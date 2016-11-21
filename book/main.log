@@ -1,0 +1,3282 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.28)  14 NOV 2016 17:13
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen103
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks16
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks20
+\thm@bodyfont=\toks21
+\thm@headfont=\toks22
+\thm@notefont=\toks23
+\thm@headpunct=\toks24
+\thm@preskip=\skip46
+\thm@postskip=\skip47
+\thm@headsep=\skip48
+\dth@everypar=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/eucal.sty
+Package: eucal 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count99
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen114
+\epsfysize=\dimen115
+)
+(/usr/share/texlive/texmf-dist/tex/latex/easy/easybmat.sty
+Document Style `easybmat' v1.0 <2001/06/13>.
+(/usr/share/texlive/texmf-dist/tex/latex/easy/easy.sty
+Document Style `easy' v1.1 <2001/05/31>.
+Package: easy 2001/05/31 v1.1
+\@easy@level=\count100
+\@easy@ncol=\count101
+\@easy@nrow=\count102
+\@easy@cnt=\count103
+\@easy@boxviii=\box28
+\@easy@minxviii=\dimen116
+\@easy@minyviii=\dimen117
+\@easy@maxxviii=\dimen118
+\@easy@maxyviii=\dimen119
+\@easy@boxvii=\box29
+\@easy@minxvii=\dimen120
+\@easy@minyvii=\dimen121
+\@easy@maxxvii=\dimen122
+\@easy@maxyvii=\dimen123
+\@easy@boxvi=\box30
+\@easy@minxvi=\dimen124
+\@easy@minyvi=\dimen125
+\@easy@maxxvi=\dimen126
+\@easy@maxyvi=\dimen127
+\@easy@boxv=\box31
+\@easy@minxv=\dimen128
+\@easy@minyv=\dimen129
+\@easy@maxxv=\dimen130
+\@easy@maxyv=\dimen131
+\@easy@boxiv=\box32
+\@easy@minxiv=\dimen132
+\@easy@minyiv=\dimen133
+\@easy@maxxiv=\dimen134
+\@easy@maxyiv=\dimen135
+\@easy@boxiii=\box33
+\@easy@minxiii=\dimen136
+\@easy@minyiii=\dimen137
+\@easy@maxxiii=\dimen138
+\@easy@maxyiii=\dimen139
+\@easy@boxii=\box34
+\@easy@minxii=\dimen140
+\@easy@minyii=\dimen141
+\@easy@maxxii=\dimen142
+\@easy@maxyii=\dimen143
+\@easy@boxi=\box35
+\@easy@minxi=\dimen144
+\@easy@minyi=\dimen145
+\@easy@maxxi=\dimen146
+\@easy@maxyi=\dimen147
+\@easy@hsizexxx=\dimen148
+\@easy@vsizexxx=\dimen149
+\@easy@hsizexxix=\dimen150
+\@easy@vsizexxix=\dimen151
+\@easy@hsizexxviii=\dimen152
+\@easy@vsizexxviii=\dimen153
+\@easy@hsizexxvii=\dimen154
+\@easy@vsizexxvii=\dimen155
+\@easy@hsizexxvi=\dimen156
+\@easy@vsizexxvi=\dimen157
+\@easy@hsizexxv=\dimen158
+\@easy@vsizexxv=\dimen159
+\@easy@hsizexxiv=\dimen160
+\@easy@vsizexxiv=\dimen161
+\@easy@hsizexxiii=\dimen162
+\@easy@vsizexxiii=\dimen163
+\@easy@hsizexxii=\dimen164
+\@easy@vsizexxii=\dimen165
+\@easy@hsizexxi=\dimen166
+\@easy@vsizexxi=\dimen167
+\@easy@hsizexx=\dimen168
+\@easy@vsizexx=\dimen169
+\@easy@hsizexix=\dimen170
+\@easy@vsizexix=\dimen171
+\@easy@hsizexviii=\dimen172
+\@easy@vsizexviii=\dimen173
+\@easy@hsizexvii=\dimen174
+\@easy@vsizexvii=\dimen175
+\@easy@hsizexvi=\dimen176
+\@easy@vsizexvi=\dimen177
+\@easy@hsizexv=\dimen178
+\@easy@vsizexv=\dimen179
+\@easy@hsizexiv=\dimen180
+\@easy@vsizexiv=\dimen181
+\@easy@hsizexiii=\dimen182
+\@easy@vsizexiii=\dimen183
+\@easy@hsizexii=\dimen184
+\@easy@vsizexii=\dimen185
+\@easy@hsizexi=\dimen186
+\@easy@vsizexi=\dimen187
+\@easy@hsizex=\dimen188
+\@easy@vsizex=\dimen189
+\@easy@hsizeix=\dimen190
+\@easy@vsizeix=\dimen191
+\@easy@hsizeviii=\dimen192
+\@easy@vsizeviii=\dimen193
+\@easy@hsizevii=\dimen194
+\@easy@vsizevii=\dimen195
+\@easy@hsizevi=\dimen196
+\@easy@vsizevi=\dimen197
+\@easy@hsizev=\dimen198
+\@easy@vsizev=\dimen199
+\@easy@hsizeiv=\dimen256
+\@easy@vsizeiv=\dimen257
+\@easy@hsizeiii=\dimen258
+\@easy@vsizeiii=\dimen259
+\@easy@hsizeii=\dimen260
+\@easy@vsizeii=\dimen261
+\@easy@hsizei=\dimen262
+\@easy@vsizei=\dimen263
+\@easy@dash@len=\dimen264
+\@easy@dash@sep=\dimen265
+)
+Package: easybmat 2001/05/31 v1.1
+\@bmat@size@rule=\dimen266
+\@bmat@size@dash=\dimen267
+) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen268
+\WF@size=\dimen269
+\c@WF@wrappedlines=\count104
+\WF@box=\box36
+\WF@everypar=\toks27
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen270
+\enit@toks=\toks28
+\enit@inbox=\box37
+\enitdp@description=\count105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count106
+\float@exts=\toks29
+\float@box=\box38
+\@float@everytoks=\toks30
+\@floatcapt=\box39
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks31
+\inpenc@posthook=\toks32
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2015/12/03 v1.1r UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+01E02 (decimal 7682)
+   defining Unicode char U+01E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
+Now handling font encoding T2A ...
+... processing UTF-8 mapping file for font encoding T2A
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t2aenc.dfu
+File: t2aenc.dfu 2015/12/03 v1.1r UTF-8 support for inputenc
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0400 (decimal 1024)
+   defining Unicode char U+0401 (decimal 1025)
+   defining Unicode char U+0402 (decimal 1026)
+   defining Unicode char U+0403 (decimal 1027)
+   defining Unicode char U+0404 (decimal 1028)
+   defining Unicode char U+0405 (decimal 1029)
+   defining Unicode char U+0406 (decimal 1030)
+   defining Unicode char U+0407 (decimal 1031)
+   defining Unicode char U+0408 (decimal 1032)
+   defining Unicode char U+0409 (decimal 1033)
+   defining Unicode char U+040A (decimal 1034)
+   defining Unicode char U+040B (decimal 1035)
+   defining Unicode char U+040C (decimal 1036)
+   defining Unicode char U+040D (decimal 1037)
+   defining Unicode char U+040E (decimal 1038)
+   defining Unicode char U+040F (decimal 1039)
+   defining Unicode char U+0410 (decimal 1040)
+   defining Unicode char U+0411 (decimal 1041)
+   defining Unicode char U+0412 (decimal 1042)
+   defining Unicode char U+0413 (decimal 1043)
+   defining Unicode char U+0414 (decimal 1044)
+   defining Unicode char U+0415 (decimal 1045)
+   defining Unicode char U+0416 (decimal 1046)
+   defining Unicode char U+0417 (decimal 1047)
+   defining Unicode char U+0418 (decimal 1048)
+   defining Unicode char U+0419 (decimal 1049)
+   defining Unicode char U+041A (decimal 1050)
+   defining Unicode char U+041B (decimal 1051)
+   defining Unicode char U+041C (decimal 1052)
+   defining Unicode char U+041D (decimal 1053)
+   defining Unicode char U+041E (decimal 1054)
+   defining Unicode char U+041F (decimal 1055)
+   defining Unicode char U+0420 (decimal 1056)
+   defining Unicode char U+0421 (decimal 1057)
+   defining Unicode char U+0422 (decimal 1058)
+   defining Unicode char U+0423 (decimal 1059)
+   defining Unicode char U+0424 (decimal 1060)
+   defining Unicode char U+0425 (decimal 1061)
+   defining Unicode char U+0426 (decimal 1062)
+   defining Unicode char U+0427 (decimal 1063)
+   defining Unicode char U+0428 (decimal 1064)
+   defining Unicode char U+0429 (decimal 1065)
+   defining Unicode char U+042A (decimal 1066)
+   defining Unicode char U+042B (decimal 1067)
+   defining Unicode char U+042C (decimal 1068)
+   defining Unicode char U+042D (decimal 1069)
+   defining Unicode char U+042E (decimal 1070)
+   defining Unicode char U+042F (decimal 1071)
+   defining Unicode char U+0430 (decimal 1072)
+   defining Unicode char U+0431 (decimal 1073)
+   defining Unicode char U+0432 (decimal 1074)
+   defining Unicode char U+0433 (decimal 1075)
+   defining Unicode char U+0434 (decimal 1076)
+   defining Unicode char U+0435 (decimal 1077)
+   defining Unicode char U+0436 (decimal 1078)
+   defining Unicode char U+0437 (decimal 1079)
+   defining Unicode char U+0438 (decimal 1080)
+   defining Unicode char U+0439 (decimal 1081)
+   defining Unicode char U+043A (decimal 1082)
+   defining Unicode char U+043B (decimal 1083)
+   defining Unicode char U+043C (decimal 1084)
+   defining Unicode char U+043D (decimal 1085)
+   defining Unicode char U+043E (decimal 1086)
+   defining Unicode char U+043F (decimal 1087)
+   defining Unicode char U+0440 (decimal 1088)
+   defining Unicode char U+0441 (decimal 1089)
+   defining Unicode char U+0442 (decimal 1090)
+   defining Unicode char U+0443 (decimal 1091)
+   defining Unicode char U+0444 (decimal 1092)
+   defining Unicode char U+0445 (decimal 1093)
+   defining Unicode char U+0446 (decimal 1094)
+   defining Unicode char U+0447 (decimal 1095)
+   defining Unicode char U+0448 (decimal 1096)
+   defining Unicode char U+0449 (decimal 1097)
+   defining Unicode char U+044A (decimal 1098)
+   defining Unicode char U+044B (decimal 1099)
+   defining Unicode char U+044C (decimal 1100)
+   defining Unicode char U+044D (decimal 1101)
+   defining Unicode char U+044E (decimal 1102)
+   defining Unicode char U+044F (decimal 1103)
+   defining Unicode char U+0450 (decimal 1104)
+   defining Unicode char U+0451 (decimal 1105)
+   defining Unicode char U+0452 (decimal 1106)
+   defining Unicode char U+0453 (decimal 1107)
+   defining Unicode char U+0454 (decimal 1108)
+   defining Unicode char U+0455 (decimal 1109)
+   defining Unicode char U+0456 (decimal 1110)
+   defining Unicode char U+0457 (decimal 1111)
+   defining Unicode char U+0458 (decimal 1112)
+   defining Unicode char U+0459 (decimal 1113)
+   defining Unicode char U+045A (decimal 1114)
+   defining Unicode char U+045B (decimal 1115)
+   defining Unicode char U+045C (decimal 1116)
+   defining Unicode char U+045D (decimal 1117)
+   defining Unicode char U+045E (decimal 1118)
+   defining Unicode char U+045F (decimal 1119)
+   defining Unicode char U+0490 (decimal 1168)
+   defining Unicode char U+0491 (decimal 1169)
+   defining Unicode char U+0492 (decimal 1170)
+   defining Unicode char U+0493 (decimal 1171)
+   defining Unicode char U+0496 (decimal 1174)
+   defining Unicode char U+0497 (decimal 1175)
+   defining Unicode char U+0498 (decimal 1176)
+   defining Unicode char U+0499 (decimal 1177)
+   defining Unicode char U+049A (decimal 1178)
+   defining Unicode char U+049B (decimal 1179)
+   defining Unicode char U+049C (decimal 1180)
+   defining Unicode char U+049D (decimal 1181)
+   defining Unicode char U+04A0 (decimal 1184)
+   defining Unicode char U+04A1 (decimal 1185)
+   defining Unicode char U+04A2 (decimal 1186)
+   defining Unicode char U+04A3 (decimal 1187)
+   defining Unicode char U+04A4 (decimal 1188)
+   defining Unicode char U+04A5 (decimal 1189)
+   defining Unicode char U+04AA (decimal 1194)
+   defining Unicode char U+04AB (decimal 1195)
+   defining Unicode char U+04AE (decimal 1198)
+   defining Unicode char U+04AF (decimal 1199)
+   defining Unicode char U+04B0 (decimal 1200)
+   defining Unicode char U+04B1 (decimal 1201)
+   defining Unicode char U+04B2 (decimal 1202)
+   defining Unicode char U+04B3 (decimal 1203)
+   defining Unicode char U+04B6 (decimal 1206)
+   defining Unicode char U+04B7 (decimal 1207)
+   defining Unicode char U+04B8 (decimal 1208)
+   defining Unicode char U+04B9 (decimal 1209)
+   defining Unicode char U+04BA (decimal 1210)
+   defining Unicode char U+04BB (decimal 1211)
+   defining Unicode char U+04C0 (decimal 1216)
+   defining Unicode char U+04C1 (decimal 1217)
+   defining Unicode char U+04C2 (decimal 1218)
+   defining Unicode char U+04D0 (decimal 1232)
+   defining Unicode char U+04D1 (decimal 1233)
+   defining Unicode char U+04D2 (decimal 1234)
+   defining Unicode char U+04D3 (decimal 1235)
+   defining Unicode char U+04D4 (decimal 1236)
+   defining Unicode char U+04D5 (decimal 1237)
+   defining Unicode char U+04D6 (decimal 1238)
+   defining Unicode char U+04D7 (decimal 1239)
+   defining Unicode char U+04D8 (decimal 1240)
+   defining Unicode char U+04D9 (decimal 1241)
+   defining Unicode char U+04DA (decimal 1242)
+   defining Unicode char U+04DB (decimal 1243)
+   defining Unicode char U+04DC (decimal 1244)
+   defining Unicode char U+04DD (decimal 1245)
+   defining Unicode char U+04DE (decimal 1246)
+   defining Unicode char U+04DF (decimal 1247)
+   defining Unicode char U+04E2 (decimal 1250)
+   defining Unicode char U+04E3 (decimal 1251)
+   defining Unicode char U+04E4 (decimal 1252)
+   defining Unicode char U+04E5 (decimal 1253)
+   defining Unicode char U+04E6 (decimal 1254)
+   defining Unicode char U+04E7 (decimal 1255)
+   defining Unicode char U+04E8 (decimal 1256)
+   defining Unicode char U+04E9 (decimal 1257)
+   defining Unicode char U+04EC (decimal 1260)
+   defining Unicode char U+04ED (decimal 1261)
+   defining Unicode char U+04EE (decimal 1262)
+   defining Unicode char U+04EF (decimal 1263)
+   defining Unicode char U+04F0 (decimal 1264)
+   defining Unicode char U+04F1 (decimal 1265)
+   defining Unicode char U+04F2 (decimal 1266)
+   defining Unicode char U+04F3 (decimal 1267)
+   defining Unicode char U+04F4 (decimal 1268)
+   defining Unicode char U+04F5 (decimal 1269)
+   defining Unicode char U+04F8 (decimal 1272)
+   defining Unicode char U+04F9 (decimal 1273)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2423 (decimal 9251)
+))
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 105.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/02/24 3.9q The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
+\babel@savecnt=\count107
+\U@D=\dimen271
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+\c@lem=\count108
+\c@lemma=\count109
+\c@lemma*=\count110
+\c@remark=\count111
+\c@theorem=\count112
+\c@exlem=\count113
+\c@prop=\count114
+\c@example=\count115
+\c@exampleA=\count116
+\c@Fig=\count117
+ (./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count118
+\scratchdimen=\dimen272
+\scratchbox=\box40
+\nofMPsegments=\count119
+\nofMParguments=\count120
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count121
+\MPscratchDim=\dimen273
+\MPnumerator=\count122
+\makeMPintoPDFobject=\count123
+\everyMPtoPDFconversion=\toks34
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+msa on input line 132.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 132.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: No \author given.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+<pictures/l1_1.png, id=1, 299.61937pt x 228.35312pt>
+File: pictures/l1_1.png Graphic file (type png)
+ <use pictures/l1_1.png>
+Package pdftex.def Info: pictures/l1_1.png used on input line 145.
+(pdftex.def)             Requested size: 149.80931pt x 114.17627pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--172
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--172
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pictures/l1_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 182--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+[3] <pictures/l1_2.png, id=26, 189.70876pt x 225.84375pt>
+File: pictures/l1_2.png Graphic file (type png)
+
+<use pictures/l1_2.png>
+Package pdftex.def Info: pictures/l1_2.png used on input line 286.
+(pdftex.def)             Requested size: 94.85414pt x 112.92159pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--339
+
+ []
+
+
+Underfull \hbox (badness 2351) in paragraph at lines 329--339
+\T2A/cmr/bx/n/12 Утверждение. \T2A/cmr/m/n/12 Любую прямоугольную матрицу $\OML
+/cmm/m/it/12 A[]$ \T2A/cmr/m/n/12 можно представить в
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 329--339
+\T2A/cmr/m/n/12 Такое разложение называется \T2A/cmr/bx/n/12 скелетным разложен
+ием \T2A/cmr/m/n/12 (разложением полного
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--339
+
+ []
+
+[4 <./pictures/l1_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 343--345
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--378
+
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 371--378
+\T2A/cmr/bx/n/12 Утверждение. \T2A/cmr/m/n/12 Для скелетного разложения $\OML/c
+mm/m/it/12 A[] \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 BC\OT1/cmr/m/n/12 )[] = \OML
+/cmm/m/it/12 C[]B[]$\T2A/cmr/m/n/12 , где
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--378
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--457
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 486--488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 511--512
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 515--516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--577
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 601--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 601--619
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--629
+
+ []
+
+
+Overfull \hbox (15.21109pt too wide) detected at line 660
+[] \OT1/cmr/m/n/12 = [][] \OMS/cmsy/m/n/12 ^^A [] \OT1/cmr/m/n/12 = [] [] \OMS/
+cmsy/m/n/12 ^^A [] [][] ^^A [] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^A [] ^^A
+ [] ^^A [] ^^A [] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^A [] ^^A \OT1/cmr/m/n
+/12 4 = []
+ []
+
+<pictures/l2_1.png, id=43, 316.18124pt x 250.43562pt>
+File: pictures/l2_1.png Graphic file (type png)
+ <use pictures/l2_1.png>
+Package pdftex.def Info: pictures/l2_1.png used on input line 662.
+(pdftex.def)             Requested size: 189.7102pt x 150.26251pt.
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 664--667
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 714--716
+
+ []
+
+[10 <./pictures/l2_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 753--754
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 772--774
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 801--803
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 833--835
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 875--880
+
+ []
+
+<pictures/l2_2.png, id=56, 265.49188pt x 202.25563pt>
+File: pictures/l2_2.png Graphic file (type png)
+ <use pictures/l2_2.png>
+Package pdftex.def Info: pictures/l2_2.png used on input line 887.
+(pdftex.def)             Requested size: 185.84305pt x 141.57796pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--900
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--900
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--900
+
+ []
+
+[13 <./pictures/l2_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 916--922
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 928--929
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--935
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 942--943
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 950--951
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 952--968
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 952--968
+
+ []
+
+[14] <pictures/l3_1.png, id=64, 277.035pt x 202.25563pt>
+File: pictures/l3_1.png Graphic file (type png)
+
+<use pictures/l3_1.png>
+Package pdftex.def Info: pictures/l3_1.png used on input line 1002.
+(pdftex.def)             Requested size: 138.51715pt x 101.12756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1010
+
+ []
+
+[15 <./pictures/l3_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1062
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1062
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1067--1069
+
+ []
+
+[16] <pictures/l3_2.png, id=73, 358.33875pt x 215.80624pt>
+File: pictures/l3_2.png Graphic file (type png)
+
+<use pictures/l3_2.png>
+Package pdftex.def Info: pictures/l3_2.png used on input line 1081.
+(pdftex.def)             Requested size: 143.33296pt x 86.32095pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1082--1092
+
+ []
+
+<pictures/l3_3.png, id=74, 275.52937pt x 200.24812pt>
+File: pictures/l3_3.png Graphic file (type png)
+ <use pictures/l3_3.png>
+Package pdftex.def Info: pictures/l3_3.png used on input line 1092.
+(pdftex.def)             Requested size: 165.3189pt x 120.1498pt.
+
+<pictures/l3_4.png, id=75, 284.56313pt x 200.24812pt>
+File: pictures/l3_4.png Graphic file (type png)
+ <use pictures/l3_4.png>
+Package pdftex.def Info: pictures/l3_4.png used on input line 1093.
+(pdftex.def)             Requested size: 170.73918pt x 120.1498pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1116
+
+ []
+
+[17 <./pictures/l3_2.png> <./pictures/l3_3.png> <./pictures/l3_4.png>]
+<pictures/l3_5.png, id=79, 275.0275pt x 183.18437pt>
+File: pictures/l3_5.png Graphic file (type png)
+ <use pictures/l3_5.png>
+Package pdftex.def Info: pictures/l3_5.png used on input line 1117.
+(pdftex.def)             Requested size: 165.01776pt x 109.91145pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1179
+
+ []
+
+[18 <./pictures/l3_5.png>]
+<pictures/l3_6.png, id=83, 268.00125pt x 331.73938pt>
+File: pictures/l3_6.png Graphic file (type png)
+ <use pictures/l3_6.png>
+Package pdftex.def Info: pictures/l3_6.png used on input line 1180.
+(pdftex.def)             Requested size: 187.59958pt x 232.21597pt.
+
+<pictures/l3_7.png, id=84, 162.6075pt x 105.39375pt>
+File: pictures/l3_7.png Graphic file (type png)
+ <use pictures/l3_7.png>
+Package pdftex.def Info: pictures/l3_7.png used on input line 1186.
+(pdftex.def)             Requested size: 81.30354pt x 52.69673pt.
+
+<pictures/l3_8.png, id=85, 265.99374pt x 169.63374pt>
+File: pictures/l3_8.png Graphic file (type png)
+ <use pictures/l3_8.png>
+Package pdftex.def Info: pictures/l3_8.png used on input line 1190.
+(pdftex.def)             Requested size: 132.99654pt x 84.81665pt.
+
+[19 <./pictures/l3_6.png> <./pictures/l3_7.png> <./pictures/l3_8.png>]
+<pictures/l3_9.png, id=90, 271.0125pt x 186.19562pt>
+File: pictures/l3_9.png Graphic file (type png)
+ <use pictures/l3_9.png>
+Package pdftex.def Info: pictures/l3_9.png used on input line 1195.
+(pdftex.def)             Requested size: 189.70744pt x 130.33603pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1196--1200
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1234
+
+ []
+
+[20 <./pictures/l3_9.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1238--1241
+
+ []
+
+<pictures/l4_1.png, id=94, 262.9825pt x 177.16188pt>
+File: pictures/l4_1.png Graphic file (type png)
+ <use pictures/l4_1.png>
+Package pdftex.def Info: pictures/l4_1.png used on input line 1247.
+(pdftex.def)             Requested size: 184.08649pt x 124.01245pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1248--1251
+
+ []
+
+<pictures/l4_2.png, id=96, 195.73125pt x 145.54375pt>
+File: pictures/l4_2.png Graphic file (type png)
+ <use pictures/l4_2.png>
+Package pdftex.def Info: pictures/l4_2.png used on input line 1252.
+(pdftex.def)             Requested size: 97.86537pt x 72.77168pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1253--1260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1253--1260
+
+ []
+
+[21 <./pictures/l4_1.png> <./pictures/l4_2.png>]
+<pictures/l4_4.png, id=101, 380.42125pt x 181.17688pt>
+File: pictures/l4_4.png Graphic file (type png)
+ <use pictures/l4_4.png>
+Package pdftex.def Info: pictures/l4_4.png used on input line 1262.
+(pdftex.def)             Requested size: 228.2545pt x 108.70695pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1273
+
+ []
+
+<pictures/l4_5.png, id=102, 251.94125pt x 231.36438pt>
+File: pictures/l4_5.png Graphic file (type png)
+ <use pictures/l4_5.png>
+Package pdftex.def Info: pictures/l4_5.png used on input line 1274.
+(pdftex.def)             Requested size: 125.9703pt x 115.6819pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1285
+
+ []
+
+[22 <./pictures/l4_4.png> <./pictures/l4_5.png>]
+Underfull \hbox (badness 3417) in paragraph at lines 1294--1295
+$\OML/cmm/m/it/12 V$ \T2A/cmr/m/n/12 --- \T2A/cmr/bx/n/12 линейное пространство
+ \T2A/cmr/m/n/12 (векторное пространство), если выполнены 8
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1303--1305
+
+ []
+
+<pictures/l4_7.png, id=106, 413.545pt x 326.72063pt>
+File: pictures/l4_7.png Graphic file (type png)
+ <use pictures/l4_7.png>
+Package pdftex.def Info: pictures/l4_7.png used on input line 1307.
+(pdftex.def)             Requested size: 165.41505pt x 130.68593pt.
+
+<pictures/l4_8.png, id=107, 413.545pt x 326.72063pt>
+File: pictures/l4_8.png Graphic file (type png)
+ <use pictures/l4_8.png>
+Package pdftex.def Info: pictures/l4_8.png used on input line 1315.
+(pdftex.def)             Requested size: 165.41505pt x 130.68593pt.
+
+[23 <./pictures/l4_7.png>]
+<pictures/l4_9.png, id=111, 434.12187pt x 235.37938pt>
+File: pictures/l4_9.png Graphic file (type png)
+ <use pictures/l4_9.png>
+Package pdftex.def Info: pictures/l4_9.png used on input line 1331.
+(pdftex.def)             Requested size: 217.0604pt x 117.68939pt.
+
+[24 <./pictures/l4_8.png> <./pictures/l4_9.png>]
+<pictures/l4_10.png, id=115, 213.29688pt x 227.34938pt>
+File: pictures/l4_10.png Graphic file (type png)
+
+<use pictures/l4_10.png>
+Package pdftex.def Info: pictures/l4_10.png used on input line 1339.
+(pdftex.def)             Requested size: 106.64816pt x 113.67441pt.
+
+<pictures/l4_11.png, id=116, 356.33125pt x 304.13625pt>
+File: pictures/l4_11.png Graphic file (type png)
+
+<use pictures/l4_11.png>
+Package pdftex.def Info: pictures/l4_11.png used on input line 1345.
+(pdftex.def)             Requested size: 249.43016pt x 212.8939pt.
+
+<pictures/l4_12.png, id=117, 209.28188pt x 163.10938pt>
+File: pictures/l4_12.png Graphic file (type png)
+
+<use pictures/l4_12.png>
+Package pdftex.def Info: pictures/l4_12.png used on input line 1346.
+(pdftex.def)             Requested size: 104.64067pt x 81.55447pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1348--1354
+
+ []
+
+[25 <./pictures/l4_10.png> <./pictures/l4_11.png> <./pictures/l4_12.png>]
+<pictures/l4_13.png, id=122, 234.8775pt x 239.89626pt>
+File: pictures/l4_13.png Graphic file (type png)
+
+<use pictures/l4_13.png>
+Package pdftex.def Info: pictures/l4_13.png used on input line 1355.
+(pdftex.def)             Requested size: 129.18301pt x 131.94334pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1365
+
+ []
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 1356--1365
+\T2A/cmr/m/n/12 Линейное пространство называется \T2A/cmr/bx/n/12 евклидовым пр
+остранством\T2A/cmr/m/n/12 , если на нем
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1377
+
+ []
+
+[26 <./pictures/l4_13.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1384--1386
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1394
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1408--1410
+[]\T2A/cmr/m/n/12 Существует ли убывающая последовательность непустых замкнутых
+
+ []
+
+
+Underfull \hbox (badness 5563) in paragraph at lines 1410--1410
+[]\T2A/cmr/m/n/12 Доказать, что шар в нормированном пространстве является выпук
+лым
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1412--1414
+
+ []
+
+<pictures/l5_2.png, id=129, 347.2975pt x 304.13625pt>
+File: pictures/l5_2.png Graphic file (type png)
+ <use pictures/l5_2.png>
+Package pdftex.def Info: pictures/l5_2.png used on input line 1420.
+(pdftex.def)             Requested size: 208.3801pt x 182.48315pt.
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1428--1432
+
+ []
+
+<pictures/l5_4.png, id=133, 278.03876pt x 271.0125pt>
+File: pictures/l5_4.png Graphic file (type png)
+ <use pictures/l5_4.png>
+Package pdftex.def Info: pictures/l5_4.png used on input line 1433.
+(pdftex.def)             Requested size: 139.01903pt x 135.5059pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1434--1438
+
+ []
+
+<pictures/l5_5.png, id=134, 290.58563pt x 222.33063pt>
+File: pictures/l5_5.png Graphic file (type png)
+ <use pictures/l5_5.png>
+Package pdftex.def Info: pictures/l5_5.png used on input line 1444.
+(pdftex.def)             Requested size: 145.29245pt x 111.16502pt.
+
+[29 <./pictures/l5_2.png> <./pictures/l5_4.png>]
+Underfull \hbox (badness 1546) in paragraph at lines 1445--1448
+\T2A/cmr/m/n/12 Пусть $\OMS/cmsy/m/n/12 j[]j[] \OT1/cmr/m/n/12 = []\OMS/cmsy/m/
+n/12 j\OML/cmm/m/it/12 x[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 ;  M \OT1/cmr/m/n/
+12 = []\OML/cmm/m/it/12 ^^W[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]\OT1/cmr/m/n/
+12 )$\T2A/cmr/m/n/12 , тогда $\OML/cmm/m/it/12 ^^W[]\OT1/cmr/m/n/12 (\OML/cmm/m
+/it/12 x\OT1/cmr/m/n/12 ) \U/msa/m/n/12 6 \OMS/cmsy/m/n/12 j[]j[]\OML/cmm/m/it/
+12 nM$\T2A/cmr/m/n/12 , то есть
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1448
+
+ []
+
+<pictures/l5_6.png, id=138, 291.0875pt x 217.81375pt>
+File: pictures/l5_6.png Graphic file (type png)
+ <use pictures/l5_6.png>
+Package pdftex.def Info: pictures/l5_6.png used on input line 1448.
+(pdftex.def)             Requested size: 145.54338pt x 108.9066pt.
+
+<pictures/l5_7.png, id=139, 349.80687pt x 304.13625pt>
+File: pictures/l5_7.png Graphic file (type png)
+ <use pictures/l5_7.png>
+Package pdftex.def Info: pictures/l5_7.png used on input line 1452.
+(pdftex.def)             Requested size: 192.39436pt x 167.27545pt.
+
+<pictures/l5_9.png, id=140, 238.8925pt x 198.7425pt>
+File: pictures/l5_9.png Graphic file (type png)
+ <use pictures/l5_9.png>
+Package pdftex.def Info: pictures/l5_9.png used on input line 1453.
+(pdftex.def)             Requested size: 131.39127pt x 109.3087pt.
+
+<pictures/l5_8.png, id=141, 161.60374pt x 150.06062pt>
+File: pictures/l5_8.png Graphic file (type png)
+ <use pictures/l5_8.png>
+Package pdftex.def Info: pictures/l5_8.png used on input line 1454.
+(pdftex.def)             Requested size: 105.04118pt x 97.53824pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1455--1470
+
+ []
+
+[30 <./pictures/l5_5.png> <./pictures/l5_6.png> <./pictures/l5_7.png> <./pictur
+es/l5_9.png> <./pictures/l5_8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1479
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1492--1497
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1502--1504
+
+ []
+
+<pictures/l5_10.png, id=150, 198.24063pt x 101.37875pt>
+File: pictures/l5_10.png Graphic file (type png)
+
+<use pictures/l5_10.png>
+Package pdftex.def Info: pictures/l5_10.png used on input line 1515.
+(pdftex.def)             Requested size: 109.03267pt x 55.75847pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1520
+
+ []
+
+<pictures/l5_11.png, id=151, 377.91188pt x 173.64874pt>
+File: pictures/l5_11.png Graphic file (type png)
+
+<use pictures/l5_11.png>
+Package pdftex.def Info: pictures/l5_11.png used on input line 1523.
+(pdftex.def)             Requested size: 207.85217pt x 95.5071pt.
+ [32 <./pictures/l5_10.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1536
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1536
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1539--1542
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1546--1550
+
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 1546--1550
+\T2A/cmr/m/n/12 скалярное произведение $[] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\
+OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m
+/it/12 x\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 dx$\T2A/cmr/m/n/12 . Применим к $\OM
+L/cmm/m/it/12 a$ \T2A/cmr/m/n/12 процесс Грама-Шмидта,
+ []
+
+[33 <./pictures/l5_11.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1557--1560
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1569--1570
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1572--1572
+[]\T2A/cmr/m/n/12 Выразить скалярное произведение через длину вектора в эрмитов
+ом
+ []
+
+[34] <pictures/T0T1T2.jpg, id=161, 401.5pt x 401.5pt>
+File: pictures/T0T1T2.jpg Graphic file (type jpg)
+
+<use pictures/T0T1T2.jpg>
+Package pdftex.def Info: pictures/T0T1T2.jpg used on input line 1602.
+(pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
+ <pictures/T3T4T5.jpg, id=162, 401.5pt x 401.5pt>
+File: pictures/T3T4T5.jpg Graphic file (type jpg)
+
+<use pictures/T3T4T5.jpg>
+Package pdftex.def Info: pictures/T3T4T5.jpg used on input line 1604.
+(pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
+ [35 <./pictures/T0T1T2.jpg>]
+<pictures/T10.jpg, id=166, 401.5pt x 401.5pt>
+File: pictures/T10.jpg Graphic file (type jpg)
+ <use pictures/T10.jpg>
+Package pdftex.def Info: pictures/T10.jpg used on input line 1606.
+(pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1607--1615
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1607--1615
+
+ []
+
+[36 <./pictures/T3T4T5.jpg> <./pictures/T10.jpg>]
+<pictures/U0U1U2.jpg, id=170, 401.5pt x 401.5pt>
+File: pictures/U0U1U2.jpg Graphic file (type jpg)
+ <use pictures/U0U1U2.jpg>
+Package pdftex.def Info: pictures/U0U1U2.jpg used on input line 1644.
+(pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
+
+<pictures/U3U4U5.jpg, id=171, 401.5pt x 401.5pt>
+File: pictures/U3U4U5.jpg Graphic file (type jpg)
+ <use pictures/U3U4U5.jpg>
+Package pdftex.def Info: pictures/U3U4U5.jpg used on input line 1646.
+(pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
+
+[37 <./pictures/U0U1U2.jpg>] <pictures/U10.jpg, id=176, 401.5pt x 401.5pt>
+File: pictures/U10.jpg Graphic file (type jpg)
+
+<use pictures/U10.jpg>
+Package pdftex.def Info: pictures/U10.jpg used on input line 1648.
+(pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1654
+
+ []
+
+
+Underfull \hbox (badness 2302) in paragraph at lines 1658--1660
+\T2A/cmr/bx/n/12 Свойство. \T2A/cmr/m/n/12 Старший коэффициент многочлена $\OML
+/cmm/m/it/12 T[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ \T2A/cmr/
+m/n/12 равен $\OT1/cmr/m/n/12 2[]$\T2A/cmr/m/n/12 , а старший
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1658--1660
+
+ []
+
+[38 <./pictures/U3U4U5.jpg> <./pictures/U10.jpg>]
+Underfull \hbox (badness 2020) in paragraph at lines 1662--1663
+[]\T2A/cmr/m/n/12 При $\OML/cmm/m/it/12 n \U/msa/m/n/12 > \OT1/cmr/m/n/12 1$ \T
+2A/cmr/m/n/12 многочлен $\OML/cmm/m/it/12 T[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
+x\OT1/cmr/m/n/12 )$ \T2A/cmr/m/n/12 имеет на отрезке [-1, 1] ровно $\OML/cmm/m/
+it/12 n$ \T2A/cmr/m/n/12 корней
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 1669--1671
+\T2A/cmr/bx/n/12 Следствие. \T2A/cmr/m/n/12 Многочлен $\OML/cmm/m/it/12 T[]\OT1
+/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )$ \T2A/cmr/m/n/12 степени $\OML
+/cmm/m/it/12 n$ \T2A/cmr/m/n/12 на отрезке $\OT1/cmr/m/n/12 [\OMS/cmsy/m/n/12 ^
+^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1]$ \T2A/cmr/m/n/12 дости
+гает своих
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1669--1671
+
+ []
+
+<pictures/T6U5.jpg, id=180, 401.5pt x 401.5pt>
+File: pictures/T6U5.jpg Graphic file (type jpg)
+ <use pictures/T6U5.jpg>
+Package pdftex.def Info: pictures/T6U5.jpg used on input line 1672.
+(pdftex.def)             Requested size: 200.7495pt x 200.7495pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1677--1680
+
+ []
+
+[39 <./pictures/T6U5.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 1680--1682
+
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 1683--1683
+[]\T2A/cmr/m/n/12 (Коркин, Золотарев) Наименее уклоняющимся от нуля на отрезке 
+$\OT1/cmr/m/n/12 [\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/
+cmr/m/n/12 1]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1690
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1691--1694
+
+ []
+
+[40] [41]
+Underfull \hbox (badness 10000) in paragraph at lines 1725--1728
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1733--1735
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1739--1740
+
+ []
+
+[42]
+Underfull \hbox (badness 1173) in paragraph at lines 1764--1766
+[]\T2A/cmr/m/n/12 а)[] Введем на множестве многочленов $\U/msb/m/n/12 R\OT1/cmr
+/m/n/12 [\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ][]$ \T2A/cmr/m/n/12 степени меньше 
+$\OML/cmm/m/it/12 n$ \T2A/cmr/m/n/12 от одной
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1770--1777
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 1796--1800
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1800
+.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1800.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1806--1807
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1808--1809
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1833--1836
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1844--1846
+
+ []
+
+<pictures/l7_1.png, id=203, 585.68813pt x 273.52188pt>
+File: pictures/l7_1.png Graphic file (type png)
+ <use pictures/l7_1.png>
+Package pdftex.def Info: pictures/l7_1.png used on input line 1847.
+(pdftex.def)             Requested size: 351.41559pt x 164.1144pt.
+
+[45 <./pictures/l7_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1873--1876
+
+ []
+
+[46] <pictures/l7_2.png, id=210, 585.68813pt x 273.52188pt>
+File: pictures/l7_2.png Graphic file (type png)
+
+<use pictures/l7_2.png>
+Package pdftex.def Info: pictures/l7_2.png used on input line 1890.
+(pdftex.def)             Requested size: 351.41559pt x 164.1144pt.
+ <pictures/l7_3.png, id=211, 585.68813pt x 273.52188pt>
+File: pictures/l7_3.png Graphic file (type png)
+
+<use pictures/l7_3.png>
+Package pdftex.def Info: pictures/l7_3.png used on input line 1891.
+(pdftex.def)             Requested size: 351.41559pt x 164.1144pt.
+ <pictures/l7_4.png, id=212, 585.68813pt x 273.52188pt>
+File: pictures/l7_4.png Graphic file (type png)
+
+<use pictures/l7_4.png>
+Package pdftex.def Info: pictures/l7_4.png used on input line 1892.
+(pdftex.def)             Requested size: 351.41559pt x 164.1144pt.
+ [47 <./pictures/l7_2.png> <./pictures/l7_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1907--1911
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1915--1918
+
+ []
+
+[48 <./pictures/l7_4.png>]
+<pictures/l8_1.png, id=220, 303.63437pt x 239.89626pt>
+File: pictures/l8_1.png Graphic file (type png)
+ <use pictures/l8_1.png>
+Package pdftex.def Info: pictures/l8_1.png used on input line 1926.
+(pdftex.def)             Requested size: 182.18202pt x 143.93886pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1936--1938
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1952--1955
+
+ []
+
+[49 <./pictures/l8_1.png>]
+<pictures/l8_2.png, id=226, 584.68437pt x 253.94875pt>
+File: pictures/l8_2.png Graphic file (type png)
+ <use pictures/l8_2.png>
+Package pdftex.def Info: pictures/l8_2.png used on input line 1960.
+(pdftex.def)             Requested size: 350.81332pt x 152.3704pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1963--1963
+
+ []
+
+[50 <./pictures/l8_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1991--1993
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1993--1998
+
+ []
+
+<pictures/l8_3.png, id=233, 288.07625pt x 245.41687pt>
+File: pictures/l8_3.png Graphic file (type png)
+ <use pictures/l8_3.png>
+Package pdftex.def Info: pictures/l8_3.png used on input line 2000.
+(pdftex.def)             Requested size: 172.84708pt x 147.25125pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2001--2002
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2009
+
+ []
+
+[51 <./pictures/l8_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2061--2065
+
+ []
+
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 2095--2098
+
+ []
+
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 2118--2119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2119--2123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2119--2123
+
+ []
+
+<pictures/l9_1.png, id=243, 287.57437pt x 245.41687pt>
+File: pictures/l9_1.png Graphic file (type png)
+ <use pictures/l9_1.png>
+Package pdftex.def Info: pictures/l9_1.png used on input line 2126.
+(pdftex.def)             Requested size: 230.0598pt x 196.33376pt.
+
+[54 <./pictures/l9_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2133--2134
+
+ []
+
+<pictures/l9_2.png, id=247, 216.81pt x 198.24063pt>
+File: pictures/l9_2.png Graphic file (type png)
+ <use pictures/l9_2.png>
+Package pdftex.def Info: pictures/l9_2.png used on input line 2146.
+(pdftex.def)             Requested size: 173.44823pt x 158.59271pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2153--2157
+
+ []
+
+[55 <./pictures/l9_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2172--2177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2172--2177
+
+ []
+
+[56] <pictures/l9_3.png, id=255, 266.49562pt x 232.87pt>
+File: pictures/l9_3.png Graphic file (type png)
+
+<use pictures/l9_3.png>
+Package pdftex.def Info: pictures/l9_3.png used on input line 2194.
+(pdftex.def)             Requested size: 213.19678pt x 186.29623pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2196--2197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2201--2214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2201--2214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2201--2214
+
+ []
+
+[57 <./pictures/l9_3.png>]
+<pictures/l9_4.png, id=259, 178.6675pt x 164.11313pt>
+File: pictures/l9_4.png Graphic file (type png)
+ <use pictures/l9_4.png>
+Package pdftex.def Info: pictures/l9_4.png used on input line 2231.
+(pdftex.def)             Requested size: 142.93417pt x 131.29066pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2233--2237
+
+ []
+
+<pictures/l9_5.png, id=260, 367.87437pt x 258.9675pt>
+File: pictures/l9_5.png Graphic file (type png)
+ <use pictures/l9_5.png>
+Package pdftex.def Info: pictures/l9_5.png used on input line 2247.
+(pdftex.def)             Requested size: 294.29988pt x 207.17426pt.
+
+[58 <./pictures/l9_4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2264--2265
+
+ []
+
+<pictures/l9_6.png, id=264, 341.275pt x 265.49188pt>
+File: pictures/l9_6.png Graphic file (type png)
+ <use pictures/l9_6.png>
+Package pdftex.def Info: pictures/l9_6.png used on input line 2276.
+(pdftex.def)             Requested size: 273.02036pt x 212.39378pt.
+
+[59 <./pictures/l9_5.png> <./pictures/l9_6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2290--2295
+
+ []
+
+
+Underfull \hbox (badness 1675) in paragraph at lines 2295--2296
+[]\T2A/cmr/m/n/12 Нарисовать круги Гершгорина для матрицы $\OML/cmm/m/it/12 A$ 
+\T2A/cmr/m/n/12 и с их помощью оценить
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2316
+
+ []
+
+[60]
+Underfull \hbox (badness 1178) in paragraph at lines 2320--2326
+\T2A/cmr/bx/n/12 Многочлен от матрицы: \T2A/cmr/m/n/12 если $\OML/cmm/m/it/12 f
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 a[] \OT
+1/cmr/m/n/12 + \OML/cmm/m/it/12 a[]x \OT1/cmr/m/n/12 + [] + \OML/cmm/m/it/12 a[
+]x[]$\T2A/cmr/m/n/12 , то $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
+A\OT1/cmr/m/n/12 ) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2320--2326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2320--2326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2341--2345
+
+ []
+
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2411--2415
+
+ []
+
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 2450--2454
+
+ []
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 2482--2488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2482--2488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2497--2507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2497--2507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2497--2507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2497--2507
+
+ []
+
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 2528--2540
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2528--2540
+
+ []
+
+
+Underfull \hbox (badness 1762) in paragraph at lines 2528--2540
+\T2A/cmr/bx/n/12 Утверждение. $\OML/cmm/m/it/12 z[]$ \T2A/cmr/m/n/12 являются м
+ногочленами от матрицы $\OML/cmm/m/it/12 A$ \T2A/cmr/m/n/12 степени меньшей,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2528--2540
+
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 2528--2540
+\T2A/cmr/bx/n/12 Утверждение. \T2A/cmr/m/n/12 Для любой матрицы $\OML/cmm/m/it/
+12 A$ \T2A/cmr/m/n/12 компонентные матрицы (спектральные
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2528--2540
+
+ []
+
+
+Underfull \hbox (badness 1184) in paragraph at lines 2528--2540
+\T2A/cmr/bx/n/12 Утверждение. \T2A/cmr/m/n/12 Спектральные компоненты $\OML/cmm
+/m/it/12 z[]$ \T2A/cmr/m/n/12 коммутируют между собой и с
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2528--2540
+
+ []
+
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 2551--2557
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2551--2557
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2560--2571
+
+ []
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 2579--2582
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2579--2582
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2645--2649
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2645--2649
+
+ []
+
+[67]
+Underfull \hbox (badness 10000) in paragraph at lines 2650--2653
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2666--2676
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2678--2679
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2680--2681
+
+ []
+
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 2691--2702
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2723--2735
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2723--2735
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2723--2735
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2741--2746
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2748--2755
+
+ []
+
+[69]
+Underfull \hbox (badness 10000) in paragraph at lines 2792--2794
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2809--2813
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2809--2813
+
+ []
+
+[70]
+Underfull \hbox (badness 10000) in paragraph at lines 2822--2825
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2831--2836
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2838--2840
+
+ []
+
+[71]
+Underfull \hbox (badness 10000) in paragraph at lines 2850--2851
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2860--2862
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2871--2873
+
+ []
+
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 2914--2918
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2914--2918
+
+ []
+
+
+Overfull \hbox (8.55986pt too wide) detected at line 2920
+\OML/cmm/m/it/12 ^^NA[] \OT1/cmr/m/n/12 = [] = [] = [] \OMS/cmsy/m/n/12 ^^Y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2923--2925
+
+ []
+
+[73]
+Underfull \hbox (badness 10000) in paragraph at lines 3008--3019
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3008--3019
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3019--3029
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3019--3029
+
+ []
+
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 3030--3031
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3032--3033
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3035--3041
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3042--3047
+
+ []
+
+
+Underfull \hbox (badness 1769) in paragraph at lines 3042--3047
+\T2A/cmr/bx/n/12 Теорема. \T2A/cmr/m/n/12 Описанный метод простых итераций сход
+ится, то есть существует
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3042--3047
+
+ []
+
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 3053--3057
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3064--3066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3079--3080
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3080--3095
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3080--3095
+
+ []
+
+[76]
+Underfull \hbox (badness 10000) in paragraph at lines 3137--3141
+
+ []
+
+[77]
+Underfull \hbox (badness 10000) in paragraph at lines 3179--3182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3184--3187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3184--3187
+
+ []
+
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 3188--3201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3188--3201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3206--3210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3233--3234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3235--3236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3235--3236
+
+ []
+
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 3246--3250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3275--3278
+
+ []
+
+[80]
+Underfull \hbox (badness 10000) in paragraph at lines 3284--3288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3284--3288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3307--3311
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3311--3313
+
+ []
+
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 3379--3383
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3383--3386
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3383--3386
+
+ []
+
+[82]
+Underfull \hbox (badness 10000) in paragraph at lines 3386--3394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3386--3394
+
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 3386--3394
+\OML/cmm/m/it/12 ^^U[]; []  ; ^^U[]$ \T2A/cmr/m/n/12 --- собственные значения и
+ соответствующие им собственные векторы
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3399--3426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3399--3426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3399--3426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3426--3443
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3426--3443
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3426--3443
+
+ []
+
+[83]
+Underfull \hbox (badness 10000) in paragraph at lines 3449--3451
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3451--3453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3465--3468
+
+ []
+
+<pictures/l13_1.png, id=344, 345.79187pt x 90.83937pt>
+File: pictures/l13_1.png Graphic file (type png)
+
+<use pictures/l13_1.png>
+Package pdftex.def Info: pictures/l13_1.png used on input line 3472.
+(pdftex.def)             Requested size: 276.63387pt x 72.67159pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3473--3480
+
+ []
+
+
+Underfull \hbox (badness 6364) in paragraph at lines 3473--3480
+\T2A/cmr/m/n/12 Если $\OML/cmm/m/it/12 ^^\ \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^
+^\[] \OT1/cmr/m/n/12 = []$\T2A/cmr/m/n/12 , то $\OML/cmm/m/it/12 ^^Z\OT1/cmr/m/
+n/12 (\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 max\OMS/cmsy/m/n/1
+2 fj\OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^\[]m\OMS/cmsy/m/n
+/12 j\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\OT1/cmr/m/n/12 1 \OMS/cmsy/m/n/12 ^^
+@ \OML/cmm/m/it/12 ^^\[]M\OMS/cmsy/m/n/12 jg \OT1/cmr/m/n/12 =
+ []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 3473--3480
+\OML/cmm/m/it/12 max[] [] ; [] [] \OT1/cmr/m/n/12 = [] = []$\T2A/cmr/m/n/12 , г
+де $\OML/cmm/m/it/12 ^^_[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 ) 
+= []$ \T2A/cmr/m/n/12 --- число
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3473--3480
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3473--3480
+
+ []
+
+[84 <./pictures/l13_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3492--3516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3492--3516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3520--3539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3520--3539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3520--3539
+
+ []
+
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 3568--3569
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3570--3572
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3573--3577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3573--3577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3573--3577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3583--3584
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3590--3591
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3597--3606
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3597--3606
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3597--3606
+
+ []
+
+[86]
+Underfull \hbox (badness 3229) in paragraph at lines 3607--3613
+\T2A/cmr/bx/n/12 Следствие. \T2A/cmr/m/n/12 Вектор $[]$, соответствующий $[]$ е
+динственный с точностью до
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3607--3613
+
+ []
+
+[87]
+Underfull \hbox (badness 10000) in paragraph at lines 3626--3630
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3633--3635
+
+ []
+
+<pictures/l14_4.png, id=358, 675.52374pt x 427.5975pt>
+File: pictures/l14_4.png Graphic file (type png)
+
+<use pictures/l14_4.png>
+Package pdftex.def Info: pictures/l14_4.png used on input line 3636.
+(pdftex.def)             Requested size: 236.43684pt x 149.66136pt.
+ [88 <./pictures/l14_4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3690--3694
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3702--3709
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3702--3709
+
+ []
+
+[89]
+Underfull \hbox (badness 10000) in paragraph at lines 3720--3723
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3723--3727
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3727--3733
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3741--3745
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3746--3749
+
+ []
+
+[90]
+Underfull \hbox (badness 10000) in paragraph at lines 3749--3751
+
+ []
+
+<pictures/l14_1.png, id=368, 236.885pt x 200.24812pt>
+File: pictures/l14_1.png Graphic file (type png)
+ <use pictures/l14_1.png>
+Package pdftex.def Info: pictures/l14_1.png used on input line 3752.
+(pdftex.def)             Requested size: 165.81836pt x 140.17273pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3754--3758
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3754--3758
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3758--3775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3758--3775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3758--3775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3758--3775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3758--3775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3758--3775
+
+ []
+
+[91 <./pictures/l14_1.png>]
+<pictures/l14_2.png, id=373, 279.54437pt x 103.38625pt>
+File: pictures/l14_2.png Graphic file (type png)
+
+<use pictures/l14_2.png>
+Package pdftex.def Info: pictures/l14_2.png used on input line 3777.
+(pdftex.def)             Requested size: 167.7279pt x 62.03221pt.
+
+Underfull \hbox (badness 1147) in paragraph at lines 3783--3784
+[]\T2A/cmr/m/n/12 Матрица $\OML/cmm/m/it/12 A$ \T2A/cmr/m/n/12 является разложи
+мой тогда и только тогда, когда существует
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3783--3784
+
+ []
+
+<pictures/l14_3.png, id=374, 701.62125pt x 294.09875pt>
+File: pictures/l14_3.png Graphic file (type png)
+
+<use pictures/l14_3.png>
+Package pdftex.def Info: pictures/l14_3.png used on input line 3785.
+(pdftex.def)             Requested size: 420.97598pt x 176.4606pt.
+ [92 <./pictures/l14_2.png> <./pictures/l14_3.png>]
+<pictures/l14_5_.png, id=379, 692.5875pt x 571.13374pt>
+File: pictures/l14_5_.png Graphic file (type png)
+
+<use pictures/l14_5_.png>
+Package pdftex.def Info: pictures/l14_5_.png used on input line 3796.
+(pdftex.def)             Requested size: 242.40926pt x 199.8998pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3813--3814
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3816--3820
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3816--3820
+
+ []
+
+[93 <./pictures/l14_5_.png>]
+<pictures/l15_1.png, id=384, 242.9075pt x 214.8025pt>
+File: pictures/l15_1.png Graphic file (type png)
+ <use pictures/l15_1.png>
+Package pdftex.def Info: pictures/l15_1.png used on input line 3821.
+(pdftex.def)             Requested size: 194.32625pt x 171.84222pt.
+
+<pictures/l15_2.png, id=385, 254.45062pt x 214.8025pt>
+File: pictures/l15_2.png Graphic file (type png)
+
+<use pictures/l15_2.png>
+Package pdftex.def Info: pictures/l15_2.png used on input line 3822.
+(pdftex.def)             Requested size: 203.56076pt x 171.84222pt.
+
+<pictures/l15_3.png, id=386, 211.28937pt x 248.42813pt>
+File: pictures/l15_3.png Graphic file (type png)
+
+<use pictures/l15_3.png>
+Package pdftex.def Info: pictures/l15_3.png used on input line 3827.
+(pdftex.def)             Requested size: 169.03172pt x 198.74277pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3829--3831
+
+ []
+
+[94 <./pictures/l15_1.png> <./pictures/l15_2.png> <./pictures/l15_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3831--3833
+
+ []
+
+<pictures/l15_4.png, id=390, 169.13188pt x 68.255pt>
+File: pictures/l15_4.png Graphic file (type png)
+ <use pictures/l15_4.png>
+Package pdftex.def Info: pictures/l15_4.png used on input line 3834.
+(pdftex.def)             Requested size: 135.30568pt x 54.60406pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3841--3847
+
+ []
+
+[95 <./pictures/l15_4.png>] [96]
+Underfull \hbox (badness 10000) in paragraph at lines 3878--3882
+
+ []
+
+<pictures/l15_5.png, id=397, 215.30438pt x 143.03438pt>
+File: pictures/l15_5.png Graphic file (type png)
+
+<use pictures/l15_5.png>
+Package pdftex.def Info: pictures/l15_5.png used on input line 3883.
+(pdftex.def)             Requested size: 172.24373pt x 114.42764pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3890--3894
+
+ []
+
+[97 <./pictures/l15_5.png>] [98]
+Underfull \hbox (badness 10000) in paragraph at lines 3926--3931
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3926--3931
+
+ []
+
+
+Overfull \hbox (49.60776pt too wide) detected at line 3965
+\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \
+OML/cmm/m/it/12 T[]AT[] \OT1/cmr/m/n/12 = [] [] [] = []
+ []
+
+[99]
+Overfull \hbox (2.32684pt too wide) detected at line 3997
+\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 T[]A[]T[] \OT1/cmr/m/n/
+12 = [] [] [] = []
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 4005--4008
+\T2A/cmr/m/n/12 Каждый из столбцов матрицы $\OML/cmm/m/it/12 T[]$ \T2A/cmr/m/n/
+12 является собственным вектором $\OML/cmm/m/it/12 ^^U[];  ^^U[]$ \T2A/cmr/m/n/
+12 и $\OML/cmm/m/it/12 ^^U[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4005--4008
+
+ []
+
+[100]
+Underfull \hbox (badness 10000) in paragraph at lines 4027--4028
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4029--4033
+
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 4029--4033
+\T2A/cmr/m/n/12 Надо описать функциональные зависимости между показателями $\OM
+L/cmm/m/it/12 y[]; []  ; y[]$\T2A/cmr/m/n/12 , то
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4035--4051
+
+ []
+
+[101]
+Underfull \hbox (badness 10000) in paragraph at lines 4052--4077
+
+ []
+
+[102]
+Underfull \hbox (badness 10000) in paragraph at lines 4080--4083
+
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 4093--4097
+\T2A/cmr/m/n/12 Пусть $\OML/cmm/m/it/12 I \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f[
+] \OML/cmm/m/it/12 c[]h[]\OMS/cmsy/m/n/12 g$ \T2A/cmr/m/n/12 (где $\OML/cmm/m/i
+t/12 c[]$ \T2A/cmr/m/n/12 --- многочлены от $\OML/cmm/m/it/12 x[]; x[]; []  ; x
+[]; z[]; z[]; []  ; z[]; u$\T2A/cmr/m/n/12 ) ---
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4093--4097
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4093--4097
+\T2A/cmr/m/n/12 Будем сравнивать мономы от переменных $\OML/cmm/m/it/12 x[]; x[
+]; []  ; x[]; z[]; z[]; []  ; z[]; u$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4097--4105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4097--4105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4097--4105
+
+ []
+
+[103]
+Underfull \hbox (badness 10000) in paragraph at lines 4110--4114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4119--4124
+
+ []
+
+[104]
+Underfull \hbox (badness 10000) in paragraph at lines 4139--4140
+
+ []
+
+[105]
+Underfull \hbox (badness 10000) in paragraph at lines 4164--4165
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4168--4170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4172--4176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4180--4184
+
+ []
+
+[106]
+Underfull \hbox (badness 10000) in paragraph at lines 4184--4194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4194--4205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4194--4205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4206--4207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4208--4210
+
+ []
+
+[107] <pictures/l18_1.png, id=434, 392.46625pt x 164.11313pt>
+File: pictures/l18_1.png Graphic file (type png)
+
+<use pictures/l18_1.png>
+Package pdftex.def Info: pictures/l18_1.png used on input line 4235.
+(pdftex.def)             Requested size: 235.48155pt x 98.46863pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4293--4296
+
+ []
+
+[108 <./pictures/l18_1.png>]
+<pictures/l18_2.png, id=438, 205.76875pt x 187.70125pt>
+File: pictures/l18_2.png Graphic file (type png)
+
+<use pictures/l18_2.png>
+Package pdftex.def Info: pictures/l18_2.png used on input line 4326.
+(pdftex.def)             Requested size: 164.6152pt x 150.1612pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 4328--4329
+
+ []
+
+[109 <./pictures/l18_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 4355--4360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4388--4389
+
+ []
+
+<pictures/l18_3.png, id=444, 233.87375pt x 157.58875pt>
+File: pictures/l18_3.png Graphic file (type png)
+
+<use pictures/l18_3.png>
+Package pdftex.def Info: pictures/l18_3.png used on input line 4390.
+(pdftex.def)             Requested size: 196.45259pt x 132.37363pt.
+ [110]
+Underfull \hbox (badness 10000) in paragraph at lines 4405--4409
+
+ []
+
+[111 <./pictures/l18_3.png>] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 5031 strings out of 493029
+ 64705 string characters out of 6136233
+ 142639 words of memory out of 5000000
+ 8384 multiletter control sequences out of 15000+600000
+ 21242 words of font info for 58 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,10n,26p,760b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm
+-super/cm-super-t2a.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+extra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
+x1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
+1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on main.pdf (111 pages, 1304564 bytes).
+PDF statistics:
+ 520 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 336 words of extra memory for PDF output out of 10000 (max. 10000000)
+
