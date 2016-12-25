@@ -18,22 +18,114 @@
 
 \usepackage{indentfirst,float,cite}
 %comment!!! \usepackage[cp1251]{inputenc}
-\usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
-\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}         % Кодировка текста
+\usepackage[english,russian]{babel} % Подключение поддержки языков
 
-%\usepackage{showlabels}
-%!!!\usepackage{showkeys}
+\newcommand{\BL}{\biggl}
+\newcommand{\BR}{\biggr}
+\newcommand{\Bl}{\Bigl}
+\newcommand{\Br}{\Bigr}
+\newcommand{\bl}{\bigl}
+\newcommand{\br}{\bigr}
 
-%\documentclass[12pt,a4paper]{article}
-%\usepackage{indentfirst,amssymb,amsmath,amsthm,float,cite}
-%\usepackage[dvips]{graphicx}
-%\usepackage[cp1251]{inputenc}
-%\usepackage[T2A]{fontenc}
-%\usepackage[russian]{babel}
+\def\gN{{\mathfrak{N}}}
+\def\gS{{\mathfrak{S}}}
 
 
 
+%\newtheorem{lem}{Lemma}
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{lemma*}{Lemma}
+%\newtheorem{remark}{Remark}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{exlem}{Lemma}
+%\newtheorem{prop}{Proposition}
+%\newtheorem*{cor*}{Corollary}
+%\newtheorem*{corollary}{Corollary}
+%\theoremstyle{definition}
+%\newtheorem{example}{Example}
+%\newtheorem{exampleA}{Example}
+%\newtheorem*{example*}{Example}
+%\newtheorem*{rem*}{Remark}
+%\newtheorem{Fig}{Fig.}
+%\numberwithin{equation}{section}
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+%\renewcommand{\theexampleA}{A\arabic{exampleA}}
+
+%% Математические пакеты
+\usepackage{mathtools}              % Тот же amsmath, только с некоторыми поправками
+\usepackage{amssymb}                % Математические символы
+\usepackage{amsthm}                 % Оформление теорем
+\usepackage{amstext}                % Текстовые вставки в формулы
+\usepackage{amsfonts}               % Математические шрифты
+\usepackage{icomma}                 % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage{enumitem}               % Для выравнивания itemize (\begin{itemize}[align=left])
+\usepackage{array}                  % Таблицы и матрицы
+\usepackage{multirow}
+
+
+
+%% Шрифты
+\usepackage{euscript}               % Шрифт Евклид
+\usepackage{mathrsfs}               % \mathscr{}
+
+%% Графика
+%\usepackage[pdftex]{graphicx}       % Вставка картинок
+\graphicspath{{images/}}            % Стандартный путь к картинкам
+\usepackage{tikz}  
+\usetikzlibrary{patterns}                 % Рисование всего
+\usepackage{pgfplots}               % Графики
+
+%% Прочие пакеты
+\usepackage{indentfirst}                    % Красная строка в начале текста
+\usepackage{epigraph}                       % Эпиграфы
+\usepackage{fancybox,fancyhdr}              % Колонтитулы
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}   % Ссылки
+\usepackage{titlesec}                       % Изменение формата заголовков
+\usepackage[normalem]{ulem}                 % Для зачёркиваний
+\usepackage[makeroom]{cancel}               % И снова зачёркивание (на этот раз косое)
+
+
+
+
+
+%% Определения
+\newtheorem*{definition}{Определение}
+
+
+\newtheorem{fulllemma}{Лемма}
+\newtheorem*{sl1}{Следствие 1}
+\newtheorem*{sl2}{Следствие 2}
+\newtheorem*{scheme}{Утверждение 1}
+\newtheorem*{theorem}{Теорема}
+\newtheorem*{proposal}{Предложение}
+\newtheorem*{notice}{Замечание}
+\newtheorem*{statement}{Утверждение}
+\newtheorem*{consequence}{Следствие}
+\newtheorem*{lemma}{Лемма}
+
+\newcommand{\note}{\underline{Замечание:} }
+\newcommand{\fact}{\underline{\textbf{Факт}:} }
+\newcommand{\example}{\underline{Пример:} }
+\newcommand{\sign}{\underline{Обозначения:} }
+\newcommand{\statements}{\underline{Утверждения:} }
+
+\renewcommand{\Re}{\mathrm{Re\:}}
+\renewcommand{\Im}{\mathrm{Im\:}}
+\newcommand{\Arg}{\mathrm{Arg\:}}
+\renewcommand{\arg}{\mathrm{arg\:}}
+\newcommand{\Mat}{\mathrm{Mat}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\isom}{\xrightarrow{\sim}} 
+\newcommand{\leftisom}{\xleftarrow{\sim}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Ker}{\mathrm{Ker}\:}
+\newcommand{\rk}{\mathrm{rk}\:}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\ort}{\mathrm{ort}}
+\newcommand{\pr}{\mathrm{pr}}
+\newcommand{\vol}{\mathrm{vol\:}}
 
 \newcommand{\comment}[1]{}
 \newcommand{\e}{\varepsilon}
@@ -56,94 +148,55 @@
 \nc{\intlinf}{\intl_{-\infty}^{+\infty}}
 \nc{\suml}{\sum\limits}
 
-\newcommand{\BL}{\biggl}
-\newcommand{\BR}{\biggr}
-\newcommand{\Bl}{\Bigl}
-\newcommand{\Br}{\Bigr}
-\newcommand{\bl}{\bigl}
-\newcommand{\br}{\bigr}
 
-\def\gN{{\mathfrak{N}}}
-\def\gS{{\mathfrak{S}}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\C}{\mathbb{C}}
+\renewcommand{\L}{\mathscr{L}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\p}{\mathsf{p}}
+\newcommand{\E}{\mathsf{E}}
+\newcommand{\D}{\mathsf{D}}
+\newcommand{\cov}{\mathsf{cov}}
+
+\renewcommand{\l}{\mathcal{L}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\F}{\mathsf{F}}
+\newcommand{\ds}{\displaystyle}
+\renewcommand{\S}{\mathsf{S}}
 
 
 
-\newtheorem{lem}{Lemma}
-\newtheorem{lemma}{Lemma}
-\newtheorem{lemma*}{Lemma}
-\newtheorem{remark}{Remark}
-\newtheorem{theorem}{Theorem}
-\newtheorem{exlem}{Lemma}
-\newtheorem{prop}{Proposition}
-\newtheorem*{cor*}{Corollary}
-\newtheorem*{corollary}{Corollary}
-\theoremstyle{definition}
-\newtheorem{example}{Example}
-\newtheorem{exampleA}{Example}
-\newtheorem*{example*}{Example}
-\newtheorem*{rem*}{Remark}
-\newtheorem{Fig}{Fig.}
-\numberwithin{equation}{section}
-\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
-\renewcommand{\theexampleA}{A\arabic{exampleA}}
 
-\makeatletter
-%------------
-\renewcommand{\@seccntformat}[1]{\csname #1name\endcsname\csname the#1\endcsname.\quad}
-%------------
-\renewcommand{\@biblabel}[1]{#1.}
-%------------
-\def\@Scaptionlabeldelim{.}
-\def\@Ssize{\small}
-\def\@Sshape{\upshape}
-\def\@Sseries{\mdseries}
-\def\@Sfamily{\rmfamily}
-\long\def\@Smakecaption#1{%
-	\vskip\abovecaptionskip
-	\sbox\@tempboxa{\@Sshape\@Sseries\@Sfamily #1.}%
-	\ifdim \wd\@tempboxa >\hsize
-	{\@Stshape\@Stseries\@Stfamily #1.}\par
-	\else
-	\global \@minipagefalse
-	\hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
-	\fi
-	\vskip\belowcaptionskip}
-\def\Scaption{\refstepcounter\@captype\@Scaption\@captype}
-\long\def\@Scaption#1{\par\addcontentsline{\csname
-		ext@#1\endcsname}{#1}{\protect\numberline{\csname
-			the#1\endcsname}}\begingroup
-	\@parboxrestore
-	\@Ssize
-	\@Smakecaption{\csname fnum@#1\endcsname}\par
-	\endgroup}
-%------------
-\makeatother
-
-\pagestyle{plain}
-%\usepackage{showkeys}
+%% Информация об авторах
+\title{\Huge{Дополнительные главы Линейной Алгебры}}
+\author{Дмитрий Игоревич Пионтковский}
+\date{}
 \begin{document}
-	\title{Прикладные проблемы линейной алгебры}
-	\date{}
-	\maketitle \sloppy
+	\maketitle
+	\tableofcontents
 	
-	
-	\section *{Лекция 1}
-	\noindent \textbf{Псевдообратная матрица.}\\\\
+	\newpage
+	\section{Лекция 1}
+	\subsection{Псевдообратная матрица}
 	Пусть имеется СЛУ
 	$$Ax=b$$
 	Тогда если $\exists A^{-1}$, то $x=A^{-1}b$.\\
 	\\
 	Так как часто матрица является вырожденной или неквадратной, появляется необходимость ввести обобщение обратной матрицы.\\
 	\\
-	Псевдообратная матрица $A^+$ позволяет найти решение через явную формулу $x=A^+b$ для любой матрицы $A$, если оно существует. Если решения нет, то $x=A^+b$ будет наилучшим приближенным решением по евклидовой метрике, то есть, расстояние между $Ax$ и $b$ будет минимальным.\\\\
-	\noindent \textbf{Определение.}\\\\
-	$C=A^+$ (где $C_{n \times m}, ~A_{m \times n})$ --- \textbf{псевдообратная матрица Мура-Пенроуза} для матрицы $A$, если:
+	Псевдообратная матрица $A^+$ позволяет найти решение через явную формулу $x=A^+b$ для любой матрицы $A$, если оно существует. Если решения нет, то $x=A^+b$ будет наилучшим приближенным решением по евклидовой метрике, то есть, расстояние между $Ax$ и $b$ будет минимальным.
+	\begin{definition}
+		$C=A^+$ (где $C_{n \times m}, ~A_{m \times n})$ --- \textbf{псевдообратная матрица Мура-Пенроуза} для матрицы $A$, если:
 	\begin{enumerate}
 		\item $ACA=A$
 		\item $CAC=C$
 		\item $(AC)^*=AC=C^*A^*$
 		\item $(CA)^*=CA$
 	\end{enumerate}
+	\end{definition}
 	\[\begin{pmatrix}
 	1+i & 3-i\\
 	2i & 5\\
@@ -152,22 +205,18 @@
 	3+i & 5\\
 	\end{pmatrix}\]
 	\\ 
-	Если $detA \neq 0$, то подходит $C=A^{-1}$.\\
-	\\
-	%
-	%
-	%
-	\textbf{Теорема 1.}
-	Если такая матрица $C$ существует, то она единственная.\\
-	$\blacktriangleright$ Пусть $B, C$ --- две матрицы, удовлетворяющие свойствам 1 - 4.\\
+	Если $detA \neq 0$, то подходит $C=A^{-1}$.
+	\begin{theorem}
+		Если такая матрица $C$ существует, то она единственная.
+	\end{theorem}
+	\begin{proof}
+		Пусть $B, C$ --- две матрицы, удовлетворяющие свойствам 1 - 4.\\
 	$$AB\overset{1}{=}\underbrace{ACA}_{A}B=(AC)(AB)\overset{3}{=}(AC)^*(AB)^*=C^*A^*B^*A^*=$$
 	$$=C^*(ABA)^*\overset{1}{=}C^*A^*=(AC)^*\overset{3}{=}AC$$\\
 	Аналогично выводится $BA=CA$. Тогда
 	$$B\overset{2}{=}BAB=\underbrace{BA}_{CA}B=C\underbrace{AB}_{AC}=CAC\overset{2}{=}C$$\\
-	Значит, $B=C$, то есть, псевдообратная матрица единственна. $\blacksquare$\\ \\
-	%
-	%
-	%
+	Значит, $B=C$, то есть, псевдообратная матрица единственна.
+	\end{proof}
 	\noindent \textbf{Пример 1.}\\
 	Найти псевдообратную матрицу.\\ \\
 	\[\begin{pmatrix}
@@ -236,9 +285,8 @@
 		$A^+A=\cfrac{1}{\lambda}A^*A=\cfrac{1}{\lambda}<A, A>=1$\\
 		$\lambda =A^*A=<A, A>=|A|^2$\\
 	\end{center} 
-	%
-	%
-	~\\Другие свойства псевдообратной матрицы:
+	\begin{lemma}[Ещё свойства псевдообратной матрицы]
+		\ 
 	\begin{enumerate}
 		\setcounter{enumi}{4}
 		\item $(A^+)^+=A$ (проверяется по определению)
@@ -250,36 +298,31 @@
 		Из свойства 1: $rkA \leqslant rkA^+$\\
 		Из свойства 2: $rkA^+ \leqslant rkA ~~\blacksquare$
 	\end{enumerate}
-	%
-	%
-	\textbf{Теорема 2.}
-	Пусть $A_{m \times n}$ --- матрица полного столбцового ранга (столбцы линейно независимы), то есть $rkA=n$. Тогда $$A^+=(A^*A)^{-1}A^*$$
-	Для доказательства существования $(A^*A)^{-1}$ нам потребуется лемма.\\\\
-	%
-	%
-	\textbf{Лемма.}
-	$rk(A^*A)=rkA$\\
-	$\blacktriangleright ~$ 
-	Докажем, что $Ker A^*A\subset Ker A$:
-	$$x\in Ker A \Leftrightarrow Ax=0\Rightarrow$$
-	$$\Rightarrow A^*Ax=A^* {0}=0$$
-	Докажем, что $Ker A\subset Ker A^*A$:\\
-	Пусть $z\in Ker A^*A$\\
-	$$A^*Az=0$$
-	$$z^*A^*Az=0$$
-	$$(Az)^*Az=0$$
-	$$|\tilde{z_1}|^2+...+|\tilde{z_n}|^2=0$$
-	$$\tilde{z}=Az$$
-	$$\tilde{z_1}=...=\tilde{z_n}=0 \Rightarrow Az=0 \Rightarrow z\in Ker A$$
-	Тогда $\dim(Im A)= n - \dim(Ker A) = n - \dim(Ker A^*A) =\dim(Im A^*A)$\\
-	$$\Rightarrow rk A = rk (A^*A) ~~ \blacksquare$$
-	%
-	%
-	Тогда если матрица $A_{m\times n}$ имеет ранг $n$, то $(A^*A)_{n\times n}$ невырожденна.\\\\
-	%
-	%
-	Доказательство Теоремы 2:\\\\
-	$\blacktriangleright$ Проверим свойства определения при $A^+=(A^*A)^{-1}A$.
+	\end{lemma}
+	\begin{lemma}
+		$rk(A^*A)=rkA$
+	\end{lemma}
+	\begin{proof}
+		Докажем, что $Ker A^*A\subset Ker A$:
+		$$x\in Ker A \Leftrightarrow Ax=0\Rightarrow$$
+		$$\Rightarrow A^*Ax=A^* {0}=0$$
+		Докажем, что $Ker A\subset Ker A^*A$:\\
+		Пусть $z\in Ker A^*A$\\
+		$$A^*Az=0$$
+		$$z^*A^*Az=0$$
+		$$(Az)^*Az=0$$
+		$$|\tilde{z_1}|^2+...+|\tilde{z_n}|^2=0$$
+		$$\tilde{z}=Az$$
+		$$\tilde{z_1}=...=\tilde{z_n}=0 \Rightarrow Az=0 \Rightarrow z\in Ker A$$
+		Тогда $\dim(Im A)= n - \dim(Ker A) = n - \dim(Ker A^*A) =\dim(Im A^*A)$\\
+		$$\Rightarrow rk A = rk (A^*A) $$
+	\end{proof}
+	\begin{theorem}
+		Пусть $A_{m \times n}$ --- матрица полного столбцового ранга (столбцы линейно независимы), то есть $rkA=n$. Тогда $$A^+=(A^*A)^{-1}A^*$$
+	\end{theorem}
+	\begin{proof}
+		По Лемме выше, если матрица $A_{m\times n}$ имеет ранг $n$, то $(A^*A)_{n\times n}$ невырожденная.\\
+	Проверим, что матрица $(A^*A)^{-1}A$ удовлетворяет свойствам определения 1.
 	\begin{enumerate}
 		\item $AA^+A=A$\\
 		$A^+A=(A^*A)^{-1}A^*A=E$\\
@@ -289,27 +332,19 @@
 		\item $(AA^+)^*=AA^+$\\
 		$(A(A^*A)^{-1}A^*)^*=(A^*)^*((A^*A)^{-1})^*A^*=A((A^*A)^*)^{-1}A^*=A(A^*A)^{-1}A^*=AA^+$
 		\item $(A^+A)^*=AA^+$\\
-		$E^*=E ~~\blacksquare$\\
+		$E^*=E $
 	\end{enumerate}
-	%
-	%
-	\textbf{Теорема 2.1.}
-	Пусть $B$ --- матрица полного строчного ранга. Тогда $$B^+=B^*(BB^*)^{-1}$$
-	$\blacktriangleright$ 
-	Так как $B^*$ - матрица полного столбцового ранга, то по Теореме 2,\\
+	\end{proof}
+	\begin{theorem}
+		Пусть $B$ --- матрица полного строчного ранга. Тогда $$B^+=B^*(BB^*)^{-1}$$
+	\end{theorem}
+	\begin{proof}
+		Так как $B^*$ - матрица полного столбцового ранга, то по Теореме 2,\\
 	$$(B^*)^+=(B^{**}B^*)^{-1}B^{**}
 	=(BB^*)^{-1}B$$
 	По свойству 6,
-	$$B^+=((B^*)^+)^*=((BB^*)^{-1}B)^*=B^*(BB^*)^{-1} ~~ \blacksquare$$
-	%
-	%
-	\newpage
-	\[S^*=S \to S'=U^*SU = \begin{pmatrix}
-	\lambda_1 & \cdots & 0 \\         
-	\vdots & \ddots & \vdots \\
-	0 & \cdots & \lambda_n
-	\end{pmatrix}, \lambda_i \in \mathbb{R}\]
-	\begin{center} \includegraphics[scale=0.5]{l1_2}\end{center}
+	$$B^+=((B^*)^+)^*=((BB^*)^{-1}B)^*=B^*(BB^*)^{-1}$$
+	\end{proof}
 	\textbf{Пример 3.}\\
 	Найти $A^+$.\\
 	\[A = \begin{pmatrix}
@@ -351,11 +386,43 @@
 	3 & -1 & -1 & 1 \\         
 	-1 & 3 & - 1 & 1 \\
 	-1 & -1 & 3 & 1 \\
-	\end{pmatrix}\]\\
-	\textbf{Утверждение.}
+	\end{pmatrix}\]\\\\
+	\subsection{Скелетное разложение}
+	\begin{statement}
 	Любую прямоугольную матрицу $A_{m \times n}$ можно представить в виде 
-	$A_{m \times n}=B_{m \times r}C_{r \times n}, r=rkA$, где $B$ --- матрица полного столбцового ранга, а $C$ --- матрица полного строчного ранга.\\
-	Такое разложение называется \textbf{скелетным разложением} (разложением полного ранга).\\ \\
+	$A_{m \times n}=F_{m \times r}G_{r \times n}, r=rkA$, где $F$ --- матрица полного столбцового ранга, а $G$ --- матрица полного строчного ранга.
+	
+	Это представление называется \textbf{скелетным разложением} матрицы $A$.
+	\end{statement}
+	\begin{proof}
+	Приведём алгоритм построения.
+	
+	Некоторый набор из $r$ столбцов $A_{t_1}, A_{t_2},\ldots, A_{t_r}$ образует базис в линейной оболочке всех столбцов $A$.\\
+	То есть, если $F$ - матрица из базисных столбцов, то любой столбец матрицы $A$ представляется в виде $A^j=\lambda_{j1}F^1+\ldots+\lambda_{jr}F^r=F\lambda_j$ для некоторого вектора коэффициентов $\lambda_j$.\\
+	Положим $G=(\lambda_1, \lambda_2,\ldots, \lambda_n)$. Тогда $A=FG$.
+	\end{proof}
+	\begin{theorem}
+		Если $A=FG$ - разложение полного ранга, то $A^+=G^+F^+$.
+	\end{theorem}
+	\begin{proof}
+		По предыдущим теоремам, $F^+=(F^*F)^{-1}F^*$, $G^+=G^*(GG^*)^{-1}$.\\
+	Тогда $G^+F^+=G^*(GG^*)^{-1}(F^*F)^{-1}F^*$. Легко проверить, что $G^+F^+$ удовлетворяет всем свойствам определения 1.
+	\end{proof}
+	\begin{theorem}
+		Пусть $A $ --- матрица размера $m\times n$
+	с рангом $r$ и пусть
+	$$
+	A = \left( \begin{array}{c} G \\ 0\end{array} \right)
+	$$
+	имеет канонический вид,
+	где $G$ верхняя $r\times n$ подматрица без нулевых строк и
+	$0$ означает нулевую подматрицу. Пусть $i_1, \dots ,i_r$ значения столбцов, где находятся ведущие коэффициенты ступенчатого разложения. Тогда если $F$ составлена из столбцов $A$ с номерами $i_1,
+	\dots , i_r$, то
+	$$
+	A = FG
+	$$
+	-- разложение полного ранга.
+	\end{theorem}
 	\textbf{Пример 4.}\\
 	Найти скелетное разложение.\\
 	\[A = \begin{pmatrix}[r]
@@ -363,7 +430,7 @@
 	-1 & 1 & 1 \\
 	0 & 1 & 2 \\
 	\end{pmatrix}\]
-	Приведем к ступенчатому виду.\\
+	Приведем к каноническому виду.\\
 	\[\begin{pmatrix}[r]
 	2 & -1 & 0 \\         
 	-1 & 1 & 1 \\
@@ -392,11 +459,6 @@
 	0 & 1 & 2 \\
 	\end{pmatrix}\]
 	Здесь $B$ --- столбцы исходной матрицы, $C$ --- канонический вид.\\ \\
-	\textbf{Утверждение.}
-	Для скелетного разложения $A^+=(BC)^+=C^+B^+$, где 
-	$B^+=(B^*B)^{-1}B^*$, так как столбцевого ранга, а
-	$C^+=C^*(CC^*)^{-1}$, так как строчного ранга.\\ \\
-	(продолжение решения)
 	\[B^* = \begin{pmatrix}[r]
 	2 & -1 & 0 \\         
 	-1 & 1 & 1 \\
@@ -473,9 +535,8 @@
 	13 & -4 & 5 \\         
 	-4 & 4 & 4 \\
 	5 & 4 & 13 \\
-	\end{pmatrix}\]\\
-	\\
-	\textbf{Домашнее задание 1}\begin{enumerate}
+	\end{pmatrix}\]
+	\subsection{Домашнее задание 1}\begin{enumerate}
 		\item Вычислите \[\begin{pmatrix} 1&0\end{pmatrix}^+\]
 		\item Вычислите \[\begin{pmatrix} ~0~\\~1~\\~2~\\~3~\end{pmatrix}^+\]
 		\item Вычислите \[\begin{pmatrix} 3&2&1&0 \end{pmatrix}^+\]
@@ -504,7 +565,10 @@
 			\item $Im A^+ = Im A^*$;
 		\end{enumerate}
 	\end{enumerate}
-	\section *{Лекция 2}
+	
+	\newpage
+	\section{Лекция 2}
+	\subsection{Скелетное разложение (продолжение)}
 	\noindent \textbf{Пример 3.}\\
 	Найти псевдообратную матрицу.\\
 	\[A = CB = \begin{pmatrix}
@@ -585,16 +649,16 @@
 	2 & 4 & 6 & 0 \\
 	-4 & -8 & -12 & 42 \\
 	\end{pmatrix}\]\\
-	\\
+	\begin{proposal}
 	Если $A=FG$ --- скелетное разложение, то 
 	$A^+=G^+F^+=G^*(GG^*)^{-1}(F^*F)^{-1}F^*=XY$ и 
 	$X^*=X, Y^*=Y$, 
-	$rk(A^*A)=rkA$.\\
-	\\
-	\textbf{Утверждение.}
+	$rk(A^*A)=rkA$.
+	\end{proposal}
+	\begin{statement}
 	$X$ --- решение $AX=B$ тогда и только тогда, когда $X$ --- решение $A^*AX=A^*B$.\\
-	Если $N=A^*A$, то $N^*=N$ --- квадратная самосопряженная матрица.\\
-	\\
+	Если $N=A^*A$, то $N^*=N$ --- квадратная самосопряженная матрица.
+	\end{statement}
 	\textbf{Пример 2.}\begin{enumerate}
 		\item $Im(AA^*)\overset{?}{=}ImA$\\
 		Из доказательства леммы $rk(A^*A)=rkA$ --- ранги равны, значит и размерности равны.
@@ -620,12 +684,13 @@
 			$KerA^+=KerA^*$
 		\end{center}
 	\end{enumerate}
-	\textbf{Теорема.}
-	Пусть $A\bar x = \bar b$ --- система линейных уравнений, которая может не иметь решение, тогда $\bar u$ --- решение системы по \textbf{методу наименьших квадратов}, если для $\forall x$ длина вектора $A\bar x - \bar b$ не меньше, чем длина вектора $A\bar u - \bar b$, то есть если $f(x)=A\bar x - \bar b \in \mathbb{C}^n$, то $|f_1|^2+...+|f_n|^2$ минимально при $\bar x = \bar u$.\\
-	\\
-	\textbf{Теорема.}
-	Вектор $\bar u = A^+ \bar b$ является решением системы $A\bar x = \bar b$ по методу наименьших квадратов (мнк), причем среди всех этих решений вектор $\bar u$ имеет наименьшую длину. Решение по методу наименьших квадратов также называют псевдорешением.\\
-	\\
+	\subsection{Решение по МНК}
+	\begin{definition}
+			Пусть $A\bar x = \bar b$ --- система линейных уравнений, которая может не иметь решение, тогда $\bar u$ --- решение системы по \textbf{методу наименьших квадратов}, если для $\forall x$ длина вектора $A\bar x - \bar b$ не меньше, чем длина вектора $A\bar u - \bar b$, то есть если $f(x)=A\bar x - \bar b \in \mathbb{C}^n$, то $|f_1|^2+...+|f_n|^2$ минимально при $\bar x = \bar u$.
+	\end{definition}
+	\begin{theorem}
+		Вектор $\bar u = A^+ \bar b$ является решением системы $A\bar x = \bar b$ по методу наименьших квадратов (мнк), причем среди всех этих решений вектор $\bar u$ имеет наименьшую длину. Решение по методу наименьших квадратов также называют псевдорешением.
+	\end{theorem}
 	\textbf{Пример 3.}\\ 
 	Найти решение системы по методу наименьших квадратов.\\ \\
 	$
@@ -683,19 +748,21 @@
 	\begin{center}
 		\includegraphics[scale=0.6]{l2_1.png}
 	\end{center}
-	\textbf{Сингулярное разложение (SVD).} \\
-	$A=Q \Sigma P^*$
-	$A: X \to Y$ --- отображение, где $X$ --- размерности $n$, а $Y$ --- размерности $m$.\\
-	\[\Sigma = \begin{pmatrix}
-	\sigma_1 & 0 & \cdots & \cdots & 0 \\
-	0 & \ddots & \cdots & \cdots & 0 \\
-	\vdots & \cdots & \sigma_r & \cdots & \vdots \\
-	\vdots & \cdots & \cdots & 0 & \vdots \\
-	0 & \cdots & \cdots & \cdots & 0 \\
-	\end{pmatrix}\]\\
-	$Q$ --- ортогональная матрица $m \times m$, 
-	$P$ --- ортогональная матрица $n \times n$, 
-	$\sigma_1 \geqslant ... \geqslant \sigma_r > 0$.\\ \\
+	\subsection{Сингулярное разложение (SVD)}
+	\begin{definition}
+		$A=Q \Sigma P^*$
+		$A: X \to Y$ --- отображение, где $X$ --- размерности $n$, а $Y$ --- размерности $m$.\\
+		\[\Sigma = \begin{pmatrix}
+		\sigma_1 & 0 & \cdots & \cdots & 0 \\
+		0 & \ddots & \cdots & \cdots & 0 \\
+		\vdots & \cdots & \sigma_r & \cdots & \vdots \\
+		\vdots & \cdots & \cdots & 0 & \vdots \\
+		0 & \cdots & \cdots & \cdots & 0 \\
+		\end{pmatrix}\]\\
+		$Q$ --- ортогональная матрица $m \times m$, 
+		$P$ --- ортогональная матрица $n \times n$, 
+		$\sigma_1 \geqslant ... \geqslant \sigma_r > 0$.
+	\end{definition}
 	Для $A^*A$ существует базис из собственных векторов $e_1,...,e_n$ (где она диагональна).\\
 	Она неотрицательно определена и существуют собственные векторы $A^*Ae_i=\sigma_i^2e_i$.\\ \\
 	$
@@ -895,16 +962,17 @@
 	0 & 1 & 0 & 1\\
 	0 & 0 & 1 & 1\\
 	\end{pmatrix}\]
-	\\
-	\textbf{Утверждение.}
-	Если $B=AU$, где $U^*=U^{-1}$ унитарная, то $B^+=U^+A^+=U^*A^+$.\\ \\
-	\textbf{Следствие.}
-	Если $A=Q\Sigma P^*$, то \[A^+=P\Sigma^+Q^*=P \cdot \begin{pmatrix}
-	\sigma_1^{-1} & \cdots & 0 \\         
-	\vdots & \sigma_2^{-1} & \vdots \\
-	0 & \cdots & \ddots \\
-	\end{pmatrix} \cdot Q^*\]
-	\textbf{Линейная регрессия.}\\
+	\begin{statement}
+			Если $B=AU$, где $U^*=U^{-1}$ унитарная, то $B^+=U^+A^+=U^*A^+$.
+	\end{statement}
+	\begin{consequence}
+		Если $A=Q\Sigma P^*$, то \[A^+=P\Sigma^+Q^*=P \cdot \begin{pmatrix}
+		\sigma_1^{-1} & \cdots & 0 \\         
+		\vdots & \sigma_2^{-1} & \vdots \\
+		0 & \cdots & \ddots \\
+		\end{pmatrix} \cdot Q^*\]
+	\end{consequence}
+	\subsection{Линейная регрессия}
 	\textbf{Модель 1:}\begin{center}
 		\includegraphics[scale=0.7]{l2_2.png}\end{center}
 	$\$ = kt+b$\\ \\
@@ -939,7 +1007,7 @@
 	\textbf{Модель 2:}\\
 	Если $x(t)$ --- цена на нефть, то $\$(t)x(t)=k_1t+b_1$.\\
 	\\
-	\textbf{Домашнее задание 2}
+	\subsection{Домашнее задание 2}
 	\begin{enumerate}
 		\item
 		Доказать утверждение о псевдообратной от произведения матриц.
@@ -970,8 +1038,10 @@
 		\end{pmatrix}\]
 	\end{enumerate}
 	~\\
-	\section *{Лекция 3}
-	\noindent \textbf{Полиномиальная интерполяция.}\\
+	
+	\newpage
+	\section{Лекция 3}
+	\subsection{Полиномиальная интерполяция}
 	\textbf{Дано:} \\$f(x)$ --- неизвестный многочлен степени $\leq$ $n$\\
 	$f(x) = a_{0}+a_1x+...+a_nx^n$ \\
 	Известны значения $f(x)$ в точках $x_0, ..., x_n$ (всего $n+1$ значений)\\ 
@@ -986,7 +1056,7 @@
 	$
 	\\
 	\\ \textbf{Найти:} $f(x)$
-	\\ \textbf{Ответ:} многочлен Лагранжа \\
+	\\ \textbf{Ответ:} \textbf{многочлен Лагранжа} \\
 	\begin{equation*}
 	\begin{cases}
 	a_0+a_1x_0+...+a_nx_0^n = y_0\\
@@ -1008,9 +1078,9 @@
 	\vdots\\
 	y_n
 	\end{pmatrix}\]
-	Матрица Вандермонда: $V(x_0,...,x_n)=V$ 
+	\textbf{Матрица Вандермонда}: $V(x_0,...,x_n)=V$ 
 	\begin{center}$V \bar a = \bar y$, $\bar a=V^{-1} \bar y$\end{center}
-	Определитель Вандермонда: $v(x_0,...,x_n) = det V(x_0,...,x_n) = (x_1-x_0)(x_2-x_0)...(x_n--x_0)(x_2-x_1)...(x_n-x_1)...(x_n-x_{n-1}) = \prod\limits_{0 \leq i < j \leq n} (x_j-x_i)$ 
+	\textbf{Определитель Вандермонда}: $v(x_0,...,x_n) = det V(x_0,...,x_n) = (x_1-x_0)(x_2-x_0)...(x_n--x_0)(x_2-x_1)...(x_n-x_1)...(x_n-x_{n-1}) = \prod\limits_{0 \leq i < j \leq n} (x_j-x_i)$ 
 	\[ V = \begin{vmatrix}
 	1 & x_0 & ... & x_0^n \\
 	\hdotsfor[1]{4} \\
@@ -1023,7 +1093,7 @@
 	\begin{center}
 		\includegraphics[scale=0.5]{l3_1.png}
 	\end{center}
-	Многочлен Лагранжа: \begin{center}$f(x)=L(x) = \sum\limits_{i=0}^{n} y_i \cdot \cfrac{\prod\limits_i (x-x_j)}{\prod\limits_j (x_i-x_j)} = \cfrac{\sum\limits_{i=0}^n y_i v(x_0,..., \underset{i}{x},..., x_n)}{v(x_0,..., x_n)}.$\end{center}
+	\textbf{Многочлен Лагранжа}: \begin{center}$f(x)=L(x) = \sum\limits_{i=0}^{n} y_i \cdot \cfrac{\prod\limits_i (x-x_j)}{\prod\limits_j (x_i-x_j)} = \cfrac{\sum\limits_{i=0}^n y_i v(x_0,..., \underset{i}{x},..., x_n)}{v(x_0,..., x_n)}.$\end{center}
 	\noindent \textbf{Пример 1.}\\
 	Дано:\\
 	$x_0 = -1$, $x_1 = 0$, $x_2 = 1$\\
@@ -1044,7 +1114,8 @@
 		\\
 		$f'(x) = 2(x-1)g(x)+(x-1)^2g'(x)$
 	\end{center}
-	\noindent \textbf{Лемма.}
+	
+	\begin{lemma}
 	\begin{center}
 		$f(x) = (x-x_1)^kg(x) \Leftrightarrow$ 
 		$  
@@ -1058,7 +1129,9 @@
 		\right.  
 		$
 	\end{center}
-	\noindent \textbf{Интерполяция с кратными узлами.}\\
+	\end{lemma}
+	
+	\subsection{Интерполяция с кратными узлами}
 	\textbf{Задача (кратко):}
 	Восстановить многочлен $f(x)$ по значениям в $m$ точках кратностей $k_1,..., k_m$.\\
 	\textbf{Формулировка:}
@@ -1076,10 +1149,11 @@
 	Количество условий равно количеству неизвестных $k_1+...+k_m = n$.\\
 	\textbf{Ответ:} Многочлен Эрмита (или Лагранжа-Сильвестра).\\
 	\\
-	\noindent \textbf{Утверждение.}
-	Такой многочлен существует и он единственный при $k_1+...+k_m = n$.\\
+	\begin{statement}
+	Такой многочлен существует и он единственный при $k_1+...+k_m = n$.
+	\end{statement}
 	Примечание: Если $k_1 = ... = k_m = 1$, то $m = n$ и $f(x)$ - многочлен Лагранжа (то есть предыдущий случай).\\
-	$\blacktriangleright$
+	\begin{proof}
 	Пусть существует два таких многочлена $f(x)$ и $g(x)$, то для $p(x) = f(x)-h(x)$
 	\begin{center}
 		$p^{(t)}(x_i) = 0, i=1,...,m, t\leq k_i$\\
@@ -1106,9 +1180,9 @@
 	Так как $A$ $n \times n$, то 
 	$dim(Im A) = rk A$, $dim(Ker A) = n-rk A$.\\ 
 	$Ker~ 0 \Leftrightarrow dim(Ker A) = 0$, то есть $rk A = n$ ($A$ невырожденная). \\
-	Матрица $A$ невырожденная $\Leftrightarrow$ $rk A = n \Leftrightarrow Im A = \mathbb{C}^n \Leftrightarrow Ker A = 0$, значит, $\bar a = A^{-1}\bar y$, всегда существует решение. $\blacksquare$\\
-	\\
-	\noindent \textbf{Сплайны.}\\
+	Матрица $A$ невырожденная $\Leftrightarrow$ $rk A = n \Leftrightarrow Im A = \mathbb{C}^n \Leftrightarrow Ker A = 0$, значит, $\bar a = A^{-1}\bar y$, всегда существует решение. 
+	\end{proof}
+	\subsection{Сплайны}
 	\noindent \textbf{1. Квадратичный.}\\
 	Надо установить функцию $f(x)$.\\
 	Аппроксимация: соседние точки надо соединить прямыми (не плавно). Но мы хотим гладко, значит на каждом отрезке надо задать свою функцию.\begin{center} \includegraphics[scale=0.6]{l3_3.png}\\
@@ -1200,7 +1274,8 @@
 	\\ \\
 	Получим $f_2 = 4x^2-21x+26$.\begin{center}
 		\includegraphics[scale=0.7]{l3_6.png}\end{center}
-	\noindent \textbf{Кривая Безье.}\\
+
+	\subsection{Кривая Безье}
 	Есть набор из $n$ точек, хотим построить прямую, хорошо вписываемую в оболочку.\\
 	Параметризация отрезка для 2 точек, степень полинома $n = 1$:
 	\begin{center}
@@ -1217,7 +1292,7 @@
 		\includegraphics[scale=0.7]{l3_9.png}\end{center}
 	$x(t) = 1\cdot (1-t)^3\cdot t^0\cdot 0+3\cdot (1-t)^2\cdot t^1\cdot 1+3\cdot (1-t)^1\cdot t^2\cdot 2+(1-t)^0\cdot t^3\cdot 7 = 4t^3+3t$\\
 	$y(t) = 1\cdot (1-t)^3\cdot t\cdot 0+3\cdot (1-t)^2\cdot t\cdot 5+3\cdot (1-t)^1\cdot t^2\cdot 7+1\cdot (1-t)^0\cdot t^3\cdot \frac{1}{2} = - \frac{11}{2}t^3-9t^2+15t$\\ \\
-	\noindent \textbf{Домашнее задание 3}
+	\subsection{Домашнее задание 3}
 	\begin{enumerate}
 		\item Приблизить следующую функцию $y(x)$ многочленом второй степени по методу наименьших квадратов:\\
 		\begin{tabular}{|l|c|c|c|c|c|}
@@ -1256,32 +1331,39 @@
 		Приблизить $sin~x$ сплайном $S(x)$ степени два с узлами $\pi k$, $\pi k + \cfrac{\pi}{2}$, $k\in \mathbb{Z}$. Найти $S \Big(\cfrac{\pi}{4} \Big)$, $S \Big(\cfrac{\pi}{3} \Big)$.
 		\item На плоскости 100 точек, любые 4 из них лежат на параболе вида $y=ax^2+bx+c$. Доказать, что тогда все 100 точек будут лежать на одной и той же параболе.
 	\end{enumerate}
-	\section *{Лекция 4}
-	\noindent \textbf{Метрики, линейные пространства.}\\ \\
-	\textbf{Метрика} $\rho$ на множестве $M$ --- это такая функция $\rho (x, y) \geqslant 0$, что 
-	\begin{enumerate}
-		\item $\rho (x, y) = \rho (y, x)$
-		\item $\rho (x, y) > 0, x\neq y, \rho (x, x) = 0$ 
-		\item $\rho (x, y) + \rho (y, z) \geqslant \rho (x, z)$
-	\end{enumerate}
+	
+	\newpage
+	\section{Лекция 4}
+	\subsection{Метрики}
+	\begin{definition}
+		\textbf{Метрика} $\rho$ на множестве $M$ --- это такая функция $\rho (x, y) \geqslant 0$, что 
+		\begin{enumerate}
+			\item $\rho (x, y) = \rho (y, x)$
+			\item $\rho (x, y) > 0, x\neq y, \rho (x, x) = 0$ 
+			\item $\rho (x, y) + \rho (y, z) \geqslant \rho (x, z)$
+		\end{enumerate}
+	\end{definition}
 	Дана карта с расстояниями между городами.\\
 	$M$ = \{ города \}\begin{center}
 		\includegraphics[scale=0.7]{l4_1.png}\end{center}
 	$\rho (A, B) = 5$\\
 	$\rho (E, F) = 4$ (минимальное расстояние из возможных)\\
 	\\
+	\begin{definition}
 	\textbf{Шар в метрическом пространстве.}\begin{center}
 		\includegraphics[scale=0.5]{l4_2.png}\end{center}
 	$B_R(A) = \{x | \rho(A, x) \leqslant R \}$ --- \textbf{шар} радиуса $R$ с центром в точке $A$.\\ 
-	$S_R(A) = \{x | \rho(A, x) = R \}$ --- \textbf{сфера} радиуса $R$ с центром в точке $A$.\\ 
-	\\
+	$S_R(A) = \{x | \rho(A, x) = R \}$ --- \textbf{сфера} радиуса $R$ с центром в точке $A$.
+	\end{definition}
 	$B_5(C) = \{ C, B, D, I \}$ --- все точки, которые туда входят. \\
 	$S_5(C) = \{ I \}$ --- только те точки, которые лежат на окружности. \\
 	$B_{100}(C) = B_{50} (C) = M $ --- все множество. \\
-	\\
-	Метод наименьших квадратов --- приближение функции в смысле следующей метрики \begin{center} $M = \{f: X \rightarrow \mathbb{R} \}, X = \{ x_1, ..., x_n \}$\\ ~\\
-		$\rho (f, y) = |\bar y - \bar f| = \sqrt{\sum\limits_{i=1}^n(y(x_i)-f(x_i))^2}$ \\
-		\includegraphics[scale=0.6]{l4_4.png}\end{center}
+	
+	\begin{notice}
+		Метод наименьших квадратов --- приближение функции в смысле следующей метрики \begin{center} $M = \{f: X \rightarrow \mathbb{R} \}, X = \{ x_1, ..., x_n \}$\\ ~\\
+			$\rho (f, y) = |\bar y - \bar f| = \sqrt{\sum\limits_{i=1}^n(y(x_i)-f(x_i))^2}$ \\
+			\includegraphics[scale=0.6]{l4_4.png}\end{center}
+	\end{notice}
 	\noindent \textbf{Пример 1.}\\
 	Найти такое метрическое пространство $M$, что\\ \\
 	$  
@@ -1301,7 +1383,8 @@
 		$B_5(x) = \{ x, y \}$\\
 		$B_4(y) = \{x, y, c \} $\end{center}
 	То есть $B_5(x) \subset B_4(y)$.\\
-	\\
+	
+	\subsection{Нормы}
 	Вспомним определение линейного пространства.\\
 	Если на непустом множестве заданы две бинарные операции "+" и "умножение на число", числа из поля $F$, $\forall ~a,~b,~c\in V$ то\begin{enumerate}
 		\item $a+(b+c) = (a+b)+c$
@@ -1313,16 +1396,22 @@
 		\item $(a+b)\lambda = a\lambda + b\lambda$
 		\item $(\mu + \lambda)a = \mu a + \lambda a$
 	\end{enumerate}
+	\begin{definition}
 	$V$ --- \textbf{линейное пространство} (векторное пространство), если выполнены 8 предыдущих аксиом и \begin{enumerate}
 		\item $\forall \bar u, \bar v$: $\bar u + \bar v \in V$
 		\item $\forall$ числа $\alpha \in$ $\mathbb{R}$, $\mathbb{C}$ $\alpha \bar u \in V$\\ 
 		(или $\alpha \in F$ заданное поле, например, $F_2 = \{ 0, 1 \}$)\end{enumerate}
+	\end{definition}
+	\begin{definition}
 	Линейное пространство $V$ --- \textbf{нормированное}, если на нем задана такая норма \\$\nu : V \to$ $\mathbb{R}$ $\geqslant 0$, что\begin{enumerate}
 		\item $\nu(\bar x) > 0$, $\bar x \neq \bar 0$, $\nu(\bar 0) = \bar 0$
 		\item $\nu(\alpha \bar x) = |\alpha|\nu(\bar x)$
 		\item $\nu(\bar x + \bar y) \leq \nu(\bar x) + \nu(\bar y)$ для $\forall x, y \in V, \forall \alpha$
 	\end{enumerate}
-	Из каждой нормы можно сделать метрику $\rho(\bar x, \bar y) = \nu(\bar y - \bar x)$.\\ \\
+	\end{definition}
+	
+	\begin{notice}Из каждой нормы можно сделать метрику $\rho(\bar x, \bar y) = \nu(\bar y - \bar x)$.
+	\end{notice}
 	\textbf{Примеры норм:}\begin{enumerate}
 		\item Манхэттенская норма (норма таксиста)\\
 		(Можно ехать разными путями, но не по прямой)\begin{center}
@@ -1345,28 +1434,36 @@
 		Если $|x_i| = max |x_i|$, то $\sqrt[p]{|x_i|^p} \to |x_i|$, получим:
 		\begin{center}$\nu_{\infty}(\bar x) = max \{|x_1|,...,|x_n|\} = \nu_{max}(\bar x)$\end{center}
 	\end{enumerate}
-	\textbf{Утверждение.}
-	В нормированном пространстве $V$ верно:\begin{enumerate}
-		\item $\forall \bar x, \bar y ~B_R(\bar x)$ равен $B_R(\bar y)$ (как геометрическая фигура).\\ 
-		$\blacktriangleright$ Пусть $\bar v = \bar y - \bar x$, тогда \begin{center} $B_R(\bar y) = \bar v + B_R(\bar x)$\end{center}
-		Ко всем точкам из $B_R(\bar x)$ прибавим одинаковый вектор $\bar v$.\begin{center}
-			\includegraphics[scale=0.5]{l4_9.png}\\
-			$C \in B_R(y) \Leftrightarrow \nu(C-y) \leqslant R$\\
-			$\nu((C-(\bar y - \bar x))-\bar x) \leqslant R$\end{center}
-		То есть, $D = C-(\bar y-\bar x) \in B_R(\bar x). ~~\blacksquare$
-		\item Шары $B_R(\bar x)$ и $ B_{\alpha R}(\bar x)$, $\alpha > 0$ подобны с коэффициентом подобия $\alpha$.\\ 
-		$\blacktriangleright$ \begin{center}$\nu(x D) = \cfrac{1}{\alpha}\nu(x C)$\\
+	\begin{statement}
+		В нормированном пространстве $V$ верно:\begin{enumerate}
+			\item $\forall \bar x, \bar y ~B_R(\bar x)$ равен $B_R(\bar y)$ (как геометрическая фигура).
+			\item Шары $B_R(\bar x)$ и $ B_{\alpha R}(\bar x)$, $\alpha > 0$ подобны с коэффициентом подобия $\alpha$. 
+		\end{enumerate}
+	\end{statement}
+	\begin{proof}
+		\ 
+		\begin{enumerate}
+			\item Пусть $\bar v = \bar y - \bar x$, тогда \begin{center} $B_R(\bar y) = \bar v + B_R(\bar x)$\end{center}
+			Ко всем точкам из $B_R(\bar x)$ прибавим одинаковый вектор $\bar v$.\begin{center}
+				\includegraphics[scale=0.5]{l4_9.png}\\
+				$C \in B_R(y) \Leftrightarrow \nu(C-y) \leqslant R$\\
+				$\nu((C-(\bar y - \bar x))-\bar x) \leqslant R$\end{center}
+			То есть, $D = C-(\bar y-\bar x) \in B_R(\bar x)$
+			\item \ 
+			\begin{center}$\nu(x D) = \cfrac{1}{\alpha}\nu(x C)$\\
 			$D = x+xD = x+\cfrac{1}{\alpha}xC$\\
 			$\rho(D, x) = \nu(x D) = \cfrac{1}{\alpha}\nu(C-x) = \nu(\cfrac{1}{\alpha}(C-x))$\\
 			\includegraphics[scale=0.5]{l4_10.png}\\
 			$C \in B_{\alpha R}(x) \Leftrightarrow \nu(C-x) \leqslant \alpha R$\\
-			$\rho(D, x) = \nu(\cfrac{C-x}{\alpha}) \leqslant R$\end{center} То есть $D \in B_R(\bar x). ~~\blacksquare$
-	\end{enumerate}
-	~\\$\nu_p$ --- норма только при $p \geqslant 1$ (для невыпуклых --- неверно, не выполняется неравенство треугольника).\\
-	$B^p = B_1(\bar 0)$ относительно $\nu_p$.\begin{center}
+			$\rho(D, x) = \nu(\cfrac{C-x}{\alpha}) \leqslant R$\end{center} То есть $D \in B_R(\bar x)$.
+		\end{enumerate}
+	\end{proof}
+	
+	\begin{notice}$\nu_p$ --- норма только при $p \geqslant 1$ (для невыпуклых --- неверно, не выполняется неравенство треугольника). 	$B^p = B_1(\bar 0)$ относительно $\nu_p$.\begin{center}
 		\includegraphics[scale=0.7]{l4_11.png}
 		\includegraphics[scale=0.5]{l4_12.png}
 	\end{center}
+	\end{notice}
 	\textbf{Пример 2.}\\
 	Для каких $R_1, R_2$ возможно $B_{R_1}(x) \subsetneq B_{R_2}(y)$?\\
 	\\
@@ -1381,15 +1478,16 @@
 	Тогда $B_{R_1}(x) = \{x, y\}$, $B_{R_2}(y) = \{x, y, C\}$, то есть $B_{R_1}(x) \subsetneq B_{R_2}(y)$ верно.\\
 	\\
 	Рассмотрим случай, когда $R_1$ чуть больше $2R_2$.\\
-	Тогда $B_{R_1}(x) = \{x, y, C\}$, $B_{R_2}(y) = \{x, y, C\}$, то есть, $B_{R_2}(y) \subseteq B_{R_1}(x)$, значит не подходит.\\
-	\\
-	Линейное пространство называется \textbf{евклидовым пространством}, если на нем задано скалярное произведение $g(x, y)$:\begin{enumerate}
-		\item $g(x, y) = g(y, x)$
-		\item $g(x_1+x_2, y) = g(x_1, y)+g(x_2, y)$
-		\item $g(\lambda x, y) = \lambda g(x, y)$
-		\item $g(x, x) \geqslant 0, g(x, x) = 0 \Leftrightarrow x = 0$
-	\end{enumerate}
-	В евклидовом пространстве есть стандартная норма $\parallel x \parallel = \sqrt{g(x, x)}$.\\
+	Тогда $B_{R_1}(x) = \{x, y, C\}$, $B_{R_2}(y) = \{x, y, C\}$, то есть, $B_{R_2}(y) \subseteq B_{R_1}(x)$, значит не подходит.
+	\begin{definition}
+		Линейное пространство называется \textbf{евклидовым пространством}, если на нем задано скалярное произведение $g(x, y)$:\begin{enumerate}
+			\item $g(x, y) = g(y, x)$
+			\item $g(x_1+x_2, y) = g(x_1, y)+g(x_2, y)$
+			\item $g(\lambda x, y) = \lambda g(x, y)$
+			\item $g(x, x) \geqslant 0, g(x, x) = 0 \Leftrightarrow x = 0$
+		\end{enumerate}
+	\end{definition}
+	В евклидовом пространстве есть стандартная норма $\parallel x \parallel = \sqrt{g(x, x)}$. 
 	$L_2[0, 1]$ --- множество функций, квадрат которых интегрируем по Риману.\\
 	$(f, g) = \int\limits_0^1 f(x) \overline{g(x)}\,dx$\\
 	$\parallel f \parallel_2 = \sqrt{\int\limits_0^1 |f(x)|^2\,dx}$\\
@@ -1412,7 +1510,7 @@
 		$f_k' = 1+k \cdot cos(xk^2)$\end{center}
 	$max \{|f(x)-f_k(x)|+|f'(x)-f_k'(x)|\} = max \{|\cfrac{1}{k}sin(xk^2)|+|1-1-k\cdot cos(xk^2)|\} \to \infty$, то есть, не сходится по $\mu(f)$.\\ \\
 	Обратное утверждение верно. При сходимости по $\mu(f)$ получим, что $|f(x)-f_k(x)|\to 0$, то есть сходится по норме.\\ \\
-	\noindent \textbf{Домашнее задание 4}\begin{enumerate}
+	\subsection{Домашнее задание 4}\begin{enumerate}
 		\item
 		$B(x, y) = \{x^2+axy+4y^2 \leqslant 1\}$\\
 		При каких $a$ на множестве $\mathbb{R}^2$ существует норма $\nu$ такая, что $B(x, y)$ --- единичный шар относительно нее? \\Найдите в этом случае
@@ -1430,29 +1528,31 @@
 		Существует ли убывающая последовательность непустых замкнутых ограниченных множеств с пустым пересечением (в произвольном метрическом пространстве)?
 		\item
 		Доказать, что шар в нормированном пространстве является выпуклым множеством. То есть доказать, что если $x, y$ принадлежат шару, то и весь отрезок $[x, y]$ принадлежит шару.\end{enumerate}
-	\section *{Лекция 5}
-	\noindent Множество \textbf{замкнутое}, если оно включает свою границу.\\ \\
+	
+	\newpage
+	\section{Лекция 5}
+	\subsection{Теорема Минковского}
+	\begin{definition} Множество \textbf{замкнутое}, если оно включает свою границу.\end{definition}
+	\begin{definition}	
 	$V$ --- линейное пространство, $\nu$ --- \textbf{норма} на $V$ ($\nu : V \to$ $\mathbb{R}$ $\geqslant 0$) если:\begin{enumerate}
 		\item $\nu(\bar x) > 0$, $\bar x \neq \bar 0$, $\nu(\bar 0) = \bar 0$
 		\item $\nu(\alpha \bar x) = |\alpha|\nu(\bar x)$
 		\item $\nu(\bar x + \bar y) \leq \nu(\bar x) + \nu(\bar y)$ для $\forall x, y \in V, \forall \alpha$\\
 		$\nu (x) = |x|$\end{enumerate}
-	~\\
-	$\mathbb{R}^2$, $\nu(\bar x) - ?,~ \nu(\bar v ) - ?$\\
-	$B_1^{\nu}(\bar 0) = B_1^{\nu}$
-	
-	\ \\
-	\ \\
-	
-	\textbf{Теорема Минковского.}
-	Множество $B \subset \mathbb{R}^n$ является единичным шаром с центром 0 $B_1^{\nu}(0)$ относительно какой-либо нормы $\nu$ тогда и только тогда, когда $B$:\begin{enumerate}
-		\item замкнуто
-		\item ограничено ($B \subset B_M^E$)
-		\item содержит окрестность нуля (то есть $B \supset B_\varepsilon^\nu(0)$)
-		\item выпукло
-		\item центрально симметрично (если $\bar x \in B$, то и $-\bar x \in B$)
-	\end{enumerate}
-	\begin{proof}[Доказательство]
+	\end{definition}
+	%$\mathbb{R}^2$, $\nu(\bar x) - ?,~ \nu(\bar v ) - ?$\\
+	%$B_1^{\nu}(\bar 0) = B_1^{\nu}$
+
+	\begin{theorem}[Минковского]
+		Множество $B \subset \mathbb{R}^n$ является единичным шаром с центром 0 $B_1^{\nu}(0)$ относительно какой-либо нормы $\nu$ тогда и только тогда, когда $B$:\begin{enumerate}
+			\item замкнуто
+			\item ограничено ($B \subset B_M^E$)
+			\item содержит окрестность нуля (то есть $B \supset B_\varepsilon^\nu(0)$)
+			\item выпукло
+			\item центрально симметрично (если $\bar x \in B$, то и $-\bar x \in B$)
+		\end{enumerate}
+	\end{theorem}
+	\begin{proof}
 		 Для начала зададим нужную норму. Если $B$ удовлетворяет свойствам 1--5, то определим норму $\nu$ по следующему алгоритму:
 		\begin{enumerate}
 			\item Ясно, что граница единичного шара -- это единичная сфера $S_1^\nu(0)$. Запишем её уравнение.
@@ -1478,7 +1578,7 @@
 		\begin{enumerate}
 			\item Любой единичный шар $B$ содержит окрестность нуля.
 				
-			$\blacktriangleright$ 
+			
 			Пусть \[\bar x = \begin{pmatrix}
 			x_1 \\
 			...\\
@@ -1530,7 +1630,7 @@
 				
 			\end{enumerate}
 			
-			Из доказанных выше утверждений напрямую следует факт, что $B$ -- единичный шар относительно нормы $\nu$ если и только если выполнены вышеуказанные свойства.
+			Из доказанных выше утверждений напрямую следует факт, что $B$ -- единичный шар относительно нормы $\nu$, если и только если выполнены вышеуказанные свойства.
 		
 	\end{proof}
 	\textbf{Пример 1.}\\
@@ -1551,40 +1651,54 @@
 		$\vartriangle_2 = 4 - \cfrac{a^2}{4} < 0$\end{center}
 	В этом случае множество не будет замкнутым, то есть не выполняются все свойства из предыдущей теоремы, значит в этом случае $B$ не будет единичным шаром относительно нормы.\\
 	При $\vartriangle_2 = 0$: $ a = \pm 4$ и $x^2 \pm 4xy+4y^2 \leqslant 1$, $(x \pm 2y)^2 \leqslant 1$. В этом случа получим множество между двумя параллельными прямыми, которое является незамкнутым, то есть в этом случае $B$ тоже не будет единичным шаром относительно нормы.\\
-	Получили, что $B = B_1^{\nu}$ только при $|a| < 4$.\\
-	\\
+	Получили, что $B = B_1^{\nu}$ только при $|a| < 4$.
+	\subsection{Скалярное произведение}
+	\begin{definition}
 	$V$ --- \textbf{евклидово пространство со скалярным произведением}, если задана $V \times V \rightarrow \mathbb{R}$, то есть, на нем задано скалярное произведение $(\bar u, \bar v) \in \mathbb{R}$ такое, что для пространств над $\mathbb{R}$ выполнено:\begin{enumerate}
 		\item $(u, v) = (v, u)$
 		\item $(u'+u'', v) = (u', v)+(u'', v)$
 		\item $\alpha (u, v) = (\alpha u, v) = (u, \alpha v), \alpha \in \mathbb{R}$
 		\item $(u, u) > 0, u \neq \bar 0~ ((u, u) = 0 \Leftrightarrow u=0)$
 	\end{enumerate}
-	Обозначение скалярного произведения: $(u, v)=<u, v>=<u~|~v>$.\\ \\
-	Длина вектора --- это $|v| = \sqrt{(v, v)} \geqslant 0$ (норма).\\
-	$\blacktriangleright$ \begin{center}$|\alpha v| = \sqrt{(\alpha v, \alpha v)} = \sqrt{\alpha^2 (v, v)} = |\alpha||v|$\\
+	Обозначение скалярного произведения: $(u, v)=<u, v>=<u~|~v>$.
+	\end{definition}
+	\begin{proposal}
+	Длина вектора --- это $|v| = \sqrt{(v, v)} \geqslant 0$ (норма).
+	\end{proposal}
+	\begin{proof}
+	\ 	
+	\begin{center}$|\alpha v| = \sqrt{(\alpha v, \alpha v)} = \sqrt{\alpha^2 (v, v)} = |\alpha||v|$\\
 		$|v| > 0$, при $v \neq \bar 0$\\
-		$|u+v| \leqslant |u|+|v| ~~\blacksquare$\end{center}
-	$$cos \widehat{(u, v)} = \cfrac{(u, v)}{|u||v|}, u, v \neq \bar 0$$\\
+		$|u+v| \leqslant |u|+|v|$\end{center}
+	
+	\end{proof}
+	$$cos \widehat{(u, v)} = \cfrac{(u, v)}{|u||v|}, u, v \neq \bar 0$$
+	\begin{definition}
 	$V$ --- \textbf{эрмитово пространство со скалярным произведением}, если задана $V \times V$ $\rightarrow \mathbb{C}$, то есть, на нем задано скалярное произведение $(\bar u, \bar v) \in \mathbb{C}$ такое, что для пространств над $\mathbb{C}$ выполнено:\begin{enumerate}
 		\item $(u, v) = \overline{(v, u)}$
 		\item $(u'+u'', v) = (u', v)+(u'', v)$
 		\item $\alpha (u, v) = (\alpha u, v) = (u, \alpha v), \alpha \in \mathbb{C}$
 		\item $\forall u~ (u, u) \geqslant 0, (u, u) = 0 \Leftrightarrow u=0$
 	\end{enumerate}
+	\end{definition}
 	Как по норме $|w|$ восстановить скалярное произведение $(u, v)$?
 	\begin{center}\includegraphics[scale=0.55]{l5_10.png}\\
 		$|w|^2 = (w, w) = (v-u, v-u) = (v, v) - (u, v) - (v, u) + (u, u) = |v|^2 - 2(u, v) + |u|^2$\end{center}
 	То есть, $(u, v) = \cfrac{1}{2}(|v|^2 + |u|^2 - |v-u|^2)$.\\
 	\\
-	\textbf{Теорема (тождество параллелограмма).}
+	\begin{theorem}[Тождество параллелограмма]
 	Пусть $V$ --- нормированное пространство с нормой $|v|$. На $V$ существует такое скалярное произведение, что $|v| = \sqrt{(v, v)}$ в том и только том случае, когда в $V$ выполняется тождество параллелограмма:\begin{center}
 		$\forall a, b~ |a+b|^2 + |b-a|^2 = 2(|a|^2 + |b|^2)$\end{center}
 	При $c = a+b, d = b-a:$ \begin{center}$c^2+d^2 = 2(a^2+b^2)$\\
 		\includegraphics[scale=0.55]{l5_11.png}\end{center}
-	$\blacktriangleright $ Если для $\forall v ~|v| = \sqrt{<v, v>}$, то $|a+b|^2+|b-a|^2 = <a+b, a+b> + <b-a, b-a> = \\=<a, a> + 2<a, b> + <b, b> +<b, b> - 2<a, b> + <a, a> = 2(|a|^2 + |b|^2)~~ \blacksquare$\\
-	\\
-	$H$ --- \textbf{гильбертово пространство}, если на нем задано скалярное произведение и оно является полным (относительно метрики, порожденной скалярным произведением).\\
-	\\
+	\end{theorem}
+	\begin{proof}
+	Если для $\forall v ~|v| = \sqrt{<v, v>}$, то $|a+b|^2+|b-a|^2 = <a+b, a+b> + <b-a, b-a> = \\=<a, a> + 2<a, b> + <b, b> +<b, b> - 2<a, b> + <a, a> = 2(|a|^2 + |b|^2)$
+	\end{proof}
+	\subsection{Ортогональные системы}
+	\begin{definition}
+	$H$ --- \textbf{гильбертово пространство}, если на нем задано скалярное произведение и оно является полным (относительно метрики, порожденной скалярным произведением).\end{definition}
+	\begin{definition}
 	Набор $\{ \varphi_0, \varphi_1,...,\varphi_n,...\}^{-e}$ называется \textbf{ортогональной системой}, если \\$(\varphi_i, \varphi_j) = \delta_j^i = 
 	\left\{  
 	\begin{array}{lcl}  
@@ -1592,31 +1706,35 @@
 	0, i \neq j \\
 	\end{array}   
 	\right.  
-	$\\
+	$
+	\end{definition}
 	Формально хотим представить $f = \sum\limits_{n=0}^{\infty} c_n \varphi_n$.\begin{center}
 		$(f, \varphi_j) = c_j(\varphi_j, \varphi_j)$\\ 
 		$(\varphi_j, \varphi_j) = 1$\\ 
 		$c_j = \cfrac{(f, \varphi_j)}{\parallel \varphi_j \parallel^2} = (f, \varphi_j)$\end{center} $c_j$ --- коэффициенты Фурье по ортогональной системе.\\ \\
-	\textbf{Теорема.}
+	\begin{theorem}
 	Если $\varphi_j$ --- ортогональная система, тогда следующие условия эквивалентны:\begin{enumerate}
 		\item система $\{\varphi_j\}$ является базисом, то есть $f = \sum\limits_{n=0}^{\infty}c_n \varphi_n$
 		\item выполнение равенства Парсеваля $\parallel f \parallel^2 = \sum\limits_{n=0}^{\infty}c_k^2$
 		\item система является полной, то есть $\exists y \neq 0: (\varphi_j, y) = 0$
 	\end{enumerate}
+	\end{theorem}
 	Хотим приблизить $f$ и минимизировать $\parallel f - \sum\limits_{k=0}^n \alpha_k \varphi_k \parallel \to min$.\\
 	$(f - \sum\limits_{k=0}^n \alpha_k \varphi_k, f - \sum\limits_{k=0}^n \alpha_k \varphi_k) =$ (так как система ортогональна) $= (f, f) - 2\sum\limits_{k=0}^n \alpha_k (f, \varphi_k) +\\+\sum\limits_{k=0}^n \alpha_k^2 (\varphi_k, \varphi_k) = (c_k=(f, \varphi_k),~ (\varphi_k, \varphi_k)=1) = \parallel f \parallel^2 + \sum\limits_{k=0}^n (\alpha_k - c_k)^2 - \sum\limits_{k=0}^n c_k^2$\\
 	Выбором $\alpha$ хотим минимизировать, минимальная норма будет там, где совпадают $\alpha_k = c_k$.\\
 	\\
 	$a = \{1, x, x^2,..., x^n\}$ --- пространство $\mathbb{R}_{n+1}$ многочленов степени $\leqslant n$ на $[-1, 1]$, где скалярное произведение $\int\limits_{-1}^1 f(x)g(x)\,dx$. Применим к $a$ процесс Грама-Шмидта, получим $b$.\begin{center}
 		$a \to b = \{P_0(x)=1\}$\end{center}
-	\textbf{Многочлены Лежандра:} \begin{center}$P_k(x) = \cfrac{1}{2^k k!}\cfrac{d^k}{dx^k}((x^2-1)^k)^{(k)}, k=1,..,n$\end{center}\begin{description} 
+	\begin{definition}
+	\textbf{Многочленами Лежандра} называются многочлены вида:
+	\begin{center}$P_k(x) = \cfrac{1}{2^k k!}\cfrac{d^k}{dx^k}((x^2-1)^k)^{(k)}, k=1,..,n$\end{center}\begin{description} 
 		\item[k=0:] $P_0(x)=1$
 		\item[k=1:] $P_1(x)=\cfrac{1}{2}(x^2-1)'=x$
 		\item[k=2:] $P_2(x)=\cfrac{1}{8}((x^2-1)^2)''=\cfrac{1}{8}(4x(x^2-1)'=\cfrac{3x^2-1}{2}$
 		\item[k=3:] $P_3(x)=\cfrac{1}{48}((x^2-1)^3)'''=\cfrac{1}{2}(5x^3-3x)$\end{description}
-	$\parallel P_1(x) \parallel = \sqrt{\int\limits_{-1}^1 x \cdot x\,dx} = \sqrt{\cfrac{2}{3}}$\\
-	\\
-	\textbf{Домашнее задание 5}\begin{enumerate}
+	$\parallel P_1(x) \parallel = \sqrt{\int\limits_{-1}^1 x \cdot x\,dx} = \sqrt{\cfrac{2}{3}}$
+	\end{definition}
+	\subsection{Домашнее задание 5}\begin{enumerate}
 		\item
 		\begin{enumerate}
 			\item Проверить ортогональность $P_2(x)$ и $P_3(x)$ относительно $<f, g> =\\= \int\limits_{-1}^1 f(x)g(x)\,dx$.
@@ -1630,8 +1748,11 @@
 		\end{enumerate}
 		\item
 		Выразить скалярное произведение через длину вектора в эрмитовом пространстве.\end{enumerate}
-	\section *{Лекция 6}
-	\noindent \textbf{Многочлены Чебышева 1 рода.}
+	
+	\newpage
+	\section{Лекция 6}
+	\subsection{Многочлены Чебышева 1 рода}
+	\begin{definition}\textbf{Многочленами Чебышева 1 рода}  называются следующие многочлены:
 	\begin{center}
 		$T_0(x) = 1$ \\
 		$T_1(x) = x$\\
@@ -1655,33 +1776,45 @@
 			10 & $512x^{10}-1280x^8+1120x^6-400x^4+50x^2-1$ \\ \hline
 		\end{tabular}
 	\end{center}
-	Для главного члена в формуле $T_n(x)=2^{n-1}x^n+..., n\geqslant 1$.\\
-	$\blacktriangleright$ По индукции:\begin{center}
-		$T_{n+1}(x)=2xT_n(x)-T_{n-1}(x)=2x2^{n-1}x^n+\cdots-2^{n-2}x^{n-1}=2^nx^{n+1}+...$ верно для $n+1. ~~\blacksquare$\end{center}
+	\end{definition}
+	\begin{statement}
+	Для главного члена в формуле $T_n(x)=2^{n-1}x^n+..., n\geqslant 1$.
+	\end{statement}
+	\begin{proof} По индукции:\begin{center}
+		$T_{n+1}(x)=2xT_n(x)-T_{n-1}(x)=2x2^{n-1}x^n+\cdots-2^{n-2}x^{n-1}=2^nx^{n+1}+...$ верно для $n+1. $\end{center}
+	\end{proof}
 	Графики многочленов $T_0(x),~ T_1(x),~ T_2(x)$:\begin{center}
 		\includegraphics[scale=0.5]{T0T1T2.jpg} \end{center}
 	Графики многочленов $T_3(x),~ T_4(x),~ T_5(x)$:\begin{center}
 		\includegraphics[scale=0.5]{T3T4T5.jpg} \end{center}	
 	График многочлена $T_{10}(x)$:\begin{center}
 		\includegraphics[scale=0.5]{T10.jpg} \end{center} 
-	\textbf{Теорема.}
-	$T_n(cos \varphi)=cos(n\varphi)$\\
-	\\
-	\textbf{Следствие.}
-	$T_n(x)=cos(n ~ arccos~x)$ при $ x \in [-1, 1]$\\
-	\\
-	\textbf{Следствие.}
-	$T_n(x)=\cfrac{(x+\sqrt{x^2-1})^n+(x-\sqrt{x^2-1})^n}{2}$ при $ |x| \geqslant 1$
-	\begin{center}
-		$x=cos~\varphi$\\
-		$cos(2\varphi)=2x^2-1$\\
-		$cos(3\varphi)=4x^3-3x$\\
-		$\cdots$\\
-		$cos(n\varphi)+cos((n-2)\varphi)=2cos \bigg(\cfrac{n+n-2}{2}~\varphi \bigg)cos \bigg(\cfrac{n-n+2}{2}~\varphi \bigg)=2cos((n-1)\varphi)cos \varphi$\\
-		~\\
-		$T_n(x)=0 \Leftrightarrow cos(n\varphi)=0 \Leftrightarrow n\varphi=\pi k +\cfrac{\pi}{2}=\pi\cfrac{(2k+1)}{2}, \varphi \in [0, \pi]$\\
-		$\varphi=\pi\cfrac{(2k+1)}{2n} \Leftrightarrow x=arccos \bigg(\cfrac{2k+1}{n}~\pi \bigg)$\end{center}
-	\textbf{Многочлены Чебышева 2 рода.}
+	\begin{theorem}
+		$T_n(cos \varphi)=cos(n\varphi)$
+	\end{theorem}
+	\begin{proof}
+		\
+		\begin{center}
+			$x=cos~\varphi$\\
+			$cos(2\varphi)=2x^2-1$\\
+			$cos(3\varphi)=4x^3-3x$\\
+			$\cdots$\\
+			$cos(n\varphi)+cos((n-2)\varphi)=2cos \bigg(\cfrac{n+n-2}{2}~\varphi \bigg)cos \bigg(\cfrac{n-n+2}{2}~\varphi \bigg)=2cos((n-1)\varphi)cos \varphi$\\
+			~\\
+			$T_n(x)=0 \Leftrightarrow cos(n\varphi)=0 \Leftrightarrow n\varphi=\pi k +\cfrac{\pi}{2}=\pi\cfrac{(2k+1)}{2}, \varphi \in [0, \pi]$\\
+			$\varphi=\pi\cfrac{(2k+1)}{2n} \Leftrightarrow x=arccos \bigg(\cfrac{2k+1}{n}~\pi \bigg)$\end{center}
+	\end{proof}
+	\begin{consequence}
+		\ 
+		\begin{itemize}
+			\item $T_n(x)=cos(n ~ arccos~x)$ при $ x \in [-1, 1]$
+			\item $T_n(x)=\cfrac{(x+\sqrt{x^2-1})^n+(x-\sqrt{x^2-1})^n}{2}$ при $ |x| \geqslant 1$
+		\end{itemize}
+	\end{consequence}
+	
+	\subsection{Многочлены Чебышева 2 рода}
+	\begin{definition}
+	\textbf{Многочленами Чебышева 2 рода} называются следующие многочлены:
 	\begin{center} $U_n(x)=\cfrac{1}{n+1}T_{n+1}'(x)$ при $ n \geqslant 0$\end{center}
 	\begin{center}
 		\begin{tabular}{|l|l|}
@@ -1699,60 +1832,80 @@
 			9 & $512x^9-1024x^7+672x^5-160x^3+10x$ \\ \hline
 			10 & $1024x^{10}-2304x^8+1792x^6-560x^4+60x^2-1$ \\ \hline
 		\end{tabular}
-	\end{center} 
+	\end{center}
+	\end{definition} 
 	Графики многочленов $U_0(x),~ U_1(x),~ U_2(x)$:\begin{center}
 		\includegraphics[scale=0.5]{U0U1U2.jpg} \end{center}
 	Графики многочленов $U_3(x),~ U_4(x),~ U_5(x)$:\begin{center}
 		\includegraphics[scale=0.5]{U3U4U5.jpg} \end{center}	
 	График многочлена $U_{10}(x)$:\begin{center}
 		\includegraphics[scale=0.5]{U10.jpg} \end{center}
-	\textbf{Теорема.}
-	$U_{n-1}(cos \varphi)sin \varphi = sin(n \varphi)$\\
-	\\
-	\textbf{Теорема.}
-	$U_n(x)=\cfrac{(x+\sqrt{x^2-1})^{n+1}+(x-\sqrt{x^2-1})^{n+1}}{\sqrt{x^2-1}}$ при $ |x| \leqslant 1$
-	\begin{center}
-		$sin(n\varphi)=sin\varphi ~ U_{n-1}(x),$ $ U_{n-1}=\cfrac{sin(n\varphi)}{sin \varphi}$\\
-		$U_{n-1}(x) = 0 \Leftrightarrow n\varphi=\pi k,$ $\varphi=\cfrac{\pi k}{n}$
-	\end{center}
-	\textbf{Свойство.}
-	Старший коэффициент многочлена $T_n(x)$ равен $2^{n-1}$, а старший коэффициент многочлена $U_n(x)$ равен $2^n$.\\
-	\newpage
-	\noindent \textbf{Теорема.}\begin{enumerate}
-		\item При $n \geqslant 1$ многочлен $T_n(x)$ имеет на отрезке [-1, 1] ровно $n$ корней $cos\cfrac{(2k-1)\pi}{2n}, k=1,..,n.$
-		\item Корни многочлена $U_n(x)$ (они же - экстремумы многочлена $T_{n+1}(x)$) также принадлежат отрезку [-1, 1]: это числа $cos\cfrac{\pi k}{n+1}, k=1,...,n.$
-	\end{enumerate}
-	\textbf{Следствие.}\begin{center}
-		$T_n(x)=2^{n-1} \bigg(x-cos~\cfrac{\pi}{2n}\bigg) \bigg(x-cos~\cfrac{3\pi}{2n}\bigg)\cdots \bigg(x-cos(2n-1)\cfrac{\pi}{2n} \bigg)$\\
-		~\\
-		$U_n(x)=2^n \bigg(x-cos~\cfrac{\pi}{n+1}\bigg) \bigg(x-cos~\cfrac{2\pi}{n+1} \bigg)\cdots \bigg(x-cos ~n\cfrac{\pi}{n+1}\bigg)$\end{center}
-	\textbf{Следствие.}
-	Многочлен $T_n(x)$ степени $n$ на отрезке $[-1, 1]$ достигает своих экстремальных значений, равных 1 и -1 в $n+1$ точке, включая концы отрезка.\\ \\
-	Пример: $n=6$ (график многочленов $T_6(x)$ и $U_5(x)$).\begin{center}
+	\begin{theorem}
+		\ 
+		\begin{enumerate}
+			\item $U_{n-1}(cos \varphi)sin \varphi = sin(n \varphi)$
+			\item $U_n(x)=\cfrac{(x+\sqrt{x^2-1})^{n+1}+(x-\sqrt{x^2-1})^{n+1}}{\sqrt{x^2-1}}$ при $ |x| \leqslant 1$
+		\end{enumerate}
+	\end{theorem}
+	\begin{proof}
+		\ 
+		\begin{enumerate}
+			\item $sin(n\varphi)=sin\varphi ~ U_{n-1}(x),$ $ U_{n-1}=\cfrac{sin(n\varphi)}{sin \varphi}$
+			\item $U_{n-1}(x) = 0 \Leftrightarrow n\varphi=\pi k,$ $\varphi=\cfrac{\pi k}{n}$
+		\end{enumerate}
+	\end{proof}
+	\begin{notice}
+		Старший коэффициент многочлена $T_n(x)$ равен $2^{n-1}$, а старший коэффициент многочлена $U_n(x)$ равен $2^n$.
+	\end{notice}
+	\begin{theorem}
+		\ 
+		\begin{enumerate}
+			\item При $n \geqslant 1$ многочлен $T_n(x)$ имеет на отрезке [-1, 1] ровно $n$ корней $cos\cfrac{(2k-1)\pi}{2n}, k=1,..,n.$
+			\item Корни многочлена $U_n(x)$ (они же - экстремумы многочлена $T_{n+1}(x)$) также принадлежат отрезку [-1, 1]: это числа $cos\cfrac{\pi k}{n+1}, k=1,...,n.$
+		\end{enumerate}
+	\end{theorem}
+	\begin{consequence}
+		\ \begin{center}
+			$T_n(x)=2^{n-1} \bigg(x-cos~\cfrac{\pi}{2n}\bigg) \bigg(x-cos~\cfrac{3\pi}{2n}\bigg)\cdots \bigg(x-cos(2n-1)\cfrac{\pi}{2n} \bigg)$\\
+			~\\
+			$U_n(x)=2^n \bigg(x-cos~\cfrac{\pi}{n+1}\bigg) \bigg(x-cos~\cfrac{2\pi}{n+1} \bigg)\cdots \bigg(x-cos ~n\cfrac{\pi}{n+1}\bigg)$\end{center}
+	\end{consequence}
+	\begin{consequence}
+		Многочлен $T_n(x)$ степени $n$ на отрезке $[-1, 1]$ достигает своих экстремальных значений, равных 1 и -1 в $n+1$ точке, включая концы отрезка.
+	\end{consequence}
+	\textbf{Пример}: $n=6$ (график многочленов $T_6(x)$ и $U_5(x)$).\begin{center}
 		\includegraphics[scale=0.5]{T6U5.jpg} \end{center}
-	\textbf{Уклонение от нуля.}\\
-	Пусть $f$ --- функция на отрезке $[-1, 1]$. Как измерить, насколько она далека от нуля?\\
+	\subsection{Уклонение от нуля и норма Чебышева}
+	Пусть $f$ --- функция на отрезке $[-1, 1]$. Как измерить, насколько она далека от нуля?
+	\begin{definition}
 	Норма Чебышева \begin{center}$|f|_0=\underset{[-1, 1]}{max}|f(x)|$ (максимум модуля на данном отрезке)\end{center}
 	и \begin{center}$|f|_1=\int\limits_{-1}^1 |f(x)|\,dx$ (площадь под графиком на данном отрезке).\end{center}
-	Пусть $|| \cdot ||$ --- норма на пространстве многочленов (например, одна из двух упомянутых). Многочлен $f(x)=x^n+\cdots$ степени $n$ со старшим коэффициентом 1 называется наименее уклняющимся от нуля относительно данной нормы, если для любого другого такого многочлена $g(x)=x^n+\cdots$ всегда $\parallel f \parallel \leqslant \parallel g \parallel$.\\
-	\\
+	\end{definition}
+	\begin{definition}
+	Пусть $|| \cdot ||$ --- норма на пространстве многочленов (например, одна из двух упомянутых). Многочлен $f(x)=x^n+\cdots$ степени $n$ со старшим коэффициентом 1 называется \textbf{наименее уклоняющимся от нуля} относительно данной нормы, если для любого другого такого многочлена $g(x)=x^n+\cdots$ всегда $\parallel f \parallel \leqslant \parallel g \parallel$.
+	\end{definition}
 	\textbf{Пример 1.}\\
 	Относительно нормы Чебышева $|f|_0$ уклонение от нуля многочлена $\widetilde{T_3}(x)=\cfrac{1}{4}~T_3(x)=\\=x^3-\cfrac{3}{4}x$ равно\begin{center} $|\cfrac{1}{4}~T_3(x)|_0=\cfrac{1}{4}~|T_3(x)|_0=\cfrac{1}{4}$~,\end{center} а, например, для многочлена $x^3$ имеем $|x^3|_0=1$.\\ \\
-	\textbf{Теорема.}\begin{enumerate}
-		\item (Чебышев) Наименее уклоняющимся от нуля на отрезке $[-1, 1]$ относительно нормы Чебышева\begin{center} $|f|_0=\underset{[-1, 1]}{max}|f(x)|$ \end{center} является многочлен $\widetilde T_n(x)=\cfrac{1}{2^{n-1}}T_n(x)$.
-		\item (Коркин, Золотарев) Наименее уклоняющимся от нуля на отрезке $[-1, 1]$ относительно нормы \begin{center}$|f|_1=\int\limits_{-1}^1 |f(x)|\,dx$ \end{center} является многочлен $\widetilde U_n(x)=\cfrac{1}{2^{n-1}}U_n(x).$
-	\end{enumerate}
+	\begin{theorem}
+		\ 
+		\begin{enumerate}
+			\item (Чебышев) Наименее уклоняющимся от нуля на отрезке $[-1, 1]$ относительно нормы Чебышева\begin{center} $|f|_0=\underset{[-1, 1]}{max}|f(x)|$ \end{center} является многочлен $\widetilde T_n(x)=\cfrac{1}{2^{n-1}}T_n(x)$.
+			\item (Коркин, Золотарев) Наименее уклоняющимся от нуля на отрезке $[-1, 1]$ относительно нормы \begin{center}$|f|_1=\int\limits_{-1}^1 |f(x)|\,dx$ \end{center} является многочлен $\widetilde U_n(x)=\cfrac{1}{2^{n-1}}U_n(x).$
+		\end{enumerate}
+	\end{theorem}
 	Дано: многочлен $f(x)=x^n+\cdots$ на $[-1, 1]$\\
 	Надо найти: $g(x)=c \cdot x^n+\cdots$, приближающий $f(x)$ в смысле $|\cdots|_1$ или $|\cdots|_0$.\\
-	$g \approx f \Leftrightarrow f-g$ --- многочлен, наименее уклоняющийся от нуля, то есть $f(x)-g(x) = \widetilde U_n(x)$ или $\widetilde T_n(x)$.\\
-	\\
-	\textbf{Следствие.}
-	Наименее уклоняющийся от нуля на отрезке $[a, b]$ многочлен степени $n$ относительно нормы Чебышева на этом отрезке $|f|_0=\underset{[a, b]}{max}|f(x)|$ --- это \begin{center}$\overline T_n(x) = \cfrac{(b-a)^n}{2^{2n-1}}T_n \bigg(\cfrac{2x-(b+a)}{b-a} \bigg)$.\end{center}
-	Идея доказательства: сделать замену переменных $y=\cfrac{2x-(b+a)}{b-a}$, где $x\in [a, b]$, а $y \in [-1, 1]$, и свести задачу к поиску многочлена, наименее уклоняющегося от нуля на отрезке $[-1, 1]$.\\
-	\\
+	$g \approx f \Leftrightarrow f-g$ --- многочлен, наименее уклоняющийся от нуля, то есть $f(x)-g(x) = \widetilde U_n(x)$ или $\widetilde T_n(x)$.
+	\begin{consequence}
+		Наименее уклоняющийся от нуля на отрезке $[a, b]$ многочлен степени $n$ относительно нормы Чебышева на этом отрезке $|f|_0=\underset{[a, b]}{max}|f(x)|$ --- это \begin{center}$\overline T_n(x) = \cfrac{(b-a)^n}{2^{2n-1}}T_n \bigg(\cfrac{2x-(b+a)}{b-a} \bigg)$.\end{center}
+	\end{consequence}
+	\begin{proof}[Идея доказательства]
+		Сделать замену переменных $y=\cfrac{2x-(b+a)}{b-a}$, где $x\in [a, b]$, а $y \in [-1, 1]$, и свести задачу к поиску многочлена, наименее уклоняющегося от нуля на отрезке $[-1, 1]$.
+	\end{proof}
 	\textbf{Пример 2.}\\
 	Наименее уклоняющийся от нуля на отрезке $[0, 1]$ многочлен степени $n$ --- это многочлен $$\overline T_n(x)=\cfrac{1}{2^{2n-1}}T_n(2x-1).$$\\
-	В частности, $\overline T_2(x)=\cfrac{1}{2^{4-1}}T_2(2x-1)=\cfrac{1}{8}(2(2x-1)^2-1)=x^2-x+\cfrac{1}{8}$.\\
+	В частности, $\overline T_2(x)=\cfrac{1}{2^{4-1}}T_2(2x-1)=\cfrac{1}{8}(2(2x-1)^2-1)=x^2-x+\cfrac{1}{8}$.
+	\begin{notice}
 	\noindent Скалярное произведение непрерывных функций на отрезке $[-1, 1]:$ $$<f, g>=\int\limits_{-1}^1 \cfrac{f(x)g(x)}{\sqrt{1-x^2}}\,dx.$$\\
 	Ему соответствует норма: $$\parallel f \parallel=\sqrt{<f,f>}=\sqrt{\int\limits_{-1}^1 \cfrac{f(x)^2}{\sqrt{1-x^2}}\,dx}.$$\\
 	Соотношения ортогональности: $$<T_m, T_n>=
@@ -1765,7 +1918,8 @@
 	\right.  
 	$$
 	\\
-	Наилучшее приближение функции $f$ многочленом степени $\leqslant n:$ $$\widetilde f(x)=\sum\limits_{i=0}^n\cfrac{<T_i, f>}{<T_i, T_i>}T_i(x)$$\\
+	Наилучшее приближение функции $f$ многочленом степени $\leqslant n:$ $$\widetilde f(x)=\sum\limits_{i=0}^n\cfrac{<T_i, f>}{<T_i, T_i>}T_i(x)$$
+	\end{notice}
 	\textbf{Пример 3.}\\
 	$f(x)=x^3$ на $[-1, 1]$ разложить в ряд по многочленам Чебышева.
 	\begin{center}
@@ -1815,13 +1969,14 @@
 	\end{description}
 	Подставим:
 	$$\cfrac{2T_{n+1}+2xT_{n+1}'-T_n'}{n+2} \overset{?}{=}\cfrac{2x\Big(2T_n+2xT_n'-T_{n-1}'\Big)}{n+1}-\cfrac{2T_{n-1}+2xT_{n-1}'-T_{n-2}'}{n}$$
-	\textbf{Домашнее задание 6}\begin{enumerate}
+	\subsection{Домашнее задание 6}
+	\begin{enumerate}
 		\item
 		Доказать, что $U_1(x)+U_3(x)+\dots+U_{2n-1}(x)=U_{n-1}(x)U_n(x).$
 		\item
 		Доказать, что $U_0(x)+U_2(x)+\dots+U_{2n-2}(x)=U_{n-1}^2(x).$
 		\item 
-		а)\footnote{Условие этой задачи несколько изменено по сравнению с тем, которое было на лекции.} Введем на множестве многочленов $\mathbb{R} [x]_{<n}$ 
+		а)Введем на множестве многочленов $\mathbb{R} [x]_{<n}$ 
 		степени меньше $n$ от одной переменной скалярное произведение
 		$$
 		\langle f,g
@@ -1842,19 +1997,25 @@
 		Для $f(x)=x^x$ найти наилучшее линейное приближение на отрезке $[1, 4]$ в норме $\underset{[1, 4]}{max}|f(x)|$.
 	\end{enumerate}
 	
-	\section *{Лекция 7}
-	\noindent \textbf{Матричные нормы.}\\
-	Рассмотрим линейное пространство матриц размера $n$ над комплексными числами. Норма $||\cdot||$ на пространстве $V=M_{n\times n}(\mathbb{C})$ называется \textbf{матричной нормой}, если \begin{enumerate}[start=0]
-		\item Это норма.
-		\item Норма $||\cdot ||$ является \textbf{согласованной с операцией умножения}, то есть $$||AB|| \leq ||A|| \; ||B|| \text{ для любых } A, B \in M_{n\times n}(\mathbb{C}),$$ (удовлетворяет свойству субмультипликативности).\end{enumerate}
-	Свойства:\begin{enumerate}
-		\item  $||E||\geqslant1$\\
-		$\blacktriangleright ||E||\leqslant||E||~||E|| \Rightarrow ||E||\geqslant1~~\blacksquare$
-		\item Матричная норма называется \textbf{сохраняющей единицу}, если $||E||=1.$
-		\item Матричная норма называется \textbf{согласованной с векторной нормой} $|\cdot|$ на $\mathbb{C}^n$, если $$|M\bar x|\leqslant||M||\cdot |\bar x|.$$
-	\end{enumerate}
-	Если $||M||$ --- матричная норма, тогда $||M||_*=||M||x,~x\geqslant1$ --- тоже матричная норма.\\
-	\\
+	
+	\newpage
+	\section{Лекция 7}
+	\subsection{Матричные нормы}
+	\begin{definition}
+		Рассмотрим линейное пространство матриц размера $n$ над комплексными числами. Норма $||\cdot||$ на пространстве $V=M_{n\times n}(\mathbb{C})$ называется \textbf{матричной нормой}, если \begin{enumerate}[start=0]
+			\item Это норма.
+			\item Норма $||\cdot ||$ является \textbf{согласованной с операцией умножения}, то есть $$||AB|| \leq ||A|| \; ||B|| \text{ для любых } A, B \in M_{n\times n}(\mathbb{C}),$$ (удовлетворяет свойству субмультипликативности).\end{enumerate}
+	\end{definition}
+	\begin{lemma}[Свойства]
+		\ 
+		\begin{enumerate}
+			\item  $||E||\geqslant1$\\
+			$\blacktriangleright ||E||\leqslant||E||~||E|| \Rightarrow ||E||\geqslant1~~\blacksquare$
+			\item Матричная норма называется \textbf{сохраняющей единицу}, если $||E||=1.$
+			\item Матричная норма называется \textbf{согласованной с векторной нормой} $|\cdot|$ на $\mathbb{C}^n$, если $$|M\bar x|\leqslant||M||\cdot |\bar x|.$$
+			\item Если $||M||$ --- матричная норма, тогда $||M||_*=||M||x,~x\geqslant1$ --- тоже матричная норма.
+		\end{enumerate}
+	\end{lemma}
 	\textbf{Примеры матричных норм.}
 	\begin{itemize}
 		\item \textbf{$||M||=\sum\limits_{i, j=1,...,n}|m_{ij}|$}\\
@@ -1901,21 +2062,33 @@
 		$$||M||=||\Sigma||$$
 		Норма Фробениуса $||M||_F$ согласована с евклидовой $|\bar x|_2$.
 	\end{itemize}
-	Пусть на $\mathbb{C}^n$ задана норма $|\cdot |_1$. Функция из $M_n$ в $\mathbb{C}$: $||M||=\underset{x\neq 0}{max} \cfrac{|Mx|}{|x|}$ называется \textbf{матричной нормой, индуцированной векторной нормой} $|\cdot|$.\\ \\
+	\subsection{Индуцированные нормы}
+	\begin{definition}
+		Пусть на $\mathbb{C}^n$ задана норма $|\cdot |_1$. Функция из $M_n$ в $\mathbb{C}$: $||M||=\underset{x\neq 0}{max} \cfrac{|Mx|}{|x|}$ называется \textbf{матричной нормой, индуцированной векторной нормой} $|\cdot|$.
+	\end{definition}
 	Если $c=|x|$, $y=\cfrac{x}{|x|}$, $|y|=1$, то $Mx=M(cy)=cMy.$ А так как $c>0$, то $|Mx|=c|My|$.\\
 	То есть, здесь максимум достигается, так как: $$\underset{x\neq y}{max}\cfrac{|Mx|}{|x|}=\underset{|y|=1}{max}\cfrac{c|My|}{c}=\underset{|y|=1}{max}|My|=\underset{y\in B_1}{max}|My|$$.\begin{center}
 		\includegraphics[scale=0.6]{l7_1.png}\end{center}
-	\textbf{Теорема.}\\
-	Пусть $||\cdot ||_{\star}$ индуцирована $|\cdot |_{\star}$, тогда \begin{enumerate}
-		\item $||\cdot ||$ --- матричная норма, выполнены свойства 0, 1
-		\item $||\cdot ||_{\star}$ согласована с $|\cdot |_{\star}$\\
-		$\blacktriangleright |Mx|_{\star}\underset{x\neq \bar 0}{=}\cfrac{|Mx|_{\star}}{|x|_{\star}}|x|_{\star} \leqslant \underset{z}{max}\cfrac{|Mz|_{\star}}{|z|_{\star}}|x|_{\star}=||M||_{\star}|x|_{\star}~~\blacksquare$
-		\item $||\cdot ||_{\star}$ сохраняет единицу\\
-		$\blacktriangleright ||E||_{\star}=\underset{|y|_{\star}=1}{max}|Ey|_{\star}=\underset{|y|_{\star}=1}{max}|y|_{\star}=1~~\blacksquare$ 
-		\item Если существует другая норма $||\cdot ||$, согласованная с $||\cdot||_{\star}$, то $||M|| \geqslant ||M||_{\star}$ ($||M_{\star}||$ минимальна).\\
-		$\blacktriangleright$ Пусть $|y|_{\star}=1$ и $||M||_{\star}=|My|_{\star}$, тогда длина матрицы $||M||_{\star}=|My|_{\star} \leqslant ||M||\cdot |y|_{\star}=||M||~~\blacksquare$
+	\begin{theorem}
+		Пусть $||\cdot ||_{\star}$ индуцирована $|\cdot |_{\star}$, тогда
+		\begin{enumerate}
+			\item $||\cdot ||$ --- матричная норма, выполнены свойства 0, 1
+			\item $||\cdot ||_{\star}$ согласована с $|\cdot |_{\star}$
+			\item $||\cdot ||_{\star}$ сохраняет единицу
+			\item Если существует другая норма $||\cdot ||$, согласованная с $||\cdot||_{\star}$, то $||M|| \geqslant ||M||_{\star}$ ($||M_{\star}||$ минимальна).
+		\end{enumerate}
+	\end{theorem}
+	\begin{proof}
+		\ 
+	 \begin{enumerate}
+		\item Очевидно.
+		\item $ |Mx|_{\star}\underset{x\neq \bar 0}{=}\cfrac{|Mx|_{\star}}{|x|_{\star}}|x|_{\star} \leqslant \underset{z}{max}\cfrac{|Mz|_{\star}}{|z|_{\star}}|x|_{\star}=||M||_{\star}|x|_{\star}$
+		\item $ ||E||_{\star}=\underset{|y|_{\star}=1}{max}|Ey|_{\star}=\underset{|y|_{\star}=1}{max}|y|_{\star}=1$ 
+		\item Пусть $|y|_{\star}=1$ и $||M||_{\star}=|My|_{\star}$, тогда длина матрицы $||M||_{\star}=|My|_{\star} \leqslant ||M||\cdot |y|_{\star}=||M||$
 	\end{enumerate}
-	\textbf{Теорема.}
+	\end{proof}
+	\begin{theorem}
+		\ 
 	\begin{center}
 		\begin{tabular}{ | c || c |}
 			\hline
@@ -1926,13 +2099,17 @@
 			$||\bar x||_\infty = \underset{1\leq i \leq n}{max} |x_i|$ & $||M||_{\infty} = \underset{i}{max}|M_i|_1=\underset{i}{max}\sum\limits_j|m_{ij}|$ \\ \hline
 		\end{tabular}
 	\end{center}
+	\end{theorem}
+	\begin{proof}
 	Докажем, что векторной норме $|\bar x|_1$ соответствует индуцированная матричная норма $||M||_1$.\\
-	$\blacktriangleright$ \begin{center} $M=(M^1,\cdots, M^n)$\\
+	\begin{center} $M=(M^1,\cdots, M^n)$\\
 		$Mx+M^1x_1+\cdots M^nx_n$\\
 		$|Mx|_1\leqslant |M^1x_1+\cdots+M^nx_n|_1\leqslant|x_1|~|M^1|_1+\cdots+|M^n|_1~|x_n|\leqslant(|x_1|+\cdots+|x_n|)\underset{j}{max}|M^j|_1\leqslant|\bar x|_1\underset{j}{max}|M^j|_1$\end{center}
 	Пусть максимум достигается на первом столбце, тогда $|Mx|_1=\sum\limits_{j=1}^n|m_{1j}|=||M||_1$.\\
-	Оценка достигается, значит это и есть максимум.$~~\blacksquare$\\ \\
-	\textbf{Домашнее задание 7}\begin{enumerate}
+	Оценка достигается, значит это и есть максимум.
+	\end{proof}
+	\subsection{Домашнее задание 7}
+	\begin{enumerate}
 		\item Доказать, что векторной норме $|\bar x|_2$ соответствует индуцированная матричная норма $\sigma(M)$.
 		\item Доказать, что векторной норме $|\bar x|_{\infty}$ соответствует индуцированная матричная норма $||M||_{\infty}$.
 		\item Является ли матричной нормой $f(A)=\underset{1\leqslant i,~j\leqslant n}{max}|a_{ij}|$ ?
@@ -1953,30 +2130,32 @@
 		\end{center}
 	\end{enumerate}
 	
-	\section *{Лекция 8}
-	\noindent Повторим несколько утверждений из предыдущих лекций.\\
-	В каждом векторном пространстве $V(\mathbb{R},~\mathbb{C})$ есть норма $\nu(\bar x)\geqslant 0$ такая, что:\begin{enumerate}
-		\item $\nu(\bar x) > 0$, $\bar x \neq \bar 0$, $\nu(\bar 0) = \bar 0$
-		\item $\nu(\alpha \bar x) = |\alpha|\nu(\bar x)$
-		\item $\nu(\bar x + \bar y) \leq \nu(\bar x) + \nu(\bar y)$ для $\forall x, y \in V, \forall \alpha$
-	\end{enumerate}
-	Норма Гёльдера: \begin{center}
-		$|\bar x|_1=|x_1|+\cdots +|x_n|$\\
-		$|\bar x|_2=\sqrt{|x_1|^2+\cdots +|x_n|^2}$\\
-		$|\bar x|_{\infty}=\underset{i=1,\cdots,n}{max}|x_i|$ \end{center}
-	В конечномерном пространстве все нормы эквивалентны.\\
-	\\
-	Свойства матричной нормы $M\in M_n$: 
-	\begin{enumerate}
-		\item $||AB||\leqslant ||A||\cdot ||B||$
-		\item Матричная норма $||\cdot||$ на $M_n$ согласована с векторной нормой $|\cdot|$ на $\mathbb{C}^n$, если $$|Ax|\leqslant ||A||\cdot |x|$$
-		\item Матричная норма сохраняет единицу, если $||E||=1$.
-	\end{enumerate}
-	Норма Фробениуса: $||A||_F=\sqrt{\sum\limits_{i,j}|a_{ij}|^2}$.\\
-	Она удовлетворяет свойствам 1, 2 для $|\cdot|_{1,~2,~\infty}$, но не удовлетворяет свойству 3.\\
-	\\
-	$||\cdot||_{\star}$ --- индуцированная матричная норма, если верно $$||A||_{\star}=\underset{\bar x \neq \bar 0}{max} \cfrac{|Ax|_{\star}}{|x|_{\star}}=\bigg( y=\cfrac{\bar x}{|\bar x|_{\star}} \bigg)=\underset{|y|_{\star}=1}{max}|Ay|_{\star}$$
-	\\
+	
+	\newpage
+	\section{Лекция 8}
+	\subsection{Сингулярный и Спектральный радиусы}
+	Повторим несколько утверждений из предыдущих лекций.
+	\begin{itemize}
+		\item В каждом векторном пространстве $V(\mathbb{R},~\mathbb{C})$ есть норма $\nu(\bar x)\geqslant 0$ такая, что:\begin{enumerate}
+			\item $\nu(\bar x) > 0$, $\bar x \neq \bar 0$, $\nu(\bar 0) = \bar 0$
+			\item $\nu(\alpha \bar x) = |\alpha|\nu(\bar x)$
+			\item $\nu(\bar x + \bar y) \leq \nu(\bar x) + \nu(\bar y)$ для $\forall x, y \in V, \forall \alpha$
+		\end{enumerate}
+		\item Норма Гёльдера: \begin{center}
+			$|\bar x|_1=|x_1|+\cdots +|x_n|$\\
+			$|\bar x|_2=\sqrt{|x_1|^2+\cdots +|x_n|^2}$\\
+			$|\bar x|_{\infty}=\underset{i=1,\cdots,n}{max}|x_i|$ \end{center}
+		\item В конечномерном пространстве все нормы эквивалентны.
+		\item Свойства матричной нормы $M\in M_n$: 
+		\begin{enumerate}
+			\item $||AB||\leqslant ||A||\cdot ||B||$
+			\item Матричная норма $||\cdot||$ на $M_n$ согласована с векторной нормой $|\cdot|$ на $\mathbb{C}^n$, если $$|Ax|\leqslant ||A||\cdot |x|$$
+			\item Матричная норма сохраняет единицу, если $||E||=1$.
+		\end{enumerate}
+		\item Норма Фробениуса: $||A||_F=\sqrt{\sum\limits_{i,j}|a_{ij}|^2}$. Она удовлетворяет свойствам 1, 2 для $|\cdot|_{1,~2,~\infty}$, но не удовлетворяет свойству 3.
+		\item $||\cdot||_{\star}$ --- индуцированная матричная норма, если верно $$||A||_{\star}=\underset{\bar x \neq \bar 0}{max} \cfrac{|Ax|_{\star}}{|x|_{\star}}=\bigg( y=\cfrac{\bar x}{|\bar x|_{\star}} \bigg)=\underset{|y|_{\star}=1}{max}|Ay|_{\star}$$
+	\end{itemize}
+	
 	\textbf{Пример 1.}\\
 	Найти $y$ для матрицы $A$ \[A=\begin{pmatrix}
 	1 & 2\\
@@ -1994,51 +2173,70 @@
 	0\\
 	1
 	\end{pmatrix}\]
-	~\\ \\
-	Сингулярное разложение матрицы (SVD): $$A=V\Sigma U^*$$
-	$V, ~U$ --- унитарные матрицы ($U^*=U^{-1}$)
-	\[\Sigma=\begin{pmatrix}
-	\sigma_1 & \cdots & 0\\
-	\vdots & \ddots & \vdots\\
-	0 & \cdots & \sigma_n
-	\end{pmatrix}\]
-	Тогда $$(A^*A)^*=A^*A=U\Sigma V^* V \Sigma U^*=U\Sigma^2 U^*$$
-	\[\Sigma^2=\begin{pmatrix}
-	\sigma_1^2 & \cdots & 0\\
-	\vdots & \ddots & \vdots\\
-	0 & \cdots & \sigma_n^2
-	\end{pmatrix}\]
-	$\sigma_1 \geqslant \sigma_2 \geqslant \cdots \geqslant \sigma_n \geqslant 0$ --- сингулярные значения матрицы.\\
-	Аналогично $$AA^*=V\Sigma^2 V^*$$
-	Здесь $U^1,\cdots,U^n$ --- ортонормированный базис из собственных векторов матрицы $A^*A$, а $V^1,\cdots,V^n$ --- ортонормированный базис из собственных векторов матрицы $AA^*$. $U^i$ и $V^i$ --- правые и левые сингулярные векторы соответственно.\\ \\
-	$||A||_2=\sigma(A)$\\
-	$\blacktriangleright$ $$||A||_2=\underset{|x|_2=1}{max}|Ax|_2=\underset{|x|_2=1}{max} \sqrt{(Ax, Ax)}=\underset{|x|_2=1}{max}\sqrt{(Ax)^*Ax}=\underset{|x|_2=1}{max}\sqrt{x^*A^*Ax}$$
-	$$A^*A\overset{\alpha\to U}{\rightarrow}\Sigma^2$$
-	$$x=\sum\limits_i \alpha_i U_i,~\sum\limits_i|\alpha_i|^2=1$$
-	$$xx^*=\sum\limits_i \alpha_i U_i U_i^* \alpha_i=\sum\limits_i \alpha_i U_i U_i^{-1} \alpha_i=\sum\limits_i|\alpha_i|^2$$
-	\begin{center}
-		\includegraphics[scale=0.6]{l8_2.png}\end{center}
-	Подставим в $||A||_2$:\begin{center}
-		$||A||_2=\underset{|x|_2=1}{max}\sqrt{x^*A^*Ax}=$(в базисе $U$)$=\underset{|x|_2=1}{max}\sqrt{x\Sigma^2 x^*}=\underset{\alpha:~\sum\limits_i |\alpha_i|^2=1}{max}\sqrt{\sum\limits_i \sigma_i^2 |\alpha_i|^2}=\underset{\alpha:~\sum\limits_i |\alpha_i|^2=1}{max}\sqrt{\sigma_1^2|\alpha_1|^2+\cdots+\sigma_n^2|\alpha_n|^2} \leqslant \underset{\alpha:~\sum\limits_i |\alpha_i|^2=1}{max} \sqrt{\sigma_1^2(|\alpha_1|^2+\cdots+|\alpha_n|^2)}=\sigma_1~~\blacksquare$\end{center}
-	~\\ \\Норма Фробениуса: $$||A||_F=\sqrt{\sum\limits_{i,j}|a_{ij}|^2}=\sqrt{tr(A^*A)}$$
-	\[A^*A=\begin{pmatrix}
-	\bar a_{11} & \cdots & \bar a_{n1}\\
-	* & * & *\\
-	* & * & *
-	\end{pmatrix} \cdot \begin{pmatrix}
-	a_{11} & * & *\\
-	\vdots & * & *\\
-	a_{n1} & * & *
-	\end{pmatrix} = \begin{pmatrix}
-	\bar a_{11} a_{11}+\cdots+\bar a_{n1} a_{n1} & * & *\\
-	* & * & *\\
-	* & * & *
-	\end{pmatrix}=\] \[=\begin{pmatrix}
-	|a_{11}|^2+\cdots +|a_{n1}|^2 & * & *\\
-	* & * & *\\
-	* & * & *
-	\end{pmatrix}\]
-	Получим $\sqrt{tr(A^*A)}=\sqrt{\sigma_1^2+\sigma_2^2+\cdots+\sigma_n^2}$.
+	\begin{definition}
+		\textbf{Сингулярным радиусом} матрицы $A$ называется её максимальное сингулярное значение: $\sigma(A) = \sigma_1$.
+	\end{definition}
+	\begin{theorem}
+		$||A||_2=\sigma(A)$
+	\end{theorem}
+	\begin{proof}
+		Вспомним, что такое сингулярное разложение матрицы (SVD): $$A=V\Sigma U^*$$
+		$V, ~U$ --- унитарные матрицы ($U^*=U^{-1}$). Найдём сингулярное разложение для матрицы $AA^*$.
+		\[\Sigma=\begin{pmatrix}
+		\sigma_1 & \cdots & 0\\
+		\vdots & \ddots & \vdots\\
+		0 & \cdots & \sigma_n
+		\end{pmatrix}\]
+		Тогда $$(A^*A)^*=A^*A=U\Sigma V^* V \Sigma U^*=U\Sigma^2 U^*$$
+		\[\Sigma^2=\begin{pmatrix}
+		\sigma_1^2 & \cdots & 0\\
+		\vdots & \ddots & \vdots\\
+		0 & \cdots & \sigma_n^2
+		\end{pmatrix}\]
+		$\sigma_1 \geqslant \sigma_2 \geqslant \cdots \geqslant \sigma_n \geqslant 0$ --- сингулярные значения матрицы.\\
+		Аналогично $$AA^*=V\Sigma^2 V^*$$
+		Здесь $U^1,\cdots,U^n$ --- ортонормированный базис из собственных векторов матрицы $A^*A$, а $V^1,\cdots,V^n$ --- ортонормированный базис из собственных векторов матрицы $AA^*$. $U^i$ и $V^i$ --- правые и левые сингулярные векторы соответственно.
+		
+		Теперь перейдём к доказательству.
+		$$||A||_2=\underset{|x|_2=1}{max}|Ax|_2=\underset{|x|_2=1}{max} \sqrt{(Ax, Ax)}=\underset{|x|_2=1}{max}\sqrt{(Ax)^*Ax}=\underset{|x|_2=1}{max}\sqrt{x^*A^*Ax}$$
+		$$A^*A\overset{\alpha\to U}{\rightarrow}\Sigma^2$$
+		$$x=\sum\limits_i \alpha_i U_i,~\sum\limits_i|\alpha_i|^2=1$$
+		$$xx^*=\sum\limits_i \alpha_i U_i U_i^* \alpha_i=\sum\limits_i \alpha_i U_i U_i^{-1} \alpha_i=\sum\limits_i|\alpha_i|^2$$
+		\begin{center}
+			\includegraphics[scale=0.6]{l8_2.png}\end{center}
+		Подставим в $||A||_2$:\begin{center}
+			$||A||_2=\underset{|x|_2=1}{max}\sqrt{x^*A^*Ax}=$(в базисе $U$)$=\underset{|x|_2=1}{max}\sqrt{x\Sigma^2 x^*}=\underset{\alpha:~\sum\limits_i |\alpha_i|^2=1}{max}\sqrt{\sum\limits_i \sigma_i^2 |\alpha_i|^2}=\underset{\alpha:~\sum\limits_i |\alpha_i|^2=1}{max}\sqrt{\sigma_1^2|\alpha_1|^2+\cdots+\sigma_n^2|\alpha_n|^2} \leqslant \underset{\alpha:~\sum\limits_i |\alpha_i|^2=1}{max} \sqrt{\sigma_1^2(|\alpha_1|^2+\cdots+|\alpha_n|^2)}=\sigma_1$\end{center}
+	\end{proof}
+	
+	\begin{definition}
+		\textbf{Матричная норма Фробениуса}:
+		$$||A||_F=\sqrt{\sum\limits_{i,j}|a_{ij}|^2}=\sqrt{tr(A^*A)}$$
+	\end{definition}
+	\begin{statement}
+		$||A||_F = \sqrt{\sigma_1^2+\sigma_2^2+\cdots+\sigma_n^2}$.
+	\end{statement}
+	\begin{proof}
+		\[A^*A=\begin{pmatrix}
+		\bar a_{11} & \cdots & \bar a_{n1}\\
+		* & * & *\\
+		* & * & *
+		\end{pmatrix} \cdot \begin{pmatrix}
+		a_{11} & * & *\\
+		\vdots & * & *\\
+		a_{n1} & * & *
+		\end{pmatrix} = \begin{pmatrix}
+		\bar a_{11} a_{11}+\cdots+\bar a_{n1} a_{n1} & * & *\\
+		* & * & *\\
+		* & * & *
+		\end{pmatrix}=\] \[=\begin{pmatrix}
+		|a_{11}|^2+\cdots +|a_{n1}|^2 & * & *\\
+		* & * & *\\
+		* & * & *
+		\end{pmatrix}\]
+		Получим $\sqrt{tr(A^*A)}=\sqrt{\sigma_1^2+\sigma_2^2+\cdots+\sigma_n^2}$.
+	\end{proof}
+	
+	
 	\[A=\begin{pmatrix}
 	1 & 2\\
 	0 & 3\\
@@ -2048,20 +2246,30 @@
 		$||A||_F \geqslant ||A||_2 \geqslant \cfrac{1}{\sqrt{n}}||A||_F=\sqrt{7}$\\
 		$||A||_1=\underset{j}{max}\sum\limits_i|a_{ij}|=max\{1,~5\}=5$\\
 		$||A||_{\infty}=\underset{i}{max}\sum\limits_j|a_{ij}|=max\{3,~3\}=3$\end{center}
-	\textbf{Спектральный радиус} $\rho(A)=|\lambda_{max}(A)|=\underset{i}{max}|\lambda_i|$\\
-	\\
-	\textbf{Теорема.} Если матричная норма $||\cdot||$ согласована с некоторой векторной нормой, то $$||A|| \geqslant \rho(A)$$
-	$\blacktriangleright Av=\lambda v,~v\neq 0$ --- для собственного значения существует собственный вектор.\\
-	Из определения согласованности векторной нормы: $|Av|\leqslant ||A||\cdot|v|$.
-	С другой стороны, $|Av|=|\lambda v|=|\lambda||v|$. Получим, что $|\lambda|\leqslant ||A||$, то есть, норма не меньше, чем $\lambda.~~\blacksquare$\\
-	\\
-	\textbf{Следствие.} В частности $$\sigma(A)\geqslant \rho(A)$$
+	\begin{definition}
+		\textbf{Спектральный радиус} матрицы $A$ -- это модуль её наибольшего собственного значения. $\rho(A)=|\lambda_{max}(A)|=\underset{i}{max}|\lambda_i|$
+	\end{definition}
+	\begin{theorem}
+		Если матричная норма $||\cdot||$ согласована с некоторой векторной нормой, то $$||A|| \geqslant \rho(A)$$
+	\end{theorem} 
+	\begin{proof}
+		$ Av=\lambda v,~v\neq 0$ --- для собственного значения существует собственный вектор.\\
+		Из определения согласованности векторной нормы: $|Av|\leqslant ||A||\cdot|v|$.
+		С другой стороны, $|Av|=|\lambda v|=|\lambda||v|$. Получим, что $|\lambda|\leqslant ||A||$, то есть, норма не меньше, чем $\lambda.$
+	\end{proof}
+	\begin{consequence}
+		 В частности $$\sigma(A)\geqslant \rho(A)$$
+	\end{consequence}
 	\begin{center}
 		\includegraphics[scale=0.6]{l8_3.png}\end{center}
-	Здесь $\sigma_i(A)$ --- сингулярные собственные значения, а $\rho(A)~(\lambda_i(A))$ --- собственные значения.\\ \\
-	\textbf{Утверждение.} Для любой матрицы $A$ и $\forall~ \varepsilon>0$ существует матричная норма $||\cdot ||$, согласованная с некоторой векторной нормой $|\cdot|$, и такая, что $$||A||\leqslant \rho(A) + \varepsilon$$
-	С помощью $\varepsilon$ можно добиться равенства.\\
-	\\
+	Здесь $\sigma_i(A)$ --- сингулярные собственные значения, а $\rho(A)~(\lambda_i(A))$ --- собственные значения.
+	
+	\begin{statement}
+		Для любой матрицы $A$ и $\forall~ \varepsilon>0$ существует матричная норма $||\cdot ||$, согласованная с некоторой векторной нормой $|\cdot|$, и такая, что $$||A||\leqslant \rho(A) + \varepsilon$$
+		С помощью $\varepsilon$ можно добиться равенства.
+	\end{statement}
+	
+	\subsection{Приближённое разложение меньшего ранга}
 	Разложение матрицы $A_{n \times n}=A_{n \times r} \cdot A_{r \times
 		n}$, $A$ ранга $r$.\\
 	\textbf{Как получить приближенное разложение матрицы?}\\
@@ -2081,8 +2289,9 @@
 	0 & \cdots & \cdots & \cdots & 0\\
 	\end{pmatrix}\]
 	$$X=A_r=V\Sigma_r U^*$$
-	Для $||A||=||A||_2=\sigma(A)$. \\
-	$\blacktriangleright U^1,\cdots, U^n$ --- правый сингулярный базис.
+	Для $||A||=||A||_2=\sigma(A)$.
+	\begin{proof}[Корректность]
+	$U^1,\cdots, U^n$ --- правый сингулярный базис.
 	Пусть $\bar w \in <U^1,\cdots,U^{r+1}> \cap~ Ker X$, где $Ker X \geqslant n-r$, а $X$ ранга $\leqslant r$, $|w|=1$.\\
 	Так как $|Mx|\leqslant ||M||,~|x|=1$, тогда \begin{center}
 		$(||X-A||_2)^2 \geqslant(|(X-A)w|_2)^2=|Xw-Aw|^2=|Aw|^2=$ (в базисе $U$) =
@@ -2119,7 +2328,8 @@
 	\vdots & \cdots & \cdots & \ddots & \vdots\\
 	0 & \cdots & \cdots & \cdots & \sigma_n\\
 	\end{pmatrix}\Bigg|\Bigg|_2=\sigma_{r+1}\]
-	Достигается для $r$, значит она оптимальна (меньше нет). Для евклидовой нормы это лучшее приближение. $\blacksquare$\\ \\
+	Достигается для $r$, значит она оптимальна (меньше нет). Для евклидовой нормы это лучшее приближение.
+	\end{proof}
 	\textbf{Пример 2.}\\
 	Найти наилучшее приближение $A_1$ ранга 1 для матрицы $A$ в норме $||\cdot||_2$ и найти $||A-A_1||_2$, где
 	\[A = \begin{pmatrix}
@@ -2154,8 +2364,7 @@
 	4 & 8 & 8
 	\end{pmatrix}\]
 	Ранг матрицы $A_1$ равен $1$, $||A-A_1||_2=9$ (наибольший из остальных $\sigma$).\\ \\
-	\noindent \textbf{Домашнее задание 8}
-	
+	\subsection{Домашнее задание 8}
 	\begin{enumerate}
 		\item
 		Найти наилучшее приближение ранга 2 по фробениусовой норме для матрицы 
@@ -2174,34 +2383,43 @@
 		\item Доказать утверждение из лекции: для любой матрицы $A$ и $\forall~ \varepsilon>0$ существует матричная норма $||\cdot ||$, согласованная с некоторой векторной нормой $|\cdot|$ и такая, что $$||A||\leqslant \rho(A) + \varepsilon .$$
 	\end{enumerate}
 	
-	\section *{Лекция 9}
-	\noindent\textbf{Оценка собственных значений}\\ \\
+	
+	\newpage
+	\section{Лекция 9}
+	\subsection{Оценка собственных значений}
 	\textbf{Оценка:} Если $||A||$ --- матричная норма, согласованная с некоторой векторной нормой, то $$|\lambda|\leqslant||A||,$$ где $\lambda$ --- любое собственное значение матрицы $A$.\\
 	\\
 	То же можно применить и к обратной матрице.\\
-	\\
-	\textbf{Утверждение.} Если матрица $A$ --- невырожденная, то для любого собственного значения $\lambda$ верно $$\cfrac{1}{||A^{-1}||}\leqslant|\lambda|\leqslant||A||$$
-	~\\Все собственные значения матрицы $A$ находятся между двумя кольцами.
+	\begin{statement}
+		Если матрица $A$ --- невырожденная, то для любого собственного значения $\lambda$ верно $$\cfrac{1}{||A^{-1}||}\leqslant|\lambda|\leqslant||A||$$
+	\end{statement} 
+	Иными словами, все собственные значения матрицы $A$ находятся между двумя кольцами.
 	\begin{center}
 		\includegraphics[scale=0.8]{l9_1.png}
 	\end{center}
-	$\blacktriangleright$ Пусть $\lambda$ --- собстенное значение матрицы $A$, то есть, $A\bar x=\lambda\bar x$ для некоторого $\bar x\neq \bar 0$, тогда
-	\begin{center}
-		$\bar x=\lambda A^{-1} \bar x$\\
-		$\lambda^{-1}\bar x=A^{-1}\bar x$
-	\end{center}
-	То есть, $\lambda^{-1}$ --- собственное значение для матрицы $A^{-1}$.\\
-	\begin{center}
-		$|\lambda^{-1}|\leqslant||A^{-1}||$ (из оценки)\\~\\
-		$|\lambda|^{-1}\leqslant ||A^{-1}||$\\
-		$|\lambda|\geqslant \cfrac{1}{||A^{-1}||}$
-	\end{center}
-	С учетом оценки, получим $$\cfrac{1}{||A^{-1}||}\leqslant|\lambda|\leqslant||A||~~\blacksquare$$ 
-	Матрица называется матрицей \textbf{с диагональным преобладанием}, если каждое из чисел на диагонале больше суммы модулей по строке, то есть, $$\forall i=1,\cdots,n~|a_{ii}|>\sum\limits_{k\neq i}|a_{ik}|.$$
-	~\\
-	\textbf{1-я Теорема Гершгорина.} Все собственные значения матрицы $A_{n \times n}=(a_{ij})$ содержатся в объединении кругов на комплексной плоскости. $$|\lambda-a_{ii}|\leqslant \sum\limits_{k=1, k\neq i}^n|a_{ik}|,~i=1,\cdots n.$$
-	Обозначим: $R_i=\sum\limits_{k=1, k\neq i}^n|a_{ik}|.$\\
-	Каждое из собственных значений $\lambda$ матрицы $A$ всегда расположено в одном из кругов.
+	\begin{proof}
+		Пусть $\lambda$ --- собстенное значение матрицы $A$, то есть, $A\bar x=\lambda\bar x$ для некоторого $\bar x\neq \bar 0$, тогда
+		\begin{center}
+			$\bar x=\lambda A^{-1} \bar x$\\
+			$\lambda^{-1}\bar x=A^{-1}\bar x$
+		\end{center}
+		То есть, $\lambda^{-1}$ --- собственное значение для матрицы $A^{-1}$.\\
+		\begin{center}
+			$|\lambda^{-1}|\leqslant||A^{-1}||$ (из оценки)\\~\\
+			$|\lambda|^{-1}\leqslant ||A^{-1}||$\\
+			$|\lambda|\geqslant \cfrac{1}{||A^{-1}||}$
+		\end{center}
+		С учетом оценки, получим $$\cfrac{1}{||A^{-1}||}\leqslant|\lambda|\leqslant||A||$$ 
+	\end{proof}
+	\begin{definition}
+		Матрица называется матрицей \textbf{с диагональным преобладанием}, если каждое из чисел на диагонале больше суммы модулей по строке, то есть, $$\forall i=1,\cdots,n~|a_{ii}|>\sum\limits_{k\neq i}|a_{ik}|.$$
+	\end{definition} 
+	\begin{theorem}[1-я Теорема Гершгорина]
+		Все собственные значения матрицы $A_{n \times n}=(a_{ij})$ содержатся в объединении кругов на комплексной плоскости. $$|\lambda-a_{ii}|\leqslant \sum\limits_{k=1, k\neq i}^n|a_{ik}|,~i=1,\cdots n.$$
+		
+		Обозначим: $R_i=\sum\limits_{k=1, k\neq i}^n|a_{ik}|.$
+	\end{theorem} 
+	Иными словами, каждое из собственных значений $\lambda$ матрицы $A$ всегда расположено в одном из кругов.
 	\begin{center}
 		\includegraphics[scale=0.8]{l9_2.png}
 	\end{center}
@@ -2216,22 +2434,30 @@
 	Если $\lambda$ --- собственное значение матрицы $A$, то
 	$$|A-\lambda E|=|(A-\lambda E)^T|=|A^T-\lambda E|=0$$
 	Получили, что $\lambda$ --- собственное значение матрицы $A^T$.\\ 
-	У матрицы $A^T$ собственные значения те же, что и у матрицы $A$, а строки $A^T$ --- столбцы $A$, такие что:\\
-	\textbf{Следствие.} Все собственные значения матрицы $A$ содержатся в объединении кругов на комплексной плоскости. $$|\lambda-a_{ii}|\leqslant \sum\limits_{k=1, k\neq i}^n|a_{ki}|,~i=1,\cdots n.$$
-	Обозначим: $C_i=\sum\limits_{k=1, k\neq i}^n|a_{ki}|.$\\
-	\textbf{Доказательство теремы.}\\
-	$\blacktriangleright$ Пусть $\lambda$ --- собственное значение $A$, докажем, что $\lambda$ находится в объединении кругов Гершгорина.\\
-	У каждого собственного значения существует собственный вектор: $$Ax=\lambda x, \bar x\neq \bar 0.$$
-	Пусть, например, $|x_1|$ --- наибольший из модулей $|x_i|$, то есть, $|x_1|\geqslant|x_2|,|x_3|,\cdots,|x_n|$. Тогда из $Ax=\lambda x$ следует
-	\begin{center}
-		$a_{11}x_1+\cdots+a_{1n}x_n=\lambda x_1$\\
-		$(\lambda-a_{11})x_1=a_{12}x_2+\cdots+a_{1n}x_n$\\
-		$|\lambda-a_{11}||x_1|=|a_{12}|x_2+\cdots+a_{1n}x_n|\leqslant\sum\limits_{k=2}^n|a_{1k}||x_k|\leqslant\sum\limits_{k=2}^n|a_{1k}||x_1|=|x_1|R_1$\\
-		$|\lambda-a_{11}|\leqslant R_1=\sum\limits_{k=2}^n|a_{1k}|$
-	\end{center}
-	Получили, что если $x_1$ --- наибольший, то собственное значение попадает в первый круг Гершгорина. И так далее, если $x_n$ --- наибольший, то собственное значение попадет в $n$-ый круг Гершгорина.$~~\blacksquare$\\ \\
-	\textbf{Следствие.} Матрица с диагональным преобладанием является невырожденной.\\
-	$\blacktriangleright$ Доказательство следует из того, что в такой матрице все собственные значения $\lambda\neq 0~~\blacksquare$\\ \\
+	У матрицы $A^T$ собственные значения те же, что и у матрицы $A$, а строки $A^T$ --- столбцы $A$. Тогда получаем следствие:
+	\begin{consequence}
+		Все собственные значения матрицы $A$ содержатся в объединении кругов на комплексной плоскости. $$|\lambda-a_{ii}|\leqslant \sum\limits_{k=1, k\neq i}^n|a_{ki}|,~i=1,\cdots n.$$
+		
+		Обозначим: $C_i=\sum\limits_{k=1, k\neq i}^n|a_{ki}|.$
+	\end{consequence} 
+	\begin{proof}
+		Пусть $\lambda$ --- собственное значение $A$, докажем, что $\lambda$ находится в объединении кругов Гершгорина.\\
+		У каждого собственного значения существует собственный вектор: $$Ax=\lambda x, \bar x\neq \bar 0.$$
+		Пусть, например, $|x_1|$ --- наибольший из модулей $|x_i|$, то есть, $|x_1|\geqslant|x_2|,|x_3|,\cdots,|x_n|$. Тогда из $Ax=\lambda x$ следует
+		\begin{center}
+			$a_{11}x_1+\cdots+a_{1n}x_n=\lambda x_1$\\
+			$(\lambda-a_{11})x_1=a_{12}x_2+\cdots+a_{1n}x_n$\\
+			$|\lambda-a_{11}||x_1|=|a_{12}|x_2+\cdots+a_{1n}x_n|\leqslant\sum\limits_{k=2}^n|a_{1k}||x_k|\leqslant\sum\limits_{k=2}^n|a_{1k}||x_1|=|x_1|R_1$\\
+			$|\lambda-a_{11}|\leqslant R_1=\sum\limits_{k=2}^n|a_{1k}|$
+		\end{center}
+		Получили, что если $x_1$ --- наибольший, то собственное значение попадает в первый круг Гершгорина. И так далее, если $x_n$ --- наибольший, то собственное значение попадет в $n$-ый круг Гершгорина.
+	\end{proof}
+	\begin{consequence}
+		Матрица с диагональным преобладанием является невырожденной.
+	\end{consequence} 
+	\begin{proof}
+		Доказательство следует из того, что в такой матрице все собственные значения $\lambda\neq 0$
+	\end{proof}
 	\textbf{Пример 1.}\\
 	Дана матрица $n\times n$:
 	\[A=\begin{pmatrix}[r]
@@ -2266,11 +2492,16 @@
 	\end{array}
 	\right.
 	$\\ \\
-	Получили, что $\lambda_i\in \mathbb{R},~0\leqslant\lambda_i\leqslant 4$.\\
-	\\
-	Если $\chi_A(\lambda)=(\lambda_1-\lambda)^{k_1}\cdots(\lambda_s-\lambda)^{k_s}$, где $\lambda_i$ различны, то числа $k_i$ называют кратностями соответствующих собственных значений.\\ \\
-	\textbf{2-я Теорема Гершгорина.} Если объединение $U$ $r$ кругов Гершгорина не пересекается с остальными $(n-r)$ кругами, то $U$ содержит ровно $r$ собственных значений с учетом кратностей.\\
-	$\blacktriangleright$ Пусть $D$ --- диагональная часть матрицы $A$
+	Получили, что $\lambda_i\in \mathbb{R},~0\leqslant\lambda_i\leqslant 4$.
+	
+	\subsection{Кратности собственных значений}
+	\begin{definition}
+		Если $\chi_A(\lambda)=(\lambda_1-\lambda)^{k_1}\cdots(\lambda_s-\lambda)^{k_s}$, где $\lambda_i$ различны, то числа $k_i$ называют \textbf{кратностями} соответствующих собственных значений.
+	\end{definition}
+	\begin{theorem}[2-я Теорема Гершгорина] Если объединение $U$ $r$ кругов Гершгорина не пересекается с остальными $(n-r)$ кругами, то $U$ содержит ровно $r$ собственных значений с учетом кратностей.
+	\end{theorem}
+	\begin{proof}
+	Пусть $D$ --- диагональная часть матрицы $A$
 	\[D=\begin{pmatrix}
 	a_{11} & \cdots & 0 \\
 	\vdots & \ddots & \vdots \\
@@ -2290,8 +2521,8 @@
 	\begin{center}
 		\includegraphics[scale=0.8]{l9_4.png}
 	\end{center}
-	Если объединение некоторых $r$ кругов Гершгорина не пересекаются с остальными при $t=1$, то и при $t<1$ тоже, значит каждое из соответствующих $r$ собственных значений $\lambda_i$ двигается из $a_{ii}$ по непрерывной кривой внутри $U.~~\blacksquare$\\
-	\\
+	Если объединение некоторых $r$ кругов Гершгорина не пересекаются с остальными при $t=1$, то и при $t<1$ тоже, значит каждое из соответствующих $r$ собственных значений $\lambda_i$ двигается из $a_{ii}$ по непрерывной кривой внутри $U.$
+	\end{proof}
 	\textbf{Пример 2.}\\
 	Пусть 
 	\[A=\begin{pmatrix}[r]
@@ -2350,8 +2581,8 @@
 	То есть, $\lambda_2',~\lambda_3'\in K_2'=K_2'\cup K_3'$.\\
 	Так как $\{\lambda_1,~\lambda_2,~\lambda_3\}=\{\lambda_1',~\lambda_2',~\lambda_3'\}$ --- те же собственные значения, то $\lambda_1=\lambda_1=5$.\\
 	Значит $\lambda_2'$ и $\lambda_3'$ --- те же, что $\lambda_2$ и $\lambda_3$, то есть, $\lambda_2',~\lambda_3'\in K_2$.\\
-	Итог для матрицы $A$: $\lambda_1=5$, а $\lambda_2,~\lambda_3$ удовлетворяют условию $|\lambda-1|\leqslant 2$.\\ \\
-	\textbf{Домашнее задание 9}\begin{enumerate}
+	Итог для матрицы $A$: $\lambda_1=5$, а $\lambda_2,~\lambda_3$ удовлетворяют условию $|\lambda-1|\leqslant 2$.
+	\subsection{Домашнее задание 9}\begin{enumerate}
 		\item Нарисовать круги Гершгорина для матрицы $A$ и с их помощью оценить собственные значения. Вычислить собственные значения и сравнить результаты.
 		\[A = \begin{pmatrix}
 		5 & 0.3\\
@@ -2372,16 +2603,19 @@
 		\item Доказать, что в номерах 1, 2 и 3 все собственные значения --- положительные действительные числа и оценить их.\\
 		Подсказка: если $\lambda$ --- собственное значение матрицы $A$, то и $\overline \lambda$ --- тоже ее собственное значение, так как $|\overline{A-\lambda E}|=|A-\overline\lambda E|=0$.
 	\end{enumerate}
-	~\\
-	\section *{Лекция 10}
-	\noindent\textbf{Функции от матрицы.}\\
+
+
+	\newpage
+	\section{Лекция 10}
+	\subsection{Функции от матриц}
 	Пусть $A$ --- квадратная матрица ($A\in M_n(\mathbb{C})$)
 	$$A^m=A~ \dot~ ... ~\dot~ A,~A^0=E$$
 	Если $A$ невырожденная, то $$A^{-m}=(A^{-1})^m$$
+	\begin{definition}
 	\textbf{Многочлен от матрицы:} если 
 	$f(x)=a_0+a_1x+\cdots+a_mx^m$, то
-	$f(A)=a_0E+a_1A+\cdots +a_mA^m$ --- тоже матрица.\\
-	\\
+	$f(A)=a_0E+a_1A+\cdots +a_mA^m$ --- тоже матрица.
+	\end{definition}
 	\textbf{Пример 1.}\\
 	\[A = \begin{pmatrix}
 	0 & 1\\
@@ -2399,11 +2633,15 @@
 	0 & 0\\
 	0 & 0\\
 	\end{pmatrix} =0\]
-	\textbf{Утверждение.} Если $C$ --- невырожденная матрица (например, $C=Te \to e'$ --- матрица перехода от базиса $e$ к базису $e'$ в $\mathbb{C}^n$) и $A'=C^{-1}AC$ (то есть, $A'$ --- матрица того же линейного оператора, что и $A$, в новом базисе $e'$ вместо старого $e$), то для любого многочлена $f(x)$ верно $f(A')=C^{-1}f(A)C$.\\
-	$\blacktriangleright$ Если $f(x)=\sum\limits_{i=0}^n a_iA^i$, то $f(A')=\sum\limits_{i=0}^n a_i A'^i=\sum\limits_{i=0}^n a_iC^{-1}AC\cdot C^{-1}AC\cdot C^{-1}\cdots AC=\\=\sum\limits_{i=0}^n a_i C^{-1}A^iC=C^{-1}(\sum\limits_{i=0}^na_iA^i)C=C^{-1}f(A)C~~\blacksquare$\\
-	\\
-	\textbf{Следствие.} $$f(A)=0 \Leftrightarrow f(A')=0$$
-	\\
+	\begin{statement}
+		 Если $C$ --- невырожденная матрица (например, $C=Te \to e'$ --- матрица перехода от базиса $e$ к базису $e'$ в $\mathbb{C}^n$) и $A'=C^{-1}AC$ (то есть, $A'$ --- матрица того же линейного оператора, что и $A$, в новом базисе $e'$ вместо старого $e$), то для любого многочлена $f(x)$ верно $f(A')=C^{-1}f(A)C$.
+	\end{statement}
+	\begin{proof}
+		Если $f(x)=\sum\limits_{i=0}^n a_iA^i$, то $f(A')=\sum\limits_{i=0}^n a_i A'^i=\sum\limits_{i=0}^n a_iC^{-1}AC\cdot C^{-1}AC\cdot C^{-1}\cdots AC=\\=\sum\limits_{i=0}^n a_i C^{-1}A^iC=C^{-1}(\sum\limits_{i=0}^na_iA^i)C=C^{-1}f(A)C$
+	\end{proof} 
+	\begin{consequence}
+		$$f(A)=0 \Leftrightarrow f(A')=0$$
+	\end{consequence}
 	Если $A'$ --- диагональная матрица\[A'=\begin{pmatrix}
 	d_1 & \cdots & 0\\
 	\vdots & \ddots & \vdots\\
@@ -2432,15 +2670,16 @@
 	\vdots & \ddots & \vdots\\
 	0 & \cdots & f(\lambda_n)
 	\end{pmatrix}C^{-1}\]
-	\\
-	\textbf{Жорданова форма.}\\
-	\textbf{Жорданова клетка} --- это матрица вида
-	\[J=J_k(\lambda)=\begin{pmatrix}
-	\lambda &  1 & \cdots & 0\\
-	\vdots & \ddots & 1 & \vdots\\
-	\vdots & 0 & \ddots & 1\\
-	0 & \cdots & \cdots & \lambda
-	\end{pmatrix}C^{-1}\]
+	\subsection{Жорданова форма}
+	\begin{definition}
+		\textbf{Жорданова клетка} --- это матрица вида
+		\[J=J_k(\lambda)=\begin{pmatrix}
+		\lambda &  1 & \cdots & 0\\
+		\vdots & \ddots & 1 & \vdots\\
+		\vdots & 0 & \ddots & 1\\
+		0 & \cdots & \cdots & \lambda
+		\end{pmatrix}C^{-1}\]
+	\end{definition}
 	Например, 
 	\[J_2(0) = \begin{pmatrix}
 	0 & 1\\
@@ -2451,10 +2690,10 @@
 	0 & 5 & 1\\
 	0 & 0 & 5\\
 	\end{pmatrix}\]
-	Например, если $V=P_n=\mathbb{C}[$x$]_{\leqslant n}=\{a_0+a_1x+\cdots +a_nx^n\},~D:V\to V:~f(x) \mapsto f'(x)$ --- дифференцирование. $f$ --- собственный вектор для $D$ тогда и только тогда, когда $Df=\lambda f$, то есть $f'(x)=\lambda f(x)$, где $\lambda$ --- число, тогда $f(x)=a_0=const,~f'(x)=0\cdot f(x)=0$.\\
-	\\
-	\textbf{Базис Маклорена.}\\
-	$$e_0=1,~e_1=\cfrac{x}{1!},\cdots,~e_u=\cfrac{x^u}{u!}$$
+	Например, если $V=P_n=\mathbb{C}[$x$]_{\leqslant n}=\{a_0+a_1x+\cdots +a_nx^n\},~D:V\to V:~f(x) \mapsto f'(x)$ --- дифференцирование. $f$ --- собственный вектор для $D$ тогда и только тогда, когда $Df=\lambda f$, то есть $f'(x)=\lambda f(x)$, где $\lambda$ --- число, тогда $f(x)=a_0=const,~f'(x)=0\cdot f(x)=0$.
+	\begin{definition}
+		\textbf{Базис Маклорена}: $$e_0=1,~e_1=\cfrac{x}{1!},\cdots,~e_u=\cfrac{x^u}{u!}$$
+	\end{definition}
 	В этом базисе
 	$$D(e_k)=\bigg(\cfrac{x^k}{k!}\bigg)'=\cfrac{x^{k-1}}{(k-1)!}=e_{k-1}$$
 	\[D_e = \begin{pmatrix}
@@ -2470,79 +2709,88 @@
 	0 & \cdots & \cdots & \cdots & 0
 	\end{pmatrix}\]
 	(так как $D^k(e_u)=e_{n-k}$ и т.д.)\\
-	\\
-	\textbf{Предложение.} Если $f(x)$ --- многочлен, то
+	\begin{proposal}
+	Если $f(x)$ --- многочлен, то
 	\[f(J_k(\lambda)) = \begin{pmatrix}
 	f(\lambda) & \cfrac{f'(\lambda)}{1!} & \cdots & \cfrac{f^{(k-1)}(\lambda)}{(k-1)!}\\
 	0 & \ddots & \cdots & \cfrac{f^{(k-2)}(\lambda)}{(k-2)!}\\
 	\vdots & 0 & \ddots & \vdots\\
 	0 & \cdots & 0 & f(\lambda)\\
 	\end{pmatrix}\]
-	$\blacktriangleright$ Так как $f(x)=\sum\limits_{i=0}^n a_ix^i$, то достаточно проверить формулу для $f(x)=x^i$. Тогда в каждой клетке получаем $\sum\limits_{i=0}^n a_i\cfrac{(x^i)^{(t)}}{t!}=\cfrac{f^{(t)}(x)}{t!}$ для подходящего $t$. \\
-	Имеем: при $f(x)=x^i$
-	\[f(J_k(\lambda))=\begin{pmatrix}
-	\lambda &  1 & \cdots & 0\\
-	\vdots & \ddots & 1 & \vdots\\
-	\vdots & 0 & \ddots & 1\\
-	0 & \cdots & \cdots & \lambda
-	\end{pmatrix}^i= \bigg( \lambda \begin{pmatrix}
-	1 &  0 & \cdots & 0\\
-	0 & \ddots & 1 & \vdots\\
-	\vdots & 0 & \ddots & 0\\
-	0 & \cdots & 0 & 1
-	\end{pmatrix} + \begin{pmatrix}
-	0 &  1 & \cdots & 0\\
-	\vdots & \ddots & 1 & \vdots\\
-	\vdots & 0 & \ddots & 1\\
-	0 & \cdots & \cdots & 0
-	\end{pmatrix} \bigg)^i=\]
-	$$=(\lambda E+J_k(0))^i=\sum\limits_{t=0}^i\lambda^t J_k(0)^{i-t}C_i^t$$
-	Ненулевые элементы только в клетках с координатами $(a, a+(i-t))_i$, в этих клетках стоит
-	$$\lambda^tC_i^t=\cfrac{\lambda^t i!}{t!(i-t)!},$$
-	при этом
-	$$f^{(i-t)}(\lambda)=\cfrac{i!}{t!}\lambda^t$$
-	\\
-	\textbf{Теорема о Жордановой форме.} Длялюбого линейного оператора $\phi$ в $\mathbb{C}^n$ существует базис (жорданов базис), в котором матрица оператора $\phi$ преобретает вид
-	\[\phi_i=J(\phi) = \begin{pmatrix}
-	J_1 & \cdots & 0\\
-	\vdots & \ddots & \vdots\\
-	0 & \cdots & J_T\\
-	\end{pmatrix},\]
-	где $J_i$ --- жордановы клетки.\\
-	\\
-	Если $A$ --- матрица $n\times n$, что
-	$$\phi_A(\lambda)=det(A-\lambda E)=(\lambda_1 - \lambda)^{k_1}\cdots(\lambda_i - \lambda)^{k_i},$$
-	то $k_i$ --- кратности собственных значений $\lambda_i$.
-	\[ 
-	J(A)=
-	\left(
-	\begin{BMAT}[8pt]{c:cc:ccc:c}{c:cc:ccc:c}
-	\lambda_1 & 0  &  & & 0 & & 0 \\
-	0 & \lambda_2 & 1 &  & 0  & & 0\\
-	& 0 & \lambda_2 &  & & &\\
-	&  & & \lambda_3 & 1 & 0 & \\
-	0& 0 &  & \vdots & \ddots & 1 & 0 \\
-	&  &  & 0 & \cdots & \lambda_3 &  \\
-	0 & 0 &  &  & 0 & & \ddots
-	\end{BMAT} 
-	\right)
-	\]
-	\textbf{Следствие.} Если $J=J(A)$ --- жорданова форма $A$, $C$ --- матрица, в которой по столбцам записан жорданов базис, то
-	$$f(J)=C^{-1}f(A)C \Leftrightarrow f(A)=Cf(J)C^{-1},$$
-	где 
-	\[ 
-	f(J)=
-	\left(
-	\begin{BMAT}[8pt]{c:c:c}{c:c:c}
-	f(J_1) & \cdots  & 0 \\
-	\vdots & f(J_2) & \vdots\\
-	0 & \cdots  & \ddots\\
-	\end{BMAT} 
-	\right)
-	\]
-	\textbf{Аннулирующий многочлен} матрицы $A$ --- такой многочлен $f(x)$, что $f(A)=0$.\\ \\
-	\textbf{Минимальный многочлен} матрицы $A$ (обозначается $m_A(x)$) --- это аннулирующий многочлен наименьшей возможной степени со старшим коэффициентом 1.\\
-	\\
+	\end{proposal}
+	\begin{proof}
+		 Так как $f(x)=\sum\limits_{i=0}^n a_ix^i$, то достаточно проверить формулу для $f(x)=x^i$. Тогда в каждой клетке получаем $\sum\limits_{i=0}^n a_i\cfrac{(x^i)^{(t)}}{t!}=\cfrac{f^{(t)}(x)}{t!}$ для подходящего $t$. \\
+		 Имеем: при $f(x)=x^i$
+		 \[f(J_k(\lambda))=\begin{pmatrix}
+		 \lambda &  1 & \cdots & 0\\
+		 \vdots & \ddots & 1 & \vdots\\
+		 \vdots & 0 & \ddots & 1\\
+		 0 & \cdots & \cdots & \lambda
+		 \end{pmatrix}^i= \bigg( \lambda \begin{pmatrix}
+		 1 &  0 & \cdots & 0\\
+		 0 & \ddots & 1 & \vdots\\
+		 \vdots & 0 & \ddots & 0\\
+		 0 & \cdots & 0 & 1
+		 \end{pmatrix} + \begin{pmatrix}
+		 0 &  1 & \cdots & 0\\
+		 \vdots & \ddots & 1 & \vdots\\
+		 \vdots & 0 & \ddots & 1\\
+		 0 & \cdots & \cdots & 0
+		 \end{pmatrix} \bigg)^i=\]
+		 $$=(\lambda E+J_k(0))^i=\sum\limits_{t=0}^i\lambda^t J_k(0)^{i-t}C_i^t$$
+		 Ненулевые элементы только в клетках с координатами $(a, a+(i-t))_i$, в этих клетках стоит
+		 $$\lambda^tC_i^t=\cfrac{\lambda^t i!}{t!(i-t)!},$$
+		 при этом
+		 $$f^{(i-t)}(\lambda)=\cfrac{i!}{t!}\lambda^t$$
+	\end{proof}
+	\begin{theorem}[О Жордановой форме]
+		Для любого линейного оператора $\phi$ в $\mathbb{C}^n$ существует базис (жорданов базис), в котором матрица оператора $\phi$ преобретает вид
+		\[\phi_i=J(\phi) = \begin{pmatrix}
+		J_1 & \cdots & 0\\
+		\vdots & \ddots & \vdots\\
+		0 & \cdots & J_T\\
+		\end{pmatrix},\]
+		где $J_i$ --- жордановы клетки.\\
+		\\
+		Если $A$ --- матрица $n\times n$, что
+		$$\phi_A(\lambda)=det(A-\lambda E)=(\lambda_1 - \lambda)^{k_1}\cdots(\lambda_i - \lambda)^{k_i},$$
+		то $k_i$ --- кратности собственных значений $\lambda_i$.
+		\[ 
+		J(A)=
+		\left(
+		\begin{BMAT}[8pt]{c:cc:ccc:c}{c:cc:ccc:c}
+		\lambda_1 & 0  &  & & 0 & & 0 \\
+		0 & \lambda_2 & 1 &  & 0  & & 0\\
+		& 0 & \lambda_2 &  & & &\\
+		&  & & \lambda_3 & 1 & 0 & \\
+		0& 0 &  & \vdots & \ddots & 1 & 0 \\
+		&  &  & 0 & \cdots & \lambda_3 &  \\
+		0 & 0 &  &  & 0 & & \ddots
+		\end{BMAT} 
+		\right)
+		\]
+	\end{theorem} 
+	\begin{consequence}
+		Если $J=J(A)$ --- жорданова форма $A$, $C$ --- матрица, в которой по столбцам записан жорданов базис, то
+		$$f(J)=C^{-1}f(A)C \Leftrightarrow f(A)=Cf(J)C^{-1},$$
+		где 
+		\[ 
+		f(J)=
+		\left(
+		\begin{BMAT}[8pt]{c:c:c}{c:c:c}
+		f(J_1) & \cdots  & 0 \\
+		\vdots & f(J_2) & \vdots\\
+		0 & \cdots  & \ddots\\
+		\end{BMAT} 
+		\right)
+		\]
+	\end{consequence}
+	\begin{definition}
+	\textbf{Аннулирующий многочлен} матрицы $A$ --- такой многочлен $f(x)$, что $f(A)=0$.
+	\end{definition}
+	\begin{definition}
+		\textbf{Минимальный многочлен} матрицы $A$ (обозначается $m_A(x)$) --- это аннулирующий многочлен наименьшей возможной степени со старшим коэффициентом 1.
+	\end{definition}
 	\textbf{Пример 2.}\\
 	$\chi_A(\lambda)$ --- аннулирующий многочлен для $A$ (по теореме Гамильтона-Кели).
 	$$\chi_A(A)=C^{-1}\chi_A(J)C=C^{-1}((\lambda_1E-J)^{k_1}\cdots(\lambda_iE-J)^{k_i})C =$$  
@@ -2562,7 +2810,7 @@
 	Как вычислить $f(A)$, зная минимальный многочлен $m_A(x)=(x-\lambda_1)^{m_1}\cdots (x-\lambda_s)^{m_s}$?\\
 	Если $f(x)=m_A(x)q(x)+R(x)$ --- деление с остатком, где $degR(x)<d$ ($d=deg m_A(x)$ --- степень минимального многочлена), то 
 	$f(A)=0\cdot q(A)+R(A)=R(A)$ --- \textbf{многочлен Лагранжа-Сильвестра}.\\
-	\\
+	\begin{definition}
 	$\lambda_1,\cdots,\lambda_s$ --- спектр, $R_1,\cdots,R_s$ --- соответствующие алгебраические кратности.\\
 	\[
 	\begin{BMAT}[8pt]{ccc}{ccc}
@@ -2572,29 +2820,39 @@
 	\end{BMAT} 
 	\]
 	$$k_1+\cdots +k_s=u$$
-	$P$ --- многочлен Лагранжа-Сильвестра.
+	$P$ --- \textbf{многочлен Лагранжа-Сильвестра}:
 	$$P(\lambda_j)=f(\lambda_k)$$
 	$$ \vdots$$
 	$$P^{(k_j-1)}(\lambda_j)=f^{(k_j-1)}(\lambda_j),~j=1,\cdots, s$$
-	Определяющий многочлен
+	\end{definition}
+	\begin{definition}
+		\textbf{Определяющий многочлен}
 	$$\psi(\lambda)=(\lambda-\lambda_1)^{k_1}\cdots(\lambda-\lambda_s)^{k_s}$$
 	многочлены
 	$$\phi_j=\cfrac{\psi(\lambda)}{(\lambda-\lambda_j)^{k_j}}$$
+	\end{definition}
 	Тогда искомый многочлен
 	$$P(\lambda)=\sum\limits_{j=1}^s(\alpha_{j1}+\alpha_{j2}(\lambda-\lambda_j)+\cdots +\alpha_{jk_j}(\lambda-\lambda_j)^{k_j-1})\psi_j(\lambda)$$
 	$$\alpha_{jl}=\cfrac{1}{(l-1)!}\bigg(\cfrac{f(\lambda)}{\psi_j(\lambda)}\bigg)^{(l-1)}_{\lambda=\lambda_j},~~l=1,\cdots,k_j,~j=1,\cdots,s$$
 	$$P(\lambda)=\sum\limits_{j=1}^s(f(\lambda_j)\phi_{j1}(\lambda)+f'(\lambda_j)\phi_{j2}(\lambda)+\cdots+f^{(k_j-1)}(\lambda_j)\phi_{jk_j}(\lambda))$$
-	Спектральное разложение:
+	
+	\begin{definition}
+		\textbf{Спектральное разложение}:
 	$$P(A)=\sum\limits_{j=1}^s(f(\lambda_j)z_{j1}+f'(\lambda_j)z_{j2}+\cdots+f^{(k_j-1)}(\lambda_j)z_{jk_j}),$$
-	где $z_{ij}$ --- спектральные компоненты матрицы $A$.\\ \\
-	\textbf{Замечание.} Спектральные компоненты зависят только от матрицы.\\
-	\\
-	\textbf{Утверждение.} $z_{ij}$ являются многочленами от матрицы $A$ степени меньшей, чем степень минимального многочлена.\\
-	\\
-	\textbf{Утверждение.} Для любой матрицы $A$ компонентные матрицы (спектральные компоненты) являются линейно независимыми.\\
-	\\
-	\textbf{Утверждение.} Спектральные компоненты $z_{ij}$ коммутируют между собой и с $A$.\\
-	\\
+	где $z_{ij}$ --- спектральные компоненты матрицы $A$.
+	\end{definition}
+	\begin{definition}
+		Спектральные компоненты зависят только от матрицы.
+	\end{definition}
+	\begin{statement}
+		$z_{ij}$ являются многочленами от матрицы $A$ степени меньшей, чем степень минимального многочлена.
+	\end{statement} 
+	\begin{statement}
+		Для любой матрицы $A$ компонентные матрицы (спектральные компоненты) являются линейно независимыми.
+	\end{statement}
+	\begin{statement}
+		Спектральные компоненты $z_{ij}$ коммутируют между собой и с $A$.
+	\end{statement}
 	Задача: Написать формулу для $A^{-1}$ в виде многочлена от $A$.\\
 	$\blacktriangleright$ 
 	\begin{center}
@@ -2603,16 +2861,19 @@
 		$A((-1)^n(A^{n-1}+C_1A^{n-2}+\cdots)=-detA\cdot E$\\
 		$A\bigg(\cfrac{(-1)^{n-1}}{det A}(A^{n-1}+C_1A^{n-2}+\cdots) \bigg)=A\cdot A^{-1}=E~~\blacksquare$
 	\end{center}
-	Ряд $\sum\limits_{k=0}^{\infty}\alpha_kA^k$ \textbf{сходится к матрице} $F$, если $\forall \varepsilon >0~\exists N(\varepsilon):~\forall N>N(\varepsilon)$
+	\begin{definition}
+		Ряд $\sum\limits_{k=0}^{\infty}\alpha_kA^k$ \textbf{сходится к матрице} $F$, если $\forall \varepsilon >0~\exists N(\varepsilon):~\forall N>N(\varepsilon)$
 	$$||\sum\limits_{k=0}^N\alpha_kA^k-F||<\varepsilon$$
-	\\
-	Функция $f$ называется \textbf{регулярной} на множестве $S$, если для любого $A\in S$ существует степенной ряд $$f(A)=\sum\limits_{k=0}^{\infty}\alpha_kA^k$$
-	\\
-	\textbf{Утверждение.} $$T^{-1}f(A)T=\sum\limits_{k=0}^{\infty}\alpha_k(T^{-1}A^kT)$$
-	\\
-	\textbf{Теорема.} $f$ определена на матрице $A$.
-	\\
-	\\
+	\end{definition}
+	\begin{definition}
+		Функция $f$ называется \textbf{регулярной} на множестве $S$, если для любого $A\in S$ существует степенной ряд $$f(A)=\sum\limits_{k=0}^{\infty}\alpha_kA^k$$
+	\end{definition}
+	\begin{statement}
+		$$T^{-1}f(A)T=\sum\limits_{k=0}^{\infty}\alpha_k(T^{-1}A^kT)$$
+	\end{statement}
+	\begin{theorem}
+		$f$ определена на матрице $A$.
+	\end{theorem}
 	\textbf{Пример 3.}\\
 	\[A = \begin{pmatrix}
 	2 & -1\\
@@ -2637,6 +2898,7 @@
 	\vdots\\
 	x_n^0\\
 	\end{pmatrix}\]
+	\textbf{Пример 4.}
 	Найти $e^A$.\\
 	\\
 	$$x(t)=e^{At}x_0$$
@@ -2703,13 +2965,15 @@
 	0 & 1\\
 	0 & 1\\
 	\end{pmatrix}\]
-	\\
-	\textbf{Утверждение.} Если $||A||<1$, то $E-A$ обратима и $(E-A)^{-1}=\sum\limits_{k=0}^{\infty}A^k$.\\
-	\\
-	$$(E-A)\sum\limits_{k=0}^{\infty}A^k=\sum\limits_{k=0}^{\infty}A^k-\sum\limits_{k=0}^{\infty}A^{k+1}=\sum\limits_{k=0}^{\infty}A^k-\sum\limits_{k=1}^{\infty}A^k=E$$
-	Критерий Коши: $$||\sum\limits_{k=0}^N A^k-(E-A)^{-1}||\leqslant||\sum\limits_{k=M}^N A^k||\leqslant \sum\limits_{k=M}^N||A||^k,$$
-	причем последовательность чисел $||A||^k=q^k,~|q|<1$ является сходящейся.\\ \\
-	\textbf{Домашнее задание 10}\begin{enumerate}
+	 \begin{statement}
+	 	Если $||A||<1$, то $E-A$ обратима и $(E-A)^{-1}=\sum\limits_{k=0}^{\infty}A^k$.
+	 \end{statement}
+	\begin{proof}
+		$$(E-A)\sum\limits_{k=0}^{\infty}A^k=\sum\limits_{k=0}^{\infty}A^k-\sum\limits_{k=0}^{\infty}A^{k+1}=\sum\limits_{k=0}^{\infty}A^k-\sum\limits_{k=1}^{\infty}A^k=E$$
+		Критерий Коши: $$||\sum\limits_{k=0}^N A^k-(E-A)^{-1}||\leqslant||\sum\limits_{k=M}^N A^k||\leqslant \sum\limits_{k=M}^N||A||^k,$$
+	причем последовательность чисел $||A||^k=q^k,~|q|<1$ является сходящейся.
+	\end{proof}
+	\subsection{Домашнее задание 10}\begin{enumerate}
 		\item Дана жорданова форма 
 		\[A = \begin{pmatrix}
 		2 & 0 & 0\\
@@ -2735,9 +2999,10 @@
 		$
 		\item Проскуряков "Сборник задач" №1164, 1165, 1167 -- 1170.
 	\end{enumerate}
-	~\\
-	\section *{Лекция 11}
-	\noindent\textbf{Решение систем линейных уравнений.}\\ \\
+	
+	\newpage
+	\section{Лекция 11}
+	\subsection{Решение систем линейных уравнений}
 	Пусть дана система уравнений:\begin{center}
 		$
 		\left\{
@@ -2799,18 +3064,22 @@
 	1 \\
 	1 \\
 	\end{pmatrix} \pm 2\% \]
-	Даже если $b$ известен точно, при изменении матрицы все может измениться. Есть два типа ошибок --- неточная матрица и неточная правая часть.\\ \\
-	\textbf{Общая постановка задачи.}\\
-	Найти $\bar x$, удовлетворяющий системе $A\bar x=\bar b$.\\
-	Пусть $\hat A \hat x=\hat b$ --- решение приближенной системы ($hat A, hat x, hat b$ считаем известны).\\
-	Обозначим: $$\Delta A =\hat A-A$$
-	$$\Delta x = \hat x-x$$
-	$$\Delta b=\hat b -b$$
-	Мы хотим оценить $\Delta x$, причем $\Delta b$ считаем "малыми".\\
-	Так как $A$ и $b$ неизвестны, считаем $x \approx \hat x$.\\
-	Абсолютная погрешность: $|\Delta x|$\\
-	Относительная погрешность: $\cfrac{|\Delta x|}{|x|}$, где $|\cdot|$ --- неоторая векторная норма.\\
-	Оценивая $|b|_1 (|b|_{\infty})$ можем оценить $|\Delta x|_1 (|\Delta x|_{\infty})$.\\ \\
+	Даже если $b$ известен точно, при изменении матрицы все может измениться. Есть два типа ошибок --- неточная матрица и неточная правая часть.\\
+	
+		\textbf{Общая постановка задачи.} 
+		
+		Найти $\bar x$, удовлетворяющий системе $A\bar x=\bar b$.\\
+		Пусть $\hat A \hat x=\hat b$ --- решение приближенной системы ($\hat A, \hat x, \hat b$ считаем известны).\\
+		Обозначим: $$\Delta A =\hat A-A$$
+		$$\Delta x = \hat x-x$$
+		$$\Delta b=\hat b -b$$
+		Мы хотим оценить $\Delta x$, причем $\Delta b$ считаем "малыми".\\
+		Так как $A$ и $b$ неизвестны, считаем $x \approx \hat x$.\\
+		Абсолютная погрешность: $|\Delta x|$\\
+		Относительная погрешность: $\cfrac{|\Delta x|}{|x|}$, где $|\cdot|$ --- неоторая векторная норма.\\
+		Оценивая $|b|_1 (|b|_{\infty})$ можем оценить $|\Delta x|_1 (|\Delta x|_{\infty})$.\\
+	
+	
 	\textbf{Упрощенный вариант $\hat A=A$}\\
 	Дано:\begin{center}
 		$
@@ -2845,7 +3114,9 @@
 	Из (v) получим $$|x|\leqslant ||A^{-1}||~|b|~~(3),$$ а из (vv) $$|\Delta x|\leqslant ||A^{-1}||~|\Delta b|~~(4)$$
 	Тогда относительная погрешность: $$\delta x=\cfrac{|\Delta x|}{|x|}\overset{(1), (4)}{\leqslant} \cfrac{||A^{-1}||~|\Delta b|}{|b|/||A||} = ||A||~||A^{-1}||\cfrac{|\Delta b|}{|b|}$$
 	$$\delta x \overset{(2), (3)}{\geqslant} \cfrac{|\Delta b|/||A||}{||A^{-1}||~|b|}=\cfrac{1}{||A||~||A^{-1}||}~\cfrac{|\Delta b|}{|b|}$$
-	Обозначение: $||A||~||A^{-1}|| = cond(A) = \chi (A) $ --- \textbf{число обусловленности}.\\
+	\begin{definition}
+		$||A||~||A^{-1}|| = cond(A) = \chi (A) $ --- \textbf{число обусловленности}.
+	\end{definition}
 	Например, для евклидовой нормы $$\chi_2(A)=||A||_2~||A^{-1}||_2$$
 	В итоге, получим: $$\cfrac{1}{\chi(A)}\delta b \leqslant \delta x\leqslant \chi(A) \delta b,~~\delta b=\cfrac{|\Delta b|}{|b|}$$
 	А для общей задачи, если $(A+\Delta A) \hat x =b+\Delta b,~ \Delta x=\hat x-x$ ($\Delta b, \Delta A, \Delta x$ --- малые), то
@@ -2889,24 +3160,32 @@
 	2 & -1 \\
 	-1 & 1 \\
 	\end{Vmatrix}_{\infty} = 3\cdot 3 = 9\]
-	$\delta x < 1\%$, если $\delta b < 0.1 \%$.\\
-	\\
-	\textbf{Свойства числа обусловленности:}
+	$\delta x < 1\%$, если $\delta b < 0.1 \%$.
+	\begin{lemma}[Свойства числа обусловленности]
+		\ 
 	\begin{enumerate}
-		\item $\chi(A) \geqslant 1$ (так как для любой нормы $||A^{-1}||\geqslant \cfrac{1}{||A||}$)\\
-		Существет такая матрица $A$, что $\chi(A)=1$ только, если $||E||=1$ --- норма сохраняет единицу, так как иначе $\chi(A)=||A||~||A^{-1}||\geqslant ||AA^{-1}||=||E||$
-		\item $\chi(AB)\leqslant \chi(A) \chi(B)$\\~\\
-		$\blacktriangleright~\chi(A) \chi(B)=||A||~||A^{-1}||~||B||~||B^{-1}|| \geqslant ||AB||~||B^{-1}A^{-1}||=||AB||~||(AB)^{-1}||=\chi(AB)~~\blacksquare$
+		\item $\chi(A) \geqslant 1$ 
+		\item $\chi(AB)\leqslant \chi(A) \chi(B)$
 		\item $\chi(A^{-1})=\chi(A)$
 		\item Для евклидовой нормы $||\cdot||_2$: если $\sigma_1\geqslant \cdots \geqslant \sigma_n$ --- сингулярные собственные значения, что $$\sigma_1=\sqrt{\lambda_{max}(A^*A)},$$
 		$$\sigma_n=\sqrt{\lambda_{min}(A^*A)},$$
 		тогда $\chi_2(A)=||A||_2||A^{-1}||_2=\sigma_1(A)\sigma_1(A^{-1})=\cfrac{\sigma_1}{\sigma_n}$\\
 		Например, если $A=A^*$ --- самосопряженная матрица, то $$\chi_2(A)= \bigg | \cfrac{ \lambda_{max}(A)}{ \lambda_{min}(A)} \bigg |$$
 		\item Для любой матричной нормы $||\cdot||$, согласованной с некоторой векторной нормой $|\cdot|$ $$\chi(A)\geqslant \bigg | \cfrac{ \lambda_{max}(A)}{ \lambda_{min}(A)} \bigg |$$
-		$\blacktriangleright~||A||\geqslant \rho(A)=|\lambda_{max}(A)|$\\
-		$||A^{-1}||\geqslant \rho(A^{-1})=\bigg | \cfrac{1}{\lambda_{min}(A)} \bigg | \Rightarrow \chi(A)=||A||~||A^{-1}||\geqslant \cfrac{|\lambda_{max}(A)|}{|\lambda_{min}(A)|}$\\
-		Так как $\lambda$ --- собственное значение $A$, то $\cfrac{1}{\lambda}$ --- собстенное значение $A^{-1}.~~\blacksquare$
 	\end{enumerate}
+	\end{lemma}
+	\begin{proof}
+		\ 
+		\begin{enumerate}
+			\item Неравенство выполнено, так как для любой нормы $||A^{-1}||\geqslant \cfrac{1}{||A||}$. Кроме того, существует такая матрица $A$, что $\chi(A)=1$ только, если $||E||=1$ --- норма сохраняет единицу, так как иначе $\chi(A)=||A||~||A^{-1}||\geqslant ||AA^{-1}||=||E||$
+			\item $\chi(A) \chi(B)=||A||~||A^{-1}||~||B||~||B^{-1}|| \geqslant ||AB||~||B^{-1}A^{-1}||=||AB||~||(AB)^{-1}||=\chi(AB)$
+			\item Очевидно.
+			\item Проверка по определению.
+			\item $||A||\geqslant \rho(A)=|\lambda_{max}(A)|$\\
+			$||A^{-1}||\geqslant \rho(A^{-1})=\bigg | \cfrac{1}{\lambda_{min}(A)} \bigg | \Rightarrow \chi(A)=||A||~||A^{-1}||\geqslant \cfrac{|\lambda_{max}(A)|}{|\lambda_{min}(A)|}$\\
+			Так как $\lambda$ --- собственное значение $A$, то $\cfrac{1}{\lambda}$ --- собстенное значение $A^{-1}.$
+		\end{enumerate}
+	\end{proof}
 	\textbf{Пример 3.}\\
 	\[\begin{pmatrix}[r]
 	0.97 & 1.98 \\
@@ -2971,9 +3250,8 @@
 		$\delta_2 x\leqslant \chi_2(A)(\delta_2 b+\delta_2 A) =15\cdot (0.0063+0.009)=0.23$\\
 		$\delta_{\infty} x\leqslant \chi_{\infty}(A)(\delta_{\infty} b+\delta_{\infty} A) =20\cdot (0.0075+0.0125)=0.4$
 	\end{center}
-	Норма $|\cdot|_2$ дала наименьшее значение ошибки 0.23, а $|\cdot|_{\infty}$ --- наибольшее 0.4.\\
-	\\
-	\textbf{Оценить ошибку для обратной матрицы.}\\
+	Норма $|\cdot|_2$ дала наименьшее значение ошибки 0.23, а $|\cdot|_{\infty}$ --- наибольшее 0.4.
+	\subsection{Ошибка для обратной матрицы}
 	$A=\hat A+\varepsilon$, если знаем $\hat A^{-1}$. Ошибка приближения $A^{-1}\approx \hat A^{-1}$?\\
 	$$\chi(A)\approx \chi(\hat A)$$
 	Надо оценить
@@ -3056,7 +3334,7 @@
 	0 & 1 & 0 \\
 	0 & 0 & 1 \\
 	\end{pmatrix}\]
-	\textbf{Домашнее задание 11}\begin{enumerate}
+	\subsection{Домашнее задание  11}\begin{enumerate}
 		\item Доказать утверждение из лекции. Если $(A+\Delta A)\hat x=b+\Delta b,~\Delta x=\hat x-x$, то 
 		$$\cfrac{1}{\chi(A)}(\delta b+\delta A) \leqslant \delta x \leqslant \chi(A)(\delta b+ \delta A),$$ где $\delta A=\cfrac{||\Delta A||}{||A||}$ для малых $\Delta b, \Delta A, \Delta x$.
 		\item Вычислить $ln A$, где 
@@ -3087,9 +3365,11 @@
 		$
 		\\ 
 	\end{enumerate}
-	~\\
-	\section *{Лекция 12}
-	\noindent\textbf{Итеративные методы решения систем алгебраических уравнений.}\\ \\
+
+	
+	\newpage
+	\section{Лекция 12}
+	\subsection{Итеративные методы решения систем алгебраических уравнений}
 	Дана система уравнений $$A\bar x=\bar B~~(1)$$
 	Перепишем ее в виде $$\bar x+(A-E)\bar x=\bar B$$
 	или $$\bar x=P\bar x+\bar b$$
@@ -3102,42 +3382,60 @@
 	Если последовательность векторов $lim\{\bar x^i\}=\bar x^{\infty}$ сходится, то $$x^{\infty}=Px^{\infty}+\bar b,~x=x^{\infty},$$
 	где $x=x^{\infty}$ --- решение системы.\\
 	\\
-	\textbf{Теорема.} Описанный метод простых итераций сходится, то есть существует $\bar x^{\infty}=\underset{i\to \infty}{lim}\{\bar x^i\}$, которое будет решением системы при любом значении $x^0$ тогда и только тогда, когда спектральный радиус $\rho(P)<1$.\\ \\
-	$\blacktriangleright$ Пусть спектральный радиус $\rho(P)<1$, тогда существуют согласованные матричные $||\cdot||$ и векторные $|\cdot|$ нормы, что $||P||<1$.\\
+	\begin{theorem}
+		Описанный метод простых итераций сходится, то есть существует $\bar x^{\infty}=\underset{i\to \infty}{lim}\{\bar x^i\}$, которое будет решением системы при любом значении $x^0$ тогда и только тогда, когда спектральный радиус $\rho(P)<1$.
+	\end{theorem}
+	\begin{proof}
+		Пусть спектральный радиус $\rho(P)<1$, тогда существуют согласованные матричные $||\cdot||$ и векторные $|\cdot|$ нормы, что $||P||<1$.\\
 	Предположим, что решение системы существует. Если $\bar x$ --- решение системы, то \begin{center}
 		$x^{k+1}-x=(Px^k+\bar b)-(Px+\bar b)=P(x^k-x)$\\
 		$|x^{k+1}-x|\leqslant||P||~|x^k-x|~~(2)$
 	\end{center}
 	Значит $|x^{k+1}-x|\leqslant \cdots \leqslant ||P||^{k+1}|x^0-x| \to 0$. То есть, если решение $\bar x$ существует, то $\overset{lim}{i\to \infty}x^i=x$ --- решение системы.\\
 	Если же решения нет $|\lambda_1|=\rho(P)\geqslant 1$, то существует $\bar v\neq 0:~Pv=\lambda_1 v$ --- собственный вектор, и для $x^0=v+\bar x$ получим
-	$$x^{k+1}-x=P(x^k-x)=\cdots=P^{k+1}(x^0-x)=P^{k+1}v=\lambda^{k+1}v \nrightarrow 0~~\blacksquare$$
+	$$x^{k+1}-x=P(x^k-x)=\cdots=P^{k+1}(x^0-x)=P^{k+1}v=\lambda^{k+1}v \nrightarrow 0$$
+	\end{proof}
 	Если $||P||<N$, то $|x^k-x|\leqslant N^k|x^0-x|$.\\
 	Число верных значащих цифр $-c\cdot log_{10}|x^k-x|=\xi(x^k)$, где $c$ зависит от нормы.\\ \\
-	\textbf{Предложение.} 
-	$$-const\cdot log_{10}(\rho(P))\leqslant \xi(x^{k+1})-\xi(x^k)$$
-	Для нормы $|\cdot|_{\infty}$ $const=1$.\\
-	$\blacktriangleright$\begin{center}
+	\begin{proposal}
+		$$-const\cdot log_{10}(\rho(P))\leqslant \xi(x^{k+1})-\xi(x^k)$$
+	Для нормы $|\cdot|_{\infty}$ $const=1$.
+	\end{proposal}
+	\begin{proof}
+		\ 
+	\begin{center}
 		$\rho(P) \approx ||P|| \geqslant \cfrac{|x^{k+1}-x}{x^k-x}$\\
 		$log_{10}(\rho(P))\geqslant log_{10}|x^{k+1}-x|-log_{10}|x^k-x|$\\
-		$-log_{10}(\rho(P))\leqslant\cfrac{1}{c}(\xi(x^{k+1}-\xi(x^k))~~\blacksquare$
+		$-log_{10}(\rho(P))\leqslant\cfrac{1}{c}(\xi(x^{k+1}-\xi(x^k))$
 	\end{center}
-	Надо, чтобы спектральный радиус был маленький.\\ \\
-	\textbf{Утверждение.} 
+	\end{proof}
+	Надо, чтобы спектральный радиус был маленький.
+	\begin{statement}
+		\ 
 	\begin{center}
 		$|x-x^k|\leqslant \cfrac{|x^{k+1}-x^k|}{1-||P||}$, если $||P||<1$
 	\end{center}
-	$\blacktriangleright$ $$|x^{k+p}-x^k|\leqslant|x^{k+p}-x^{k+p-1}|+\cdots+|x^{k+1}-x^k|\overset{(2)}{\leqslant}(||P||^p+\cdots+||P||+1)|x^{k+1}-x^k|\leqslant\cfrac{|x^{k+1}-x^k}{1-||P||}$$
-	$$|x-x^k|=|x^{\infty}-x^k|=\underset{p\to \infty}{lim}|x^{k+p}-x^k|\leqslant\cfrac{|x^{k+1}-x^k|}{1-||P||}~~\blacksquare$$
-	\textbf{Следствие 1.}
+	\end{statement}
+	\begin{proof}
+		$$|x^{k+p}-x^k|\leqslant|x^{k+p}-x^{k+p-1}|+\cdots+|x^{k+1}-x^k|\overset{(2)}{\leqslant}(||P||^p+\cdots+||P||+1)|x^{k+1}-x^k|\leqslant\cfrac{|x^{k+1}-x^k}{1-||P||}$$
+	$$|x-x^k|=|x^{\infty}-x^k|=\underset{p\to \infty}{lim}|x^{k+p}-x^k|\leqslant\cfrac{|x^{k+1}-x^k|}{1-||P||}$$
+	\end{proof}
+	\begin{consequence}
+		\ 
 	\begin{center}
 		$|x-x^k|\leqslant \cfrac{||P||^k}{1-||P||}|x^1-x^0|$
 	\end{center}
-	\textbf{Следствие 2.}
+	\end{consequence}
+	\begin{consequence}
+		\ 
 	\begin{center}
 		Если $\bar x^0=\bar b$, то $|x-x^k|\leqslant \cfrac{||P||^{k+1}}{1-||P||}|\bar b|$
 	\end{center}
-	$\blacktriangleright~x^1=Px^0+b$. Если $x^0=b$, то $x^1=Pb+b$.\\
-	$$|x^1-x^0|=|Pb|\leqslant||P||~|b|~~\blacksquare$$
+	\end{consequence}
+	\begin{proof}
+		$x^1=Px^0+b$. Если $x^0=b$, то $x^1=Pb+b$.\\
+	$$|x^1-x^0|=|Pb|\leqslant||P||~|b|$$
+	\end{proof}
 	\textbf{Пример 1.}\\
 	Методом итераций решить систему.\\ \\
 	$
@@ -3195,8 +3493,8 @@
 	1\\
 	5\\
 	\end{pmatrix}\]
-	Теперь вместо $x^0$ подставляем $x^1$ и получаем $x^2$, и так далее, пока значение $x$ не будет больше изменяться.\\ \\
-	\textbf{Метод Зейделя.}\\
+	Теперь вместо $x^0$ подставляем $x^1$ и получаем $x^2$, и так далее, пока значение $x$ не будет больше изменяться.
+	\subsection{Метод Зейделя}
 	Этот метод является модификацией метода итераций. 
 	$$x=Px+b$$
 	Представим матрицу $P$ в виде суммы верхней и нижней треугольных матриц.
@@ -3237,16 +3535,16 @@
 	$$x_1'=0\cdot x_1'-(0.15\cdot 2.05+0.05\cdot 6)+3.4=2.7925$$
 	$$x_2'=-0.1x_1'-0.15\cdot 6+2.05=0.87075$$
 	$$x_3'=-0.3x_1'-0.1x_2'-0+6=5.075175$$
-	\\
 	\textbf{Приведение к виду, удобному для итераций.}\\
 	$$Ax=b$$
 	$$\tau Ax=\tau b$$
 	$$x=(E-\tau A)x+\tau b$$
-	Надо найти такое оптимальное $\tau$, что $\underset{\tau}{min}\underset{\lambda \in [\lambda_{min},\lambda_{max}]}{max}|1-\tau \lambda|$.\\
-	\textbf{Утверждение.} Если все собственные числа матрицы $\lambda_i>0$, то оптимальное значение $\tau=\cfrac{2}{\lambda_{min}+\lambda_{max}}$.\\ \\
-	\newpage
+	Надо найти такое оптимальное $\tau$, что $\underset{\tau}{min}\underset{\lambda \in [\lambda_{min},\lambda_{max}]}{max}|1-\tau \lambda|$.
+	\begin{statement}
+		Если все собственные числа матрицы $\lambda_i>0$, то оптимальное значение $\tau=\cfrac{2}{\lambda_{min}+\lambda_{max}}$.
+	\end{statement}
 	\noindent\textbf{Пример 3.}\\
-	Привести к виду, удобному для итераций.\\ \\
+	Привести к виду, удобному для итераций.\\
 	$
 	\left\{
 	\begin{array}{lcl}
@@ -3264,9 +3562,8 @@
 	-2\tau & 1-5\tau & 4\tau \\
 	2\tau & 4\tau & 1-5\tau \\
 	\end{pmatrix}\]
-	Тогда $max\{|1-2\tau|,~|1-3\tau|,~|1+\tau|\}$.\\
-	~\\
-	\textbf{Домашнее задание 12}\begin{enumerate}
+	Тогда $max\{|1-2\tau|,~|1-3\tau|,~|1+\tau|\}$.
+	\subsection{Домашнее задание 12}\begin{enumerate}
 		\item Доказать утверждение из лекции. Если все собственные числа матрицы $\lambda_i>0$, то оптимальное значение $\tau=\cfrac{2}{\lambda_{min}+\lambda_{max}}$.
 		\item Привести к виду, удобному для итераций.
 		\begin{enumerate}
@@ -3290,9 +3587,11 @@
 			$
 		\end{enumerate}
 	\end{enumerate}
-	~\\
-	\section *{Лекция 13}
-	\noindent\textbf{Итеративное решение систем линейных уравнений.}\\ \\
+	
+	
+	\newpage
+	\section{Лекция 13}
+	\subsection{Итеративное решение систем линейных уравнений.}
 	$$Ax=b~~(1)$$
 	Если матрица $A$ не является симметричной (и положительно определенной), то надо перейти от (1) к нормальной системе $$A^*Ax=A^*b$$
 	\\
@@ -3324,8 +3623,8 @@
 	\]
 	где кратность $\lambda_1$ равна $k$, а кратность $\lambda_2$ равна $m$, то
 	$$\chi_J(\lambda)=(\lambda_1-\lambda)^k(\lambda_2-\lambda)^m$$
-	\\
-	\textbf{Циклическая клетка} --- это матрица вида
+	\begin{definition}
+		\textbf{Циклическая клетка} --- это матрица вида
 	\[C_n=\begin{pmatrix}
 	0 & 0 & \cdots & 0 & a_0 \\
 	1 & 0 & \cdots & 0 & a_1 \\
@@ -3333,17 +3632,7 @@
 	\vdots & \vdots & \ddots & \vdots & \vdots \\
 	0 & 0 & \cdots & 1 & a_{n-1} \\
 	\end{pmatrix}\]
-	Однако не все матрицы можно привести к такому виду.\\ \\
-	\textbf{Фробениусова форма} --- это матрица вида
-	\[F_n=\begin{pmatrix}
-	a_{n-1} & a_{n-2} & \cdots & a_1 & a_0 \\
-	1 & 0 & \cdots & 0 & 0 \\
-	0 & 1 & \cdots & 0 & 0 \\
-	\vdots & \vdots & \ddots & \vdots & \vdots \\
-	0 & 0 & \cdots & 1 & 0 \\
-	\end{pmatrix}\]
-	Данная матрица получена отражением относительно побочной диагонали.\\
-	\\
+	\end{definition}
 	Найдем характеристический многочлен у циклической клетки.\\
 	\[C_2=\begin{pmatrix}
 	0 & a_0 \\
@@ -3366,6 +3655,18 @@
 	Тогда для $C_n$ получим
 	$$\chi_{C_n}=det(C_n-\lambda E)=(-1)^n(\lambda^n-a_{n-1}\lambda^{n-1}-\cdots-a_0)$$
 	\\
+	Однако не все матрицы можно привести к такому виду.
+	\begin{definition}
+		\textbf{Фробениусова форма} --- это матрица вида
+	\[F_n=\begin{pmatrix}
+	a_{n-1} & a_{n-2} & \cdots & a_1 & a_0 \\
+	1 & 0 & \cdots & 0 & 0 \\
+	0 & 1 & \cdots & 0 & 0 \\
+	\vdots & \vdots & \ddots & \vdots & \vdots \\
+	0 & 0 & \cdots & 1 & 0 \\
+	\end{pmatrix}\]
+	Данная матрица получена отражением относительно побочной диагонали.
+	\end{definition}
 	Как приводить матрицу к фробениусовой форме?\\
 	Надо составить базис. Выбрем $v_0$ случайным образом.\\
 	$$v_0, Av_0=v_1, Av_1=v_2, Av_2=v_3,\cdots$$
@@ -3441,8 +3742,8 @@
 	$\chi_A(\lambda)$ --- многочлен степени $m$ --- вычисляется как интерполяционный многочлен Лагранжа по значениям в $(m+1)$ точке.\\
 	\\
 	Характеристический многочлен $$\chi_A(\lambda)=det(A-\lambda E),~~\lambda=0,1,\cdots,m$$
-	То есть, надо $m$ раз вычислить определитель.\\ \\
-	\textbf{Метод итераций.}\\
+	То есть, надо $m$ раз вычислить определитель.
+	\subsection{Метод итераций}
 	$$\bar x=P\bar x+\bar b$$
 	Итеративный шаг: $x^{k+1}=Px^k+\bar b$.\\
 	\\
@@ -3593,9 +3894,8 @@
 	$
 	\\
 	\\
-	Так как сумма собственный значений равна следу = 18, то из этого выражения, зная $\lambda_1, \lambda_2$ можно найти $\lambda_3$.\\
-	\\
-	\textbf{Домашнее задание 13}\begin{enumerate}
+	Так как сумма собственный значений равна следу = 18, то из этого выражения, зная $\lambda_1, \lambda_2$ можно найти $\lambda_3$.
+	\subsection{Домашнее задание 13}\begin{enumerate}
 		\item Дорешать Пример 1 с лекции.
 		\item Методом Крылова найти минимальный характеристический многочлен.
 		\begin{enumerate}
@@ -3625,9 +3925,11 @@
 		-6 & 0 & 16\\
 		\end{pmatrix}\]
 	\end{enumerate}
-	~\\
-	\section *{Лекция 14}
-	\noindent\textbf{Положительные и неотрицательные матрицы.}\\ \\
+	
+	
+	\newpage
+	\section{Лекция 14}
+	\subsection{Положительные и неотрицательные матрицы}
 	Пусть $A\in M_n(\mathbb{R})$, тогда
 	$$A\geqslant B \Leftrightarrow a_{ij}\geqslant b_{ij} ~~\forall i, j$$
 	$$A> B \Leftrightarrow a_{ij}> b_{ij} ~~\forall i, j$$
@@ -3655,20 +3957,24 @@
 	1\\
 	1\\
 	\end{pmatrix}\]
-	\\Матрица называется \textbf{неотрицательной}, если $A\geqslant 0$ тогда и только тогда, когда все $a_{ij}\geqslant 0$.\\
-	\\
-	Матрица называется \textbf{положительной}, если $A> 0$ тогда и только тогда, когда все $a_{ij}> 0$.\\
-	\\
-	\textbf{Матрица смежности} $G>0,~G\ngtr 0$ --- матрица с элементами $g_{ij}$, причем $g_{ij}=1$, если есть ребро из вершины $i$ в вершину $j$ и $g_{ij}=0$ иначе (вместо единицы может также стоять какое-либо число $k$, равное количеству ребер из вершины $i$ в $j$ или весу ребра).
-	\\
-	\\
-	\textbf{Теорема Перрона.} Если $A>0$ матрица положительная, то существует такое $\hat \lambda_A>0$ --- собственное значение матрицы $A$, что $\hat \lambda_A>|\lambda|$ для всех остальных собственных значений $A$ и соответствующий собственный вектор $\hat x$ положителен
+	\begin{definition}
+		Матрица называется \textbf{неотрицательной}, если $A\geqslant 0$ тогда и только тогда, когда все $a_{ij}\geqslant 0$.
+	\end{definition}
+	\begin{definition}
+		Матрица называется \textbf{положительной}, если $A> 0$ тогда и только тогда, когда все $a_{ij}> 0$.
+	\end{definition}
+	\begin{definition}
+		\textbf{Матрица смежности} $G>0,~G\ngtr 0$ --- матрица с элементами $g_{ij}$, причем $g_{ij}=1$, если есть ребро из вершины $i$ в вершину $j$ и $g_{ij}=0$ иначе (вместо единицы может также стоять какое-либо число $k$, равное количеству ребер из вершины $i$ в $j$ или весу ребра).
+	\end{definition}
+	\begin{theorem}[Перрона]
+		Если $A>0$ матрица положительная, то существует такое $\hat \lambda_A>0$ --- собственное значение матрицы $A$, что $\hat \lambda_A>|\lambda|$ для всех остальных собственных значений $A$ и соответствующий собственный вектор $\hat x$ положителен
 	$$A\hat x=\hat \lambda_A \hat x,~\hat x>0.$$
 	В частности, $$\rho_(A)=\hat \lambda_A.$$
-	\\
-	\textbf{Следствие.} Вектор $\hat x$, соответствующий $\hat \lambda_A$ единственный с точностью до пропорциональности. В частности, $\hat \lambda$ --- простое, кратности один.\\
-	\\
-	\textbf{PageRank.}\\
+	\end{theorem}
+	\begin{consequence}
+		Вектор $\hat x$, соответствующий $\hat \lambda_A$ единственный с точностью до пропорциональности. В частности, $\hat \lambda$ --- простое, кратности один.
+	\end{consequence}
+	\subsection{PageRank}
 	Есть конечное число состояний и вероятности перехода из одного состояния в другое. Какова вероятность на каком-то шаге $n$ попасть в состояние $i$? (Какова вероятность, что пользователь окажется на нашем сайте?)
 	$$\bar x_n=(p_1 \cdots p_i \cdots p_n)^T$$
 	$$P=(p_{ij}):~x_n=P^n\cdot x_0$$
@@ -3685,11 +3991,13 @@
 	\cfrac{1}{n} & \cdots & \cfrac{1}{n}\\
 	\end{pmatrix},\]
 	где $n$ --- количество всех страниц в интернете.\\ \\
-	\textbf{Следствие.} Пусть $A\geqslant 0$ неотрицательная матрица, тогда
+	\begin{consequence}
+		Пусть $A\geqslant 0$ неотрицательная матрица, тогда
 	\begin{enumerate}
 		\item Существует собственное значение, равное спектральному радиусу $$\exists \hat \lambda_A=\rho(A)\geqslant 0$$
 		\item Собственный вектор $\hat x_A\geqslant 0$ (не обязательно единственный)
 	\end{enumerate}
+	\end{consequence}
 	\textbf{Пример 2.}\\
 	Найти самую влиятельную вершину в графе, сформировать предпочтения.\\
 	\begin{center}
@@ -3748,9 +4056,9 @@
 	\end{pmatrix}\]
 	Таким образом, получили ранги:
 	$$C=1,~~A=B=0,$$
-	значит самая влиятельная вершина в графе это $C$.\\
-	\\
-	Матрица $A$ называется \textbf{неразложимой матрицей}, если одновременно перестановкой строк и столбцов матрицу $A$ нельзя привести к виду
+	значит самая влиятельная вершина в графе это $C$.
+	\begin{definition}
+		Матрица $A$ называется \textbf{неразложимой матрицей}, если одновременно перестановкой строк и столбцов матрицу $A$ нельзя привести к виду
 	\[ 
 	A=
 	\left(
@@ -3760,11 +4068,12 @@
 	\end{BMAT} 
 	\right),
 	\]
-	где $P$ и $R$ --- квадратные матрицы, а $O$ --- нулевая матрица.\\
-	\\
-	\textbf{Теорема Фробениуса (Перрона-Фробениуса).} Пусть $A\geqslant 0$ и $A$ --- неразложимая матрица, тогда $\hat \lambda_A>0$ и $\hat x>0$ --- единственный с точностью до множителя.\\
-	\\
-	\textbf{Модель Леонтьева.}\\
+	где $P$ и $R$ --- квадратные матрицы, а $O$ --- нулевая матрица.
+	\end{definition}
+	\begin{theorem}[Перрона Фробениуса]
+		Пусть $A\geqslant 0$ и $A$ --- неразложимая матрица, тогда $\hat \lambda_A>0$ и $\hat x>0$ --- единственный с точностью до множителя.
+	\end{theorem}
+	\subsection{Модель Леонтьева и продуктивные матрицы}
 	Есть несколько отраслей и несколько категорий продукций. Матрица Леонтьева имеет вид:
 	\[ 
 	\begin{BMAT}[8pt]{|c|cccc|}{|c|cccc|}
@@ -3779,67 +4088,84 @@
 	$A=(a_{ij})$, где $a_{ij}$ --- количество продукции $j$ в отрасли $i$ для производства (матрица прямых затрат), $d$ --- конечный спрос, а $x$ --- выпуск.
 	Продукция отрасли $i$: $$x_i=d_i+\sum\limits_j a_{ij}x_j,$$
 	первое слагаемое означает употребление, а второе --- использование для производства.\\
-	\\
-	Матрица $A$ называется \textbf{продуктивной}, если $A\geqslant 0$ и для некоторого $\bar x > \bar 0$ верно $$A\bar x <\bar x.$$
-	\\
-	\textbf{Лемма 1.} Если матрица неотрицательная $A\geqslant 0$ и $x_1 \geqslant x_2$, то $Ax_1 \geqslant Ax_2$.\\
-	$\blacktriangleright$ Надо проверить $Ax_1-Ax_2 \overset{?}{\geqslant} 0$.\\
-	$$A(x_1-x_2)\geqslant 0,$$
-	так как $A\geqslant 0$ и $x_1-x_2 \geqslant 0.~~\blacksquare$\\
-	Если $A\geqslant 0,~B\geqslant 0$, то $A-B=(c_{ij})$, где $c_{ij}=\sum\limits_k a_{ik}b_{kj}\geqslant 0,~c\geqslant 0$.\\
-	\\
-	\textbf{Лемма 2.} Если матрица $A$ продуктивная, то $\underset{n\to \infty}{lim}A^n=0$.\\
-	$\blacktriangleright$ По определению продуктивной матрицы $A\bar x< \bar x$, тогда существует число $0<\alpha <1$, где $\alpha$ --- константа сжатия, что:
-	$$Ax<\alpha x$$
-	$$0\leqslant A^n x<\alpha^n x$$
-	При $n\to \infty$ $\alpha \to 0$, тогда получим $\underset{n\to \infty}{lim}A^nx=0$, тогда $\underset{n\to \infty}{lim}A^n=0$, так как $x$ --- положительный вектор.\\
-	Подробнее: если $A^n=(b_{ij})$, то 
-	\[A^n \bar x = \begin{pmatrix}[r]
-	\sum\limits_{j=1}^n b_{1j}x_j\\
-	\vdots\\
-	\sum\limits_{j=1}^n b_{nj}x_j\\
-	\end{pmatrix}=\bar 0,\]
-	где $x_j>0,~ b_{ij}\geqslant 0$. Значит все $b_{ij}=0,~A^{\infty}=0$ по лемме 1.   $\blacksquare$\\
-	\\
-	\textbf{Лемма 3.} Если матрица $A$ --- продуктивная и для какого-то $\bar y$
-	$$\bar y \geqslant A\bar y,$$ то $\bar y$ --- неотрицательный вектор.\\
-	$\blacktriangleright$ Будем подставлять $y$ в наше условие много раз: $$y\geqslant Ay \geqslant A^2y \geqslant \cdots \geqslant A^n y \geqslant \cdots \geqslant A^{\infty} y =\bar 0$$ по лемме 2, значит $\bar y \geqslant 0.~~\blacksquare$\\
-	\\
-	\textbf{Теорема.} Пусть $M$ --- полное метрическое пространство (например, $M=\textbf{R}^n$ или $M \subset \textbf{R}^n$ --- замкнутое ограниченное множество), $f:~M\to M$ --- сжимающее, то есть существует $0<\alpha <1$ такое, что для $\forall x, y \in M$
+	\begin{definition}
+		Матрица $A$ называется \textbf{продуктивной}, если $A\geqslant 0$ и для некоторого $\bar x > \bar 0$ верно $$A\bar x <\bar x.$$
+	\end{definition}
+	Если $A\geqslant 0,~B\geqslant 0$, то $A-B=(c_{ij})$, где $c_{ij}=\sum\limits_k a_{ik}b_{kj}\geqslant 0,~c\geqslant 0$.
+	\begin{lemma}
+		\ 
+		\begin{enumerate}
+			\item Если матрица неотрицательная $A\geqslant 0$ и $x_1 \geqslant x_2$, то $Ax_1 \geqslant Ax_2$.
+			\item Если матрица $A$ продуктивная, то $\underset{n\to \infty}{lim}A^n=0$.
+			\item Если матрица $A$ --- продуктивная и для какого-то $\bar y$
+			$$\bar y \geqslant A\bar y,$$ то $\bar y$ --- неотрицательный вектор.
+		\end{enumerate}
+	\end{lemma}
+	\begin{proof}
+		\ 
+		\begin{enumerate}
+			\item Надо проверить $Ax_1-Ax_2 \overset{?}{\geqslant} 0$.\\
+			$$A(x_1-x_2)\geqslant 0,$$
+			так как $A\geqslant 0$ и $x_1-x_2 \geqslant 0.$
+			\item По определению продуктивной матрицы $A\bar x< \bar x$, тогда существует число $0<\alpha <1$, где $\alpha$ --- константа сжатия, что:
+			$$Ax<\alpha x$$
+			$$0\leqslant A^n x<\alpha^n x$$
+			При $n\to \infty$ $\alpha \to 0$, тогда получим $\underset{n\to \infty}{lim}A^nx=0$, тогда $\underset{n\to \infty}{lim}A^n=0$, так как $x$ --- положительный вектор.\\
+			Подробнее: если $A^n=(b_{ij})$, то 
+			\[A^n \bar x = \begin{pmatrix}[r]
+			\sum\limits_{j=1}^n b_{1j}x_j\\
+			\vdots\\
+			\sum\limits_{j=1}^n b_{nj}x_j\\
+			\end{pmatrix}=\bar 0,\]
+			где $x_j>0,~ b_{ij}\geqslant 0$. Значит все $b_{ij}=0,~A^{\infty}=0$ по первой части леммы.
+			\item Будем подставлять $y$ в наше условие много раз: $$y\geqslant Ay \geqslant A^2y \geqslant \cdots \geqslant A^n y \geqslant \cdots \geqslant A^{\infty} y =\bar 0$$ по лемме 2, значит $\bar y \geqslant 0.$
+		\end{enumerate}
+	\end{proof}
+	\begin{theorem}
+		Пусть $M$ --- полное метрическое пространство (например, $M=\textbf{R}^n$ или $M \subset \textbf{R}^n$ --- замкнутое ограниченное множество), $f:~M\to M$ --- сжимающее, то есть существует $0<\alpha <1$ такое, что для $\forall x, y \in M$
 	$$\rho(f(x), f(y))\leqslant \alpha \rho(x, y),$$
 	тогда существует единственная неподвижная точка --- такое $z\in M$, что $f(z)=z$.\\
 	\begin{center}
 		\includegraphics[scale=0.7]{l14_1.png}\\
 	\end{center}
-	$M$ отображается в $f(M)$ и так далее. В пределе диаметр стремится к нулю.\\
-	\\
-	\textbf{Лемма 4.} Если матрица $A$ --- продуктивная, то существует $(E-A)^{-1}\geqslant 0$. (А если $A>0$, то $(E-A)^{-1}$ положительная матрица.)\\
-	$\blacktriangleright~(E-A)^{-1}=E+A+A^2+\cdots +A^n+\cdots$ --- ряд сходится, так как $A^n \to 0$, тогда $\rho(A)<1$ и так далее.\\
+	$M$ отображается в $f(M)$ и так далее. В пределе диаметр стремится к нулю.
+	\end{theorem}
+	\begin{lemma}
+		Если матрица $A$ --- продуктивная, то существует $(E-A)^{-1}\geqslant 0$. (А если $A>0$, то $(E-A)^{-1}$ положительная матрица.)
+		
+		Как следствие, если $A\geqslant 0$ --- неразложимая и продуктивная матрица, то $(E-A)^{-1}>0$.
+	\end{lemma}
+	\begin{proof}
+		$(E-A)^{-1}=E+A+A^2+\cdots +A^n+\cdots$ --- ряд сходится, так как $A^n \to 0$, тогда $\rho(A)<1$ и так далее.\\
 	$$(E-A)^{-1}\geqslant E+A \geqslant A$$
-	Если $A>0$, то $(E-A)^{-1}>0$, а если $A\geqslant 0$, то $(E-A)^{-1}\geqslant 0~~\blacksquare$\\
-	\\
-	\textbf{Задача.} Если $A\geqslant 0$ --- неразложимая и продуктивная матрица, то $(E-A)^{-1}>0$.\\
-	\\
-	\textbf{Теорема.} Если $A$ --- продуктивная, то для любого $\bar d \geqslant \bar 0$ система $A\bar x+\bar d=\bar x$ имеет единственное решение $\bar x$, причем $\bar x \geqslant 0$.\\
-	\\
-	\textbf{Следствие.} Для $d>0$ система имеет решение $x \geqslant 0$ тогда и только тогда, когда матрица $A$ продуктивная.\\
-	\\
-	\textbf{Доказательство теоремы.}\\
-	$\blacktriangleright$ Выразим $x-Ax=d$ или $(E-A)\bar x=\bar d$. Так как матрица $A$ продуктивная из леммы 4 и следствия выше получим $\bar x=(E-A)^{-1}\bar d\geqslant 0~~\blacksquare$\\
-	\\
-	\textbf{Доказательство следствия.}\\
-	$\blacktriangleright$ Если $(E-A)\bar x=\bar d,~\bar d>0$, то $x=Ax+d>0$, причем $x>Ax$, а это по определению означает, что матрица $A$ продуктивная.$~~\blacksquare$\\
-	\\
-	\textbf{Утверждение.}
+	Если $A>0$, то $(E-A)^{-1}>0$, а если $A\geqslant 0$, то $(E-A)^{-1}\geqslant 0$
+	\end{proof}
+	\begin{theorem}
+		Если $A$ --- продуктивная, то для любого $\bar d \geqslant \bar 0$ система $A\bar x+\bar d=\bar x$ имеет единственное решение $\bar x$, причем $\bar x \geqslant 0$.
+	\end{theorem}
+	\begin{proof}
+		Выразим $x-Ax=d$ или $(E-A)\bar x=\bar d$. Так как матрица $A$ продуктивная из леммы 4 и следствия выше получим $\bar x=(E-A)^{-1}\bar d\geqslant 0$
+	\end{proof}
+	\begin{consequence}
+		Для $d>0$ система имеет решение $x \geqslant 0$ тогда и только тогда, когда матрица $A$ продуктивная.
+	\end{consequence}
+	\begin{proof}
+		Если $(E-A)\bar x=\bar d,~\bar d>0$, то $x=Ax+d>0$, причем $x>Ax$, а это по определению означает, что матрица $A$ продуктивная.
+	\end{proof}
+	\begin{statement}
+		\ 
 	\begin{enumerate}
 		\item Матрица $A$ является неразложимой тогда и только тогда, когда для $\forall i, j, i\neq j$ существует такая последовательность вершин $$i=i_0, i_1, i_2, \cdots, i_k=j:~~a_{i_t i_{t+1}}\neq 0,~t=0, \cdots, k-1$$
 		\begin{center}
 			\includegraphics[scale=0.6]{l14_2.png}\\
 		\end{center}
 		\item Матрица $A$ неразложима тогда и только тогда, когда для любых вершин $\forall i, j$ существует $\exists m<n$, что $$(A^m)_{ij}\neq 0.$$
-		\item Неотрицательная матрица $A\geqslant 0$ неразложима тогда и только, когда $(E+A)^{n-1}>0$, где $n$ --- порядок матрицы. 
+		\item Неотрицательная матрица $A\geqslant 0$ неразложима тогда и только, когда $(E+A)^{n-1}>0$, где $n$ --- порядок матрицы.
 	\end{enumerate}
-	\begin{enumerate}
+	\end{statement}
+	\begin{proof}
+		\ 
+		\begin{enumerate}
 		\item Матрица $A$ является разложимой тогда и только тогда, когда существует $\exists S=\{i_1,\cdots, i_s\} \subsetneq [1, \cdots, n]$. Тогда $a_{ij}=0$ при $j\in S,~i\notin S$, где $1\leqslant |S| \leqslant n-1$.\\
 		\begin{center}
 			\includegraphics[scale=0.6]{l14_3.png}\\
@@ -3850,7 +4176,8 @@
 		\item $a_{ij}$ равно количеству путей $i\to j$ длины один, а $(A^m)_{ij}$ равно количеству путей $i\to i_1\to \cdots i_{m-1}$ длины $m$.
 		\item Путь длины $n-1$ $(E+A)^{n-1}=\sum\limits_{m=0}^{n-1}C_{n-1}^mA^m>0$, так как в каком-то слагаемом будет ненулевой элемент, то есть получим положительное число. 
 	\end{enumerate}
-	\textbf{Домашнее задание 14}\begin{enumerate}
+	\end{proof}
+	\subsection{Домашнее задание 14}\begin{enumerate}
 		\item Найти самую влиятельную вершину в графе.
 		\begin{center}
 			\includegraphics[scale=0.35]{l14_5_.png}\\
@@ -3870,13 +4197,20 @@
 		0 & 2 & 0\\
 		\end{pmatrix}\]
 	\end{enumerate}
-	~\\
-	\section *{Лекция 15}
-	\noindent\textbf{Теорема о сжимающем отображении.} Существует единственное $\bar x\geqslant 0:~\varphi(\bar x)=\bar x$ --- неподвижная точка, то есть $$\cfrac{1}{|Ax|_1}A\bar x=\bar x$$
+
+
+	\newpage
+	\section{Лекция 15}
+	\subsection{Теоремы Перрона}
+	\begin{theorem}[О сжимающем отображении]
+		Существует единственное $\bar x\geqslant 0:~\varphi(\bar x)=\bar x$ --- неподвижная точка, то есть $$\cfrac{1}{|Ax|_1}A\bar x=\bar x$$
 	$$Ax=\hat \lambda x,~~\hat \lambda=|Ax|_1$$
-	Докажем теорему Перрона с прошлой лекции.\\ \\
-	\textbf{Теорема Перрона.} Если $A>0$ (то есть все $a_{ij}>0$), то у матрицы $A$ существует положительное собственное значение $\hat \lambda =\hat \lambda_A:~~\hat \lambda =\rho(A)$ и $\hat \lambda>|\lambda|$ для всех остальных собственных значений $\lambda$ матрицы $A$. Этому собственному значению отвечает положительный собственный вектор $\hat x>0$ --- единственный с точностью до пропорциональности: в частности $\hat \lambda$ --- простое, то есть кратности один.\\
-	$\blacktriangleright$ Рассмотрим отображение $\bar x \mapsto A \bar x \to \cfrac{A\bar x}{|Ax|_1}$.\\
+	\end{theorem}
+	\begin{theorem}[Перрона]
+		Если $A>0$ (то есть все $a_{ij}>0$), то у матрицы $A$ существует положительное собственное значение $\hat \lambda =\hat \lambda_A:~~\hat \lambda =\rho(A)$ и $\hat \lambda>|\lambda|$ для всех остальных собственных значений $\lambda$ матрицы $A$. Этому собственному значению отвечает положительный собственный вектор $\hat x>0$ --- единственный с точностью до пропорциональности: в частности $\hat \lambda$ --- простое, то есть кратности один.
+	\end{theorem}
+	\begin{proof}
+		Рассмотрим отображение $\bar x \mapsto A \bar x \to \cfrac{A\bar x}{|Ax|_1}$.\\
 	\begin{center}
 		\includegraphics[scale=0.8]{l15_1.png}
 		\includegraphics[scale=0.8]{l15_2.png}\\
@@ -3889,7 +4223,8 @@
 	Функция $c(x, y)=\cfrac{\rho(\varphi(x), \varphi(y))}{\rho(x, y)}$ непрерывна на компактном $\Delta$, причем $c(x, y)<1$. Тогда существует $\varepsilon:~\forall x, y~~c(x, y)<\varepsilon<1$, значит $\varphi$ --- сжимающее отображение (оно сжимает расстояние в $\geqslant \varepsilon$ раз).\\
 	Воспользуемся теоремой о сжимающем отображении. Здесь $\hat \lambda>0$ (так как $\bar x\in \Delta$, то $\bar x\neq \bar 0$, так что $Ax>0$, $|Ax|_1$ равен сумме всех координат вектора $A\bar x$, а значит >0).\\
 	$$x=\cfrac{1}{\lambda}Ax>\bar 0$$
-	Это единственный положительный собственный вектор (как неподвижная точка).$~~\blacksquare$\\
+	Это единственный положительный собственный вектор (как неподвижная точка).
+	\end{proof}
 	\begin{center}
 		\includegraphics[scale=0.8]{l15_4.png}\\
 	\end{center}
@@ -3900,16 +4235,17 @@
 	|x_n|\\
 	\end{pmatrix}\]
 	Тогда $|\bar x|_1=||\bar x||_1,~|Ax|_1\leqslant |A|\bar x||_1.$ Значит $\underset{|x|=1}{max}|Ax|_1=\underset{\bar x \in \Delta}{max}|Ax|_1=||A||_1>\rho(A)$. Оценка $||A||_1 \geqslant \hat \lambda$.
-	\\
-	\\
-	\textbf{Теорема Перрона-Фробениуса.} Если $A\geqslant 0$ --- неразложимая матрица, то 
+	\begin{theorem}[Перрона-Фробениуса]
+		Если $A\geqslant 0$ --- неразложимая матрица, то 
 	\begin{enumerate}
 		\item $\exists \hat \lambda_A \geqslant 0$, причем $\hat \lambda_A=\rho(A)$ --- самое большое по модулю собственное значение $A$
 		\item при этом соответствующий собственный вектор $\hat x_A \geqslant 0$
 		\item если при этом $A\bar y \geqslant \mu \bar y$ для некоторого $\bar y \geqslant \bar 0,~\mu \in \mathbb{R}$, то $\mu \leqslant \hat \lambda_A$
 		\item в частности, для любого собственного значения $\lambda$ матрицы $A$ всегда $|\lambda|\leqslant \hat \lambda_A$
 	\end{enumerate}
-	$\blacktriangleright$ Пусть $\forall \bar x \geqslant \bar 0~~r_x=\underset{x_i \neq 0}{min} \cfrac{(Ax)_i}{x_i}=max \{ \rho >0 ~~|~~\rho x \leqslant Ax \},~~\rho \leqslant \cfrac{(Ax)_i}{x_i}$.\\
+	\end{theorem}
+	\begin{proof}
+		Пусть $\forall \bar x \geqslant \bar 0~~r_x=\underset{x_i \neq 0}{min} \cfrac{(Ax)_i}{x_i}=max \{ \rho >0 ~~|~~\rho x \leqslant Ax \},~~\rho \leqslant \cfrac{(Ax)_i}{x_i}$.\\
 	Тогда пусть $M=S_1 \cap \mathbb{R}^n_{\geqslant 0} = \{ x_1 \geqslant 0, \cdots, x_n \geqslant 0~~|~~x_1^2+\cdots +x_n^2=1\}$, где $S_1$ радиуса один.\\
 	Найдем $\underset{x}{max}~r_x$. Почему он существует?
 	\begin{enumerate}
@@ -3935,9 +4271,9 @@
 		(модуль $\bar s$), то $$A|\bar s| \underset{A\geqslant 0}{\geqslant} |\bar{As}|=|\lambda||\bar s|$$
 		Так как $|\bar s| \geqslant 0$ (из 3.), то $|\lambda|\leqslant \hat \lambda$. В частности, $\hat \lambda=\rho(A)$
 		$$\hat \lambda =\underset{\underset{x\in \Delta}{\underset{x\in M,}{\bar x>0,}}}{max} \underset{i:x_i\neq 0}{~min}\cfrac{(Ax)_i}{x_i}$$
-	\end{enumerate} $~~\blacksquare$\\
-	\\
-	\textbf{Пример 1.}\\
+	\end{enumerate} 
+	\end{proof}
+	\textbf{Пример 1.}
 	Найти ранги.
 	\begin{center}
 		\includegraphics[scale=0.8]{l15_5.png}\\
@@ -3948,9 +4284,8 @@
 	0 & 1 & 0\\
 	\end{pmatrix}\]
 	$$(x, y, z)P=(x, y, z)$$
-	Получим (0.4, 0.4, 0.2).\\
-	\\
-	\textbf{Метод вращений (метод Якоби).}\\
+	Получим (0.4, 0.4, 0.2).
+	\subsection{Метод вращений (метод Якоби)}
 	Пусть матрица $A$ --- симметрическая (матрица $A^*A$ --- всегда симметрическая). Хотим построить процесс $$A_0=A_1,\cdots, A_k \to \Lambda$$
 	$$T_0=E, T_1, \cdots, T_k \to T$$
 	$$A=T\Lambda T^{-1}=T \Lambda T^T,$$
@@ -4063,8 +4398,8 @@
 	-\cfrac{1}{3\sqrt{2}} & \cfrac{\sqrt{2}}{2} & \cfrac{2}{3}\\
 	-\cfrac{1}{3\sqrt{2}} & \cfrac{\sqrt{2}}{2} & \cfrac{2}{3}\\
 	\end{pmatrix}\]
-	Каждый из столбцов матрицы $T_2$ является собственным вектором $\lambda_1,~\lambda_2$ и $\lambda_3$ соответственно.\\ \\
-	\textbf{Домашнее задание 15}\begin{enumerate}
+	Каждый из столбцов матрицы $T_2$ является собственным вектором $\lambda_1,~\lambda_2$ и $\lambda_3$ соответственно.
+	\subsection{Домашнее задание 15}\begin{enumerate}
 		\item Найти собственные векторы и собственные значения методом вращений (методом Якоби).
 		\begin{enumerate}
 			\item \[\begin{pmatrix}[r]
@@ -4084,9 +4419,10 @@
 			\end{pmatrix},\] матрица удовлетворяет условию $A^*=A$, что гарантирует, что у нее есть диагональная форма.
 		\end{enumerate}
 	\end{enumerate}
-	~\\
-	\section *{Лекция 16}
-	\noindent\textbf{Алгебраические зависимости в системах экономических показателей.}\\
+	
+	\newpage
+	\section{Лекция 16}
+	\subsection{Алгебраические зависимости в системах экономических показателей}
 	\textbf{Постановка задачи.}\\
 	Пусть $x_1,\cdots,x_n$ --- первичные показатели, а $y_1, \cdots, y_m$ --- расчетные (производные) показатели, $y_i=f_i(x_1,\cdots,x_n)$.\\
 	\\
@@ -4143,8 +4479,7 @@
 	$$y_1=\cfrac{f-g}{g}=\cfrac{a_0+a_1x_1+a_2x_2++a_{12}x_1x_2+a_{11}x_1^2+a_{22}x_2^2-b_1x_1-b_2x_2-b_0}{b_1x_1+b_2x_2+b_0}$$
 	$$y_2=\cfrac{f-g}{x_1}=\cfrac{a_0+a_1x_1+a_2x_2++a_{12}x_1x_2+a_{11}x_1^2+a_{22}x_2^2-b_1x_1-b_2x_2-b_0}{x_1}$$
 	$$y_3=\cfrac{f-g}{x_2}=\cfrac{a_0+a_1x_1+a_2x_2++a_{12}x_1x_2+a_{11}x_1^2+a_{22}x_2^2-b_1x_1-b_2x_2-b_0}{x_2}$$
-	\\
-	\textbf{Описание алгоритма.}\\
+	\subsection{Описание алгоритма. Базис Гребнера}
 	Пусть $y_1=\cfrac{f_1}{g_1},~y_2=\cfrac{f_2}{g_2},\cdots,~y_m=\cfrac{f_m}{g_m}$, где $f_i, g_i$ --- многочлены от переменных $x_1, \cdots, x_n$, причем $$g=g_1\cdot g_2 \cdots g_m \neq 0$$
 	Введем новые многочлены от $n+m+1$ переменных $x_1, x_2, \cdots, x_n, z_1, z_2, \cdots, z_m, u$: $$h_1=g_1z_1-f_1$$
 	$$h_2=g_2z_2-f_2$$
@@ -4155,21 +4490,22 @@
 	Пусть $I=\{\sum \limits_j c_j h_j\}$ (где $c_j$ --- многочлены от $x_1, x_2, \cdots, x_n, z_1, z_2, \cdots, z_m, u$) --- полиномиальный идеал, порожденный многочленами $h_j$.\\
 	\\
 	Будем сравнивать мономы от переменных $x_1, x_2, \cdots, x_n, z_1, z_2, \cdots, z_m, u$ лексикографически так, что $$u>x_n>x_{n-1}>\cdots >x_1>z_m>z_{m-1}>\cdots >z_1$$
-	Например, старший член многочлена $f=4x_2x_1+3z_1x_2+2u$ есть $\hat f=2u$.\\
-	\\
-	\textbf{Базисом Гребнера} идеала $I$ называется такое множество $G=\{q_1, q_2, \cdots\}$ элементов $I$, что старший член $\hat f$ любого элемента $f\in I$ делится на один из старших членов $\hat q_1, \hat q_2,\cdots$ элементов $G$.\\
-	\\
-	Базис Гребнера $G$ \textbf{редуцированный}, если ни один из $\hat q_i$ не делится на остальные.\\
-	\\
-	\textbf{Утверждение.} Пусть $G=\{q_1, q_2, \cdots\}$ --- редуцированный базис Гребнера $I$, и пусть среди его элементов только $q_1, \cdots, q_k$ зависят от переменных $z_1, z_2, \cdots, z_m$. Тогда минимальный набор тождеств для $y_1, y_2, \cdots, y_m$:
+	Например, старший член многочлена $f=4x_2x_1+3z_1x_2+2u$ есть $\hat f=2u$.
+	\begin{definition}
+		\textbf{Базисом Гребнера} идеала $I$ называется такое множество $G=\{q_1, q_2, \cdots\}$ элементов $I$, что старший член $\hat f$ любого элемента $f\in I$ делится на один из старших членов $\hat q_1, \hat q_2,\cdots$ элементов $G$.
+		
+		Базис Гребнера $G$ \textbf{редуцированный}, если ни один из $\hat q_i$ не делится на остальные.
+	\end{definition}
+	\begin{statement}
+		Пусть $G=\{q_1, q_2, \cdots\}$ --- редуцированный базис Гребнера $I$, и пусть среди его элементов только $q_1, \cdots, q_k$ зависят от переменных $z_1, z_2, \cdots, z_m$. Тогда минимальный набор тождеств для $y_1, y_2, \cdots, y_m$:
 	$$q_1(y_1, y_2, \cdots, y_m)=0$$
 	$$\cdots$$
 	$$q_k(y_1, y_2, \cdots, y_m)=0$$
 	Если же таких множеств в $G$ нет, то показатели $y_1, y_2, \cdots, y_m$ --- независимы.\\
 	В этом случае любое другое полиномиальное соотношение имеет вид 
 	$$c_1q_1(y_1, y_2, \cdots, y_m)+\cdots+c_kq_k(y_1, y_2, \cdots, y_m),$$
-	где $c_i$ --- многочлены от переменных $y_1, y_2, \cdots, y_m$.\\
-	\\
+	где $c_i$ --- многочлены от переменных $y_1, y_2, \cdots, y_m$.
+	\end{statement}
 	\textbf{Пример 3 с частными значениями коэффициентов.}\\
 	Пусть $$f=2+x_1+x_2+3x_1x_2+4x_1^2+5x_2^2,$$
 	$$g=1+x_2+x_1$$
@@ -4238,9 +4574,8 @@
 	Разделим $S_1$ на $p_1'$, получим $$R(S_1)=S_1'=S_1-2xp_1'=x^3y^2-2x^2y^2+y^2-x^2-2x$$
 	Разделим $S_1'$ на $p_2$, получим
 	$$R(S_1')=S_1''=S_1'-xyp_2=y^2+xy-x^2-2x$$
-	И так далее.\\
-	\\
-	\textbf{Домашнее задание 16}\begin{enumerate}
+	И так далее.
+	\subsection{Домашнее задание 16}\begin{enumerate}
 		\item Решить с помощью базисов Грёбнера систему уравнений\\ \\
 		$
 		\left\{
@@ -4263,12 +4598,15 @@
 		$
 		\\ \\и решить систему уравнений $f_1=f_2=f_3=0$.
 	\end{enumerate}
-	~\\
-	\section *{Лекция 17}
-	\noindent\textbf{Линейная алгебра в теории кодирования.}\\
-	Презентация.\\
-	\section *{Лекция 18}
-	\noindent\textbf{Задача линейного программирования.}\\
+	
+	
+	\newpage
+	\section{Лекция 17}
+	\subsection{Линейная Алгебра в теории кодирования}
+	
+	\newpage
+	\section{Лекция 18}
+	\subsection{Задача линейного программирования}
 	Пусть \[\bar x=\begin{pmatrix}
 	x_1\\
 	\vdots\\
@@ -4413,9 +4751,8 @@
 	$$y_2=\cfrac{21}{29},~~y_1=4-\cfrac{5\cdot 21}{29}=\cfrac{11}{29}$$
 	Получим
 	$$f(B)=100\cdot \cfrac{11}{29}+150\cdot \cfrac{21}{29}=\cfrac{4250}{29}\approx 147$$
-	Таким образом, наименьшее значение $f(\bar y)$ достигается в точке $B$ и принимает значение 147.\\
-	\\
-	\textbf{Линейная производственная модель.}\\
+	Таким образом, наименьшее значение $f(\bar y)$ достигается в точке $B$ и принимает значение 147.
+	\subsection{Линейная производственная модель}
 	Пусть $\bar x$ -- выпуск $m$ видов продукции
 	\[\bar x=\begin{pmatrix}
 	x_1\\
@@ -4462,13 +4799,18 @@
 		\right.
 		$
 	\end{center}
-	Тогда $y^*$ -- решение, то есть $f(y^*)=<d, \bar y^*>=f_{min}$.\\
-	\\
-	\textbf{Теорема.} 
+	Тогда $y^*$ -- решение, то есть $f(y^*)=<d, \bar y^*>=f_{min}$.
+	\begin{theorem}[Основная двойственности]
+		\ 
 	\begin{enumerate}
 		\item Если $\bar x$ -- допустимый для прямой задачи, а $\bar y$ -- допустимый для двойственной задачи, то $$g(x)\leqslant f(y), ~<c, x>\leqslant <d, y>$$
-		$\blacktriangleright$
-		\begin{center}    
+		\item Если $x^*, y^*$ -- решения прямой и двойственной задач, то $f(y)=g(x)$, то есть $$<c, x^*>=<d, y^*>=f_{min}=g_{max}$$
+	\end{enumerate}
+	\end{theorem}
+	\begin{proof}\ 
+		\begin{enumerate}
+			\item \ 
+			\begin{center}    
 			$
 			\left\{
 			\begin{array}{lcl}
@@ -4477,10 +4819,11 @@
 			\end{array}
 			\right.
 			$
-		\end{center}
-		$$<c, x>=x^Tc\leqslant x^TAy \leqslant d^Ty=f(y)=<d, y>~~\blacksquare$$
-		\item Если $x^*, y^*$ -- решения прямой и двойственной задач, то $f(y)=g(x)$, то есть $$<c, x^*>=<d, y^*>=f_{min}=g_{max}$$
-		$\blacktriangleright$ Так как значения оптимальны, то вместо неравенств в доказательстве пункта 1 теоремы везде будут стоять равенства, потому что $<x^TA, y^*>=<d^T, y^*>$, либо они несущественны и равны 0. Значит $<c, x^*>=<d, y^*>~~\blacksquare$
-	\end{enumerate}
+			\end{center}
+			$$<c, x>=x^Tc\leqslant x^TAy \leqslant d^Ty=f(y)=<d, y>$$
+			\item 
+			Так как значения оптимальны, то вместо неравенств в доказательстве пункта 1 теоремы везде будут стоять равенства, потому что $<x^TA, y^*>=<d^T, y^*>$, либо они несущественны и равны 0. Значит $<c, x^*>=<d, y^*>$
+		\end{enumerate}
+	\end{proof}
 \end{document}
 
