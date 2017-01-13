@@ -1,0 +1,394 @@
+\newpage
+\section{Лекция 10}
+\subsection{Функции от матриц}
+Пусть $A$ --- квадратная матрица ($A\in M_n(\mathbb{C})$)
+$$A^m=A~ \dot~ ... ~\dot~ A,~A^0=E$$
+Если $A$ невырожденная, то $$A^{-m}=(A^{-1})^m$$
+\begin{definition}
+\textbf{Многочлен от матрицы:} если 
+$f(x)=a_0+a_1x+\cdots+a_mx^m$, то
+$f(A)=a_0E+a_1A+\cdots +a_mA^m$ --- тоже матрица.
+\end{definition}
+\textbf{Пример 1.}\\
+\[A = \begin{pmatrix}
+0 & 1\\
+1 & 0\\
+\end{pmatrix}\]
+$f(x)=x^2-1$\\
+Тогда 
+\[f(A)=A^2-1\cdot E = \begin{pmatrix}
+1 & 0\\
+0 & 1\\
+\end{pmatrix} - \begin{pmatrix}
+1 & 0\\
+0 & 1\\
+\end{pmatrix} = \begin{pmatrix}
+0 & 0\\
+0 & 0\\
+\end{pmatrix} =0\]
+\begin{statement}
+        Если $C$ --- невырожденная матрица (например, $C=Te \to e'$ --- матрица перехода от базиса $e$ к базису $e'$ в $\mathbb{C}^n$) и $A'=C^{-1}AC$ (то есть, $A'$ --- матрица того же линейного оператора, что и $A$, в новом базисе $e'$ вместо старого $e$), то для любого многочлена $f(x)$ верно $f(A')=C^{-1}f(A)C$.
+\end{statement}
+\begin{proof}
+    Если $f(x)=\sum\limits_{i=0}^n a_iA^i$, то $f(A')=\sum\limits_{i=0}^n a_i A'^i=\sum\limits_{i=0}^n a_iC^{-1}AC\cdot C^{-1}AC\cdot C^{-1}\cdots AC=\\=\sum\limits_{i=0}^n a_i C^{-1}A^iC=C^{-1}(\sum\limits_{i=0}^na_iA^i)C=C^{-1}f(A)C$
+\end{proof} 
+\begin{consequence}
+    $$f(A)=0 \Leftrightarrow f(A')=0$$
+\end{consequence}
+Если $A'$ --- диагональная матрица\[A'=\begin{pmatrix}
+d_1 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & d_n
+\end{pmatrix},\]
+то \[f(A')=\sum\limits_{i=0}^n a_i(A')^i=\sum\limits_{i=0}^n a_i\begin{pmatrix}
+d_1^i & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & d_n^i
+\end{pmatrix}=\begin{pmatrix}
+f(d_1) & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & f(d_n)
+\end{pmatrix}\]
+В частности, если все собственные значения $\lambda_1,\cdots, \lambda_n$ матрицы $A$ различны, то 
+\[A'=C^{-1}AC=\begin{pmatrix}
+\lambda_1 & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & \lambda_n
+\end{pmatrix},~~C= \begin{pmatrix}
+v_1~| & ~v_2~| & ~\cdots~| & ~v_n\\
+\end{pmatrix}\]
+Причем, $v_1$ --- собственный вектор, соответствующий собственному значению $\lambda_1$ (то есть, $Av_1=\lambda_1 v_1$), $\cdots$, $v_n$ --- собственный вектор, соответствующий собственному значению $\lambda_n$ ($Av_n=\lambda_n v_n$), тогда $A=CA'C^{-1}$
+\[f(A)=Cf(A')C^{-1}=C\begin{pmatrix}
+f(\lambda_1) & \cdots & 0\\
+\vdots & \ddots & \vdots\\
+0 & \cdots & f(\lambda_n)
+\end{pmatrix}C^{-1}\]
+\subsection{Жорданова форма}
+\begin{definition}
+    \textbf{Жорданова клетка} --- это матрица вида
+    \[J=J_k(\lambda)=\begin{pmatrix}
+    \lambda &  1 & \cdots & 0\\
+    \vdots & \ddots & 1 & \vdots\\
+    \vdots & 0 & \ddots & 1\\
+    0 & \cdots & \cdots & \lambda
+    \end{pmatrix}C^{-1}\]
+\end{definition}
+Например, 
+\[J_2(0) = \begin{pmatrix}
+0 & 1\\
+0 & 0\\
+\end{pmatrix}\]
+\[J_3(5) = \begin{pmatrix}
+5 & 1 & 0\\
+0 & 5 & 1\\
+0 & 0 & 5\\
+\end{pmatrix}\]
+Например, если $V=P_n=\mathbb{C}[$x$]_{\leqslant n}=\{a_0+a_1x+\cdots +a_nx^n\},~D:V\to V:~f(x) \mapsto f'(x)$ --- дифференцирование. $f$ --- собственный вектор для $D$ тогда и только тогда, когда $Df=\lambda f$, то есть $f'(x)=\lambda f(x)$, где $\lambda$ --- число, тогда $f(x)=a_0=const,~f'(x)=0\cdot f(x)=0$.
+\begin{definition}
+    \textbf{Базис Маклорена}: $$e_0=1,~e_1=\cfrac{x}{1!},\cdots,~e_u=\cfrac{x^u}{u!}$$
+\end{definition}
+В этом базисе
+$$D(e_k)=\bigg(\cfrac{x^k}{k!}\bigg)'=\cfrac{x^{k-1}}{(k-1)!}=e_{k-1}$$
+\[D_e = \begin{pmatrix}
+0 &  1 & \cdots & 0\\
+\vdots & \ddots & 1 & \vdots\\
+\vdots & 0 & \ddots & 1\\
+0 & \cdots & \cdots & 0
+\end{pmatrix} = J_n(0)\]
+\[J_n(0)^k = \begin{pmatrix}
+0 &  \cdots & \underset{k}{1} & \cdots & 0\\
+\vdots & \cdots & \ddots & \underset{k+1}{1} & \vdots\\
+\vdots & \cdots & 0 & \ddots & \underset{n}{1}\\
+0 & \cdots & \cdots & \cdots & 0
+\end{pmatrix}\]
+(так как $D^k(e_u)=e_{n-k}$ и т.д.)\\
+\begin{proposal}
+Если $f(x)$ --- многочлен, то
+\[f(J_k(\lambda)) = \begin{pmatrix}
+f(\lambda) & \cfrac{f'(\lambda)}{1!} & \cdots & \cfrac{f^{(k-1)}(\lambda)}{(k-1)!}\\
+0 & \ddots & \cdots & \cfrac{f^{(k-2)}(\lambda)}{(k-2)!}\\
+\vdots & 0 & \ddots & \vdots\\
+0 & \cdots & 0 & f(\lambda)\\
+\end{pmatrix}\]
+\end{proposal}
+\begin{proof}
+        Так как $f(x)=\sum\limits_{i=0}^n a_ix^i$, то достаточно проверить формулу для $f(x)=x^i$. Тогда в каждой клетке получаем $\sum\limits_{i=0}^n a_i\cfrac{(x^i)^{(t)}}{t!}=\cfrac{f^{(t)}(x)}{t!}$ для подходящего $t$. \\
+        Имеем: при $f(x)=x^i$
+        \[f(J_k(\lambda))=\begin{pmatrix}
+        \lambda &  1 & \cdots & 0\\
+        \vdots & \ddots & 1 & \vdots\\
+        \vdots & 0 & \ddots & 1\\
+        0 & \cdots & \cdots & \lambda
+        \end{pmatrix}^i= \bigg( \lambda \begin{pmatrix}
+        1 &  0 & \cdots & 0\\
+        0 & \ddots & 1 & \vdots\\
+        \vdots & 0 & \ddots & 0\\
+        0 & \cdots & 0 & 1
+        \end{pmatrix} + \begin{pmatrix}
+        0 &  1 & \cdots & 0\\
+        \vdots & \ddots & 1 & \vdots\\
+        \vdots & 0 & \ddots & 1\\
+        0 & \cdots & \cdots & 0
+        \end{pmatrix} \bigg)^i=\]
+        $$=(\lambda E+J_k(0))^i=\sum\limits_{t=0}^i\lambda^t J_k(0)^{i-t}C_i^t$$
+        Ненулевые элементы только в клетках с координатами $(a, a+(i-t))_i$, в этих клетках стоит
+        $$\lambda^tC_i^t=\cfrac{\lambda^t i!}{t!(i-t)!},$$
+        при этом
+        $$f^{(i-t)}(\lambda)=\cfrac{i!}{t!}\lambda^t$$
+\end{proof}
+\begin{theorem}[О Жордановой форме]
+    Для любого линейного оператора $\phi$ в $\mathbb{C}^n$ существует базис (жорданов базис), в котором матрица оператора $\phi$ преобретает вид
+    \[\phi_i=J(\phi) = \begin{pmatrix}
+    J_1 & \cdots & 0\\
+    \vdots & \ddots & \vdots\\
+    0 & \cdots & J_T\\
+    \end{pmatrix},\]
+    где $J_i$ --- жордановы клетки.\\
+    \\
+    Если $A$ --- матрица $n\times n$, что
+    $$\phi_A(\lambda)=det(A-\lambda E)=(\lambda_1 - \lambda)^{k_1}\cdots(\lambda_i - \lambda)^{k_i},$$
+    то $k_i$ --- кратности собственных значений $\lambda_i$.
+    \[ 
+    J(A)=
+    \left(
+    \begin{BMAT}[8pt]{c:cc:ccc:c}{c:cc:ccc:c}
+    \lambda_1 & 0  &  & & 0 & & 0 \\
+    0 & \lambda_2 & 1 &  & 0  & & 0\\
+    & 0 & \lambda_2 &  & & &\\
+    &  & & \lambda_3 & 1 & 0 & \\
+    0& 0 &  & \vdots & \ddots & 1 & 0 \\
+    &  &  & 0 & \cdots & \lambda_3 &  \\
+    0 & 0 &  &  & 0 & & \ddots
+    \end{BMAT} 
+    \right)
+    \]
+\end{theorem} 
+\begin{consequence}
+    Если $J=J(A)$ --- жорданова форма $A$, $C$ --- матрица, в которой по столбцам записан жорданов базис, то
+    $$f(J)=C^{-1}f(A)C \Leftrightarrow f(A)=Cf(J)C^{-1},$$
+    где 
+    \[ 
+    f(J)=
+    \left(
+    \begin{BMAT}[8pt]{c:c:c}{c:c:c}
+    f(J_1) & \cdots  & 0 \\
+    \vdots & f(J_2) & \vdots\\
+    0 & \cdots  & \ddots\\
+    \end{BMAT} 
+    \right)
+    \]
+\end{consequence}
+\begin{definition}
+\textbf{Аннулирующий многочлен} матрицы $A$ --- такой многочлен $f(x)$, что $f(A)=0$.
+\end{definition}
+\begin{definition}
+    \textbf{Минимальный многочлен} матрицы $A$ (обозначается $m_A(x)$) --- это аннулирующий многочлен наименьшей возможной степени со старшим коэффициентом 1.
+\end{definition}
+\textbf{Пример 2.}\\
+$\chi_A(\lambda)$ --- аннулирующий многочлен для $A$ (по теореме Гамильтона-Кели).
+$$\chi_A(A)=C^{-1}\chi_A(J)C=C^{-1}((\lambda_1E-J)^{k_1}\cdots(\lambda_iE-J)^{k_i})C =$$  
+\[=C^{-1}\left(
+\begin{BMAT}[8pt]{ccc:c}{ccc:c}
+0 & 1 & 0  & 0 \\
+\vdots & \ddots & 1 &\vdots\\
+0 & \cdots & 0 & \vdots\\
+0 & \cdots & \cdots & \ddots\\
+\end{BMAT} 
+\right)
+^{k_i}\cdots C = C^{-1}OC\]
+Получим $\chi_A(\lambda)=0$.\\
+\\
+Пусть $m_i$ --- порядок наибольшей жордановой клетки с $\lambda=\lambda_i$ (геометрическая кратность собственного значения). Тогда $m_i\leqslant k_i$ и $m_A(x)=(x-\lambda_1)^{m_1}\cdots (x-\lambda_i)^{m_i}$ --- минимальный многочлен матрицы $A$ (он же --- минимальный многочлен $J$).\\
+\\
+Как вычислить $f(A)$, зная минимальный многочлен $m_A(x)=(x-\lambda_1)^{m_1}\cdots (x-\lambda_s)^{m_s}$?\\
+Если $f(x)=m_A(x)q(x)+R(x)$ --- деление с остатком, где $degR(x)<d$ ($d=deg m_A(x)$ --- степень минимального многочлена), то 
+$f(A)=0\cdot q(A)+R(A)=R(A)$ --- \textbf{многочлен Лагранжа-Сильвестра}.\\
+\begin{definition}
+$\lambda_1,\cdots,\lambda_s$ --- спектр, $R_1,\cdots,R_s$ --- соответствующие алгебраические кратности.\\
+\[
+\begin{BMAT}[8pt]{ccc}{ccc}
+f(\lambda_1) & \cdots & f(\lambda_s) \\
+\vdots & \ddots &\vdots\\
+f^{(k_1-1)}(\lambda_1) & \cdots & f^{(k_s-1)}(\lambda_s)\\
+\end{BMAT} 
+\]
+$$k_1+\cdots +k_s=u$$
+$P$ --- \textbf{многочлен Лагранжа-Сильвестра}:
+$$P(\lambda_j)=f(\lambda_k)$$
+$$ \vdots$$
+$$P^{(k_j-1)}(\lambda_j)=f^{(k_j-1)}(\lambda_j),~j=1,\cdots, s$$
+\end{definition}
+\begin{definition}
+    \textbf{Определяющий многочлен}
+$$\psi(\lambda)=(\lambda-\lambda_1)^{k_1}\cdots(\lambda-\lambda_s)^{k_s}$$
+многочлены
+$$\phi_j=\cfrac{\psi(\lambda)}{(\lambda-\lambda_j)^{k_j}}$$
+\end{definition}
+Тогда искомый многочлен
+$$P(\lambda)=\sum\limits_{j=1}^s(\alpha_{j1}+\alpha_{j2}(\lambda-\lambda_j)+\cdots +\alpha_{jk_j}(\lambda-\lambda_j)^{k_j-1})\psi_j(\lambda)$$
+$$\alpha_{jl}=\cfrac{1}{(l-1)!}\bigg(\cfrac{f(\lambda)}{\psi_j(\lambda)}\bigg)^{(l-1)}_{\lambda=\lambda_j},~~l=1,\cdots,k_j,~j=1,\cdots,s$$
+$$P(\lambda)=\sum\limits_{j=1}^s(f(\lambda_j)\phi_{j1}(\lambda)+f'(\lambda_j)\phi_{j2}(\lambda)+\cdots+f^{(k_j-1)}(\lambda_j)\phi_{jk_j}(\lambda))$$
+
+\begin{definition}
+    \textbf{Спектральное разложение}:
+$$P(A)=\sum\limits_{j=1}^s(f(\lambda_j)z_{j1}+f'(\lambda_j)z_{j2}+\cdots+f^{(k_j-1)}(\lambda_j)z_{jk_j}),$$
+где $z_{ij}$ --- спектральные компоненты матрицы $A$.
+\end{definition}
+\begin{definition}
+    Спектральные компоненты зависят только от матрицы.
+\end{definition}
+\begin{statement}
+    $z_{ij}$ являются многочленами от матрицы $A$ степени меньшей, чем степень минимального многочлена.
+\end{statement} 
+\begin{statement}
+    Для любой матрицы $A$ компонентные матрицы (спектральные компоненты) являются линейно независимыми.
+\end{statement}
+\begin{statement}
+    Спектральные компоненты $z_{ij}$ коммутируют между собой и с $A$.
+\end{statement}
+Задача: Написать формулу для $A^{-1}$ в виде многочлена от $A$.\\
+$\blacktriangleright$ 
+\begin{center}
+    $det(A)\neq 0$ (так как существует $A^{-1}$)\\
+    $(-1)^n(A^n+C_1A^{n-1}+C_2A^{n-2}+\cdots)+det A\cdot E=0 \Rightarrow$\\
+    $A((-1)^n(A^{n-1}+C_1A^{n-2}+\cdots)=-detA\cdot E$\\
+    $A\bigg(\cfrac{(-1)^{n-1}}{det A}(A^{n-1}+C_1A^{n-2}+\cdots) \bigg)=A\cdot A^{-1}=E~~\blacksquare$
+\end{center}
+\begin{definition}
+    Ряд $\sum\limits_{k=0}^{\infty}\alpha_kA^k$ \textbf{сходится к матрице} $F$, если $\forall \varepsilon >0~\exists N(\varepsilon):~\forall N>N(\varepsilon)$
+$$||\sum\limits_{k=0}^N\alpha_kA^k-F||<\varepsilon$$
+\end{definition}
+\begin{definition}
+    Функция $f$ называется \textbf{регулярной} на множестве $S$, если для любого $A\in S$ существует степенной ряд $$f(A)=\sum\limits_{k=0}^{\infty}\alpha_kA^k$$
+\end{definition}
+\begin{statement}
+    $$T^{-1}f(A)T=\sum\limits_{k=0}^{\infty}\alpha_k(T^{-1}A^kT)$$
+\end{statement}
+\begin{theorem}
+    $f$ определена на матрице $A$.
+\end{theorem}
+\textbf{Пример 3.}\\
+\[A = \begin{pmatrix}
+2 & -1\\
+0 & 1\\
+\end{pmatrix}\]
+Задача Коши:\\
+$
+\left\{
+\begin{array}{lcl}
+\cfrac{dx}{dt}=Ax\\
+x|_{t=0}=x_0\\
+\end{array}
+\right.
+$
+\\
+\[x = \begin{pmatrix}
+x_1(t)\\
+\vdots\\
+x_n(t)\\
+\end{pmatrix},~x_0= \begin{pmatrix}
+x_1^0\\
+\vdots\\
+x_n^0\\
+\end{pmatrix}\]
+\textbf{Пример 4.}
+Найти $e^A$.\\
+\\
+$$x(t)=e^{At}x_0$$
+Собственные значения матрицы: $\lambda_1=1,~\lambda_2=2$.\\
+Тогда жорданова матрица
+\[J= \left(
+\begin{BMAT}[8pt]{c:c}{c:c}
+1 & 0 \\
+0 & 2\\
+\end{BMAT} \right)
+\]
+\[e^J = \begin{pmatrix}
+e & 0 \\
+0 & e^2\\
+\end{pmatrix},~v_1=\begin{pmatrix}
+1 \\
+0 \\
+\end{pmatrix},~v_2= \begin{pmatrix}
+1 \\
+1\\
+\end{pmatrix}\]
+\[T = \begin{pmatrix}
+1 & 1\\
+0 & 1\\
+\end{pmatrix},~T^{-1}= \begin{pmatrix}
+0 & 1\\
+1 & -1\\
+\end{pmatrix}\]
+$$e^A=Te^T T^{-1}$$
+Подставим:
+\[\begin{pmatrix}
+1 & 1\\
+1 & 0\\
+\end{pmatrix}\begin{pmatrix}
+e & 0\\
+0 & e^2\\
+\end{pmatrix}\begin{pmatrix}
+0 & 1\\
+1 & -1\\
+\end{pmatrix} = \begin{pmatrix}
+e^2 & e-e^2\\
+0 & e\\
+\end{pmatrix}\]
+$$f(A)=f(1)z_{11}+f(2)z_{21}$$
+\begin{enumerate}
+    \item $f(\lambda)=\lambda-2,~A-2E=(-1)z_{11} \Rightarrow$ \[z_{11}=\begin{pmatrix}
+    0 & 1\\
+    0 & 1\\
+    \end{pmatrix}\]
+    \item $f(\lambda)=\lambda-1,~A-E=z_{21} \Rightarrow$ 
+    \[z_{21}=\begin{pmatrix}
+    1 & -1\\
+    0 & 0\\
+    \end{pmatrix}\]
+\end{enumerate}
+\[f(A)=f(1)\begin{pmatrix}
+0 & 1\\
+0 & 1\\
+\end{pmatrix}+f(2)\begin{pmatrix}
+1 & -1\\
+0 & 0\\
+\end{pmatrix}\]
+\[sin\bigg(\cfrac{\pi A}{2}\bigg) = \begin{pmatrix}
+0 & 1\\
+0 & 1\\
+\end{pmatrix}\]
+    \begin{statement}
+    Если $||A||<1$, то $E-A$ обратима и $(E-A)^{-1}=\sum\limits_{k=0}^{\infty}A^k$.
+    \end{statement}
+\begin{proof}
+    $$(E-A)\sum\limits_{k=0}^{\infty}A^k=\sum\limits_{k=0}^{\infty}A^k-\sum\limits_{k=0}^{\infty}A^{k+1}=\sum\limits_{k=0}^{\infty}A^k-\sum\limits_{k=1}^{\infty}A^k=E$$
+    Критерий Коши: $$||\sum\limits_{k=0}^N A^k-(E-A)^{-1}||\leqslant||\sum\limits_{k=M}^N A^k||\leqslant \sum\limits_{k=M}^N||A||^k,$$
+причем последовательность чисел $||A||^k=q^k,~|q|<1$ является сходящейся.
+\end{proof}
+\subsection{Домашнее задание 10}\begin{enumerate}
+    \item Дана жорданова форма 
+    \[A = \begin{pmatrix}
+    2 & 0 & 0\\
+    0 & 1 & 1\\
+    0 & 0 & 1\\
+    \end{pmatrix}\]
+    Найти спектральное разложение для $A$ и вычислить: 
+    \begin{itemize}
+        \item $f(\lambda)=sin(\cfrac{\pi}{2}\lambda)$
+        \item $f(\lambda)=e^{\lambda t}$
+        \item $f(\lambda)=\sqrt{\lambda}$
+        \item $f(\lambda)=\lambda^{100}$
+    \end{itemize}
+    \item Решить задачу Коши.\\ \\
+    $
+    \left\{
+    \begin{array}{lcl}
+    \cfrac{dx_1}{dt}=2x_1, & & x_1|_{t=0}=1\\
+    \cfrac{dx_2}{dt}=x_2+x_3, & & x_2|_{t=0}=1\\
+    \cfrac{dx_3}{dt}=x_3, & & x_3|_{t=0}=1\\
+    \end{array}
+    \right.
+    $
+    \item Проскуряков "Сборник задач" №1164, 1165, 1167 -- 1170.
+\end{enumerate}

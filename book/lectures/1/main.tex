@@ -1,0 +1,390 @@
+\newpage
+\section{Лекция 1}
+\subsection{Псевдообратная матрица}
+Пусть имеется СЛУ
+$$Ax=b$$
+Тогда если $\exists A^{-1}$, то $x=A^{-1}b$.
+
+Так как часто матрица является вырожденной или неквадратной, появляется необходимость ввести обобщение обратной матрицы.
+
+Псевдообратная матрица $A^+$ позволяет найти решение через явную формулу $x=A^+b$ для любой матрицы $A$, если оно существует.
+Если решения нет, то $x=A^+b$ будет наилучшим приближенным решением по евклидовой метрике, то есть, расстояние между $Ax$ и $b$ будет минимальным.\bigskip
+
+\begin{definition}
+    $C=A^+$ (где $C_{n \times m}, ~A_{m \times n})$ --- \textbf{псевдообратная матрица Мура-Пенроуза} для матрицы $A$, если:
+\begin{enumerate}
+    \item $ACA=A$
+    \item $CAC=C$
+    \item $(AC)^*=AC=C^*A^*$
+    \item $(CA)^*=CA$
+\end{enumerate}
+\end{definition}
+\[\begin{pmatrix}
+1+i & 3-i\\
+2i & 5\\
+\end{pmatrix}^* = \begin{pmatrix}
+1-i & -2i\\
+3+i & 5\\
+\end{pmatrix}\]
+\\ 
+Если $detA \neq 0$, то подходит $C=A^{-1}$.
+\begin{theorem}
+    Если такая матрица $C$ существует, то она единственная.
+\end{theorem}
+\begin{proof}
+    Пусть $B, C$ --- две матрицы, удовлетворяющие свойствам 1 - 4.\\
+$$AB\overset{1}{=}\underbrace{ACA}_{A}B=(AC)(AB)\overset{3}{=}(AC)^*(AB)^*=C^*A^*B^*A^*=$$
+$$=C^*(ABA)^*\overset{1}{=}C^*A^*=(AC)^*\overset{3}{=}AC$$\\
+Аналогично выводится $BA=CA$. Тогда
+$$B\overset{2}{=}BAB=\underbrace{BA}_{CA}B=C\underbrace{AB}_{AC}=CAC\overset{2}{=}C$$\\
+Значит, $B=C$, то есть, псевдообратная матрица единственна.
+\end{proof}
+\noindent \textbf{Пример 1.}\\
+Найти псевдообратную матрицу.\\ \\
+\[\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 0 & \cdots & 0 \\         
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 0
+\end{pmatrix}^+ = \begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 0 & \cdots & 0 \\         
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & 0
+\end{pmatrix}\]\\
+$
+\left\{ 
+\begin{array}{ll}  
+AA=A \Rightarrow A=A^+\\
+A^*=A\\
+\end{array}   
+\right.
+$\\ \\
+\noindent Мы доказали единственность, значит другая матрица не подойдет.\\ \\
+$O_{m \times n}^+ = O_{n \times m}$\\
+\[ A_{m \times n}=\bordermatrix{
+    &r  & n \cr
+    r & X_{r \times r} & O \cr 
+    m & O & O \cr } , ~ A_{n \times m}^+=\bordermatrix{
+    &r  & m \cr
+    r & X_{r \times r}^+ & O \cr
+    n & O & O \cr }\]\\
+\textbf{Пример 2.}\\
+Найти $A^+$.
+\[A=\begin{pmatrix}
+a_1 \\
+\vdots \\         
+a_n
+\end{pmatrix}\]\\
+$A^+=(b_1 \cdots b_n), ~ b_1,...,b_n$ - ?\\ \\
+Из свойств получим:
+\begin{center}
+    $A^+A=<A^+, A>=C \in \mathbb{R}$\\
+    $CA^+=A^+ \Rightarrow C=1$\\
+\end{center}
+\[A=\begin{pmatrix}
+a_1 \\
+\vdots \\         
+a_n
+\end{pmatrix}, B=\begin{pmatrix}
+b_1 \\
+\vdots \\         
+b_n
+\end{pmatrix}\] 
+\begin{center}
+    $<A, B>=A^*B=\bar a_1 b_1+...+\bar a_n b_n$\\ 
+    $A^+=\cfrac{1}{<A, A>}A^+=\cfrac{(\bar a_1,..., \bar a_n)}{|a_1|^2+...+|a_n|^2}$\\ 
+    $A^+A=\cfrac{A^*A}{<A, A>}=1$\\~\\
+    $
+    \left\{  
+    \begin{array}{ll}  
+    A^+=\cfrac{1}{\lambda}A^*\\
+    A^+A=1=C
+    \end{array}   
+    \right.  
+    $
+    \\ ~\\
+    $A^+A=\cfrac{1}{\lambda}A^*A=\cfrac{1}{\lambda}<A, A>=1$\\
+    $\lambda =A^*A=<A, A>=|A|^2$\\
+\end{center} 
+\begin{lemma}[Ещё свойства псевдообратной матрицы]
+    \ 
+\begin{enumerate}
+    \setcounter{enumi}{4}
+    \item $(A^+)^+=A$ (проверяется по определению)
+    \item $(A^*)^+=(A^+)^*$\\
+    Докажем, например, что $(A^*)^+=(A^+)^*$, удовлетворяет первому свойству:\\
+    $\blacktriangleright A^*(A^+)^*A^*=(AA^+A)^*=A^* ~~\blacksquare$
+    \item $rkA^+=rkA$\\
+    $\blacktriangleright$ $~rk(AB) \leqslant min\{rkA, rkB\}$\\
+    Из свойства 1: $rkA \leqslant rkA^+$\\
+    Из свойства 2: $rkA^+ \leqslant rkA ~~\blacksquare$
+\end{enumerate}
+\end{lemma}
+\begin{lemma}
+    $rk(A^*A)=rkA$
+\end{lemma}
+\begin{proof}
+    Докажем, что $Ker A^*A\subset Ker A$:
+    $$x\in Ker A \Leftrightarrow Ax=0\Rightarrow$$
+    $$\Rightarrow A^*Ax=A^* {0}=0$$
+    Докажем, что $Ker A\subset Ker A^*A$:\\
+    Пусть $z\in Ker A^*A$\\
+    $$A^*Az=0$$
+    $$z^*A^*Az=0$$
+    $$(Az)^*Az=0$$
+    $$|\tilde{z_1}|^2+...+|\tilde{z_n}|^2=0$$
+    $$\tilde{z}=Az$$
+    $$\tilde{z_1}=...=\tilde{z_n}=0 \Rightarrow Az=0 \Rightarrow z\in Ker A$$
+    Тогда $\dim(Im A)= n - \dim(Ker A) = n - \dim(Ker A^*A) =\dim(Im A^*A)$\\
+    $$\Rightarrow rk A = rk (A^*A) $$
+\end{proof}
+\begin{theorem}
+    Пусть $A_{m \times n}$ --- матрица полного столбцового ранга (столбцы линейно независимы), то есть $rkA=n$. Тогда $$A^+=(A^*A)^{-1}A^*$$
+\end{theorem}
+\begin{proof}
+    По Лемме выше, если матрица $A_{m\times n}$ имеет ранг $n$, то $(A^*A)_{n\times n}$ невырожденная.\\
+Проверим, что матрица $(A^*A)^{-1}A$ удовлетворяет свойствам определения 1.
+\begin{enumerate}
+    \item $AA^+A=A$\\
+    $A^+A=(A^*A)^{-1}A^*A=E$\\
+    $AE=A$
+    \item $A^+AA^+=A^+$\\
+    $EA^+=A^+$
+    \item $(AA^+)^*=AA^+$\\
+    $(A(A^*A)^{-1}A^*)^*=(A^*)^*((A^*A)^{-1})^*A^*=A((A^*A)^*)^{-1}A^*=A(A^*A)^{-1}A^*=AA^+$
+    \item $(A^+A)^*=AA^+$\\
+    $E^*=E $
+\end{enumerate}
+\end{proof}
+\begin{theorem}
+    Пусть $B$ --- матрица полного строчного ранга. Тогда $$B^+=B^*(BB^*)^{-1}$$
+\end{theorem}
+\begin{proof}
+    Так как $B^*$ - матрица полного столбцового ранга, то по Теореме 2,\\
+$$(B^*)^+=(B^{**}B^*)^{-1}B^{**}
+=(BB^*)^{-1}B$$
+По свойству 6,
+$$B^+=((B^*)^+)^*=((BB^*)^{-1}B)^*=B^*(BB^*)^{-1}$$
+\end{proof}
+\textbf{Пример 3.}\\
+Найти $A^+$.\\
+\[A = \begin{pmatrix}
+1 & 0 & 0 \\         
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 1 & 1 \\
+\end{pmatrix}\]\\
+\\
+\[A^*A = \begin{pmatrix}
+1 & 0 & 0 & 1 \\         
+0 & 1 & 0 & 1\\
+0 & 0 & 1 & 1\\
+\end{pmatrix} \cdot \begin{pmatrix}
+1 & 0 & 0 \\         
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 1 & 1 \\
+\end{pmatrix} = \begin{pmatrix}
+2 & 1 & 1 \\         
+1 & 2 & 1 \\
+1 & 1 & 2 \\
+\end{pmatrix}\]\\
+\begin{center}$det (A^*A)=2\cdot 3-(2-1)+(1-2)=6-1-1=4$\end{center}
+\[(A^*A)^{-1} = \begin{pmatrix}[r]
+\cfrac{3}{4} & -\cfrac{1}{4} & -\cfrac{1}{4} \\         
+-\cfrac{1}{4} & \cfrac{3}{4} & -\cfrac{1}{4} \\
+-\cfrac{1}{4} & -\cfrac{1}{4} & \cfrac{3}{4} \\
+\end{pmatrix}\]
+\[A^+ = \begin{pmatrix}[r]
+\cfrac{3}{4} & -\cfrac{1}{4} & -\cfrac{1}{4} \\         
+-\cfrac{1}{4} & \cfrac{3}{4} & -\cfrac{1}{4} \\
+-\cfrac{1}{4} & -\cfrac{1}{4} & \cfrac{3}{4} \\
+\end{pmatrix} \cdot \begin{pmatrix}
+1 & 0 & 0 & 1 \\         
+0 & 1 & 0 & 1\\
+0 & 0 & 1 & 1\\
+\end{pmatrix} = \frac{1}{4} \cdot \begin{pmatrix}[r]
+3 & -1 & -1 & 1 \\         
+-1 & 3 & - 1 & 1 \\
+-1 & -1 & 3 & 1 \\
+\end{pmatrix}\]\\\\
+\subsection{Скелетное разложение}
+\begin{statement}
+Любую прямоугольную матрицу $A_{m \times n}$ можно представить в виде 
+$$A_{m \times n}=F_{m \times r}G_{r \times n}$$
+где $r=rkA$, $F$ --- матрица полного столбцового ранга, $G$ --- матрица полного строчного ранга.
+
+Это представление называется \textbf{скелетным разложением} матрицы $A$.
+\end{statement}
+\begin{proof}
+Приведём алгоритм построения.
+
+Некоторый набор из $r$ столбцов $A_{t_1}, A_{t_2},\ldots, A_{t_r}$ образует базис в линейной оболочке всех столбцов $A$.\\
+То есть, если $F$ - матрица из базисных столбцов, то любой столбец матрицы $A$ представляется в виде $A^j=\lambda_{j1}F^1+\ldots+\lambda_{jr}F^r=F\lambda_j$ для некоторого вектора коэффициентов $\lambda_j$.\\
+Положим $G=(\lambda_1, \lambda_2,\ldots, \lambda_n)$. Тогда $A=FG$.
+\end{proof}
+\begin{theorem}
+    Если $A=FG$ - разложение полного ранга, то $A^+=G^+F^+$.
+\end{theorem}
+\begin{proof}
+    По предыдущим теоремам, $F^+=(F^*F)^{-1}F^*$, $G^+=G^*(GG^*)^{-1}$.\\
+Тогда $G^+F^+=G^*(GG^*)^{-1}(F^*F)^{-1}F^*$. Легко проверить, что $G^+F^+$ удовлетворяет всем свойствам определения 1.
+\end{proof}
+\begin{theorem}
+    Пусть $A $ --- матрица размера $m\times n$
+с рангом $r$ и пусть
+$$
+A = \left( \begin{array}{c} G \\ 0\end{array} \right)
+$$
+имеет канонический вид,
+где $G$ верхняя $r\times n$ подматрица без нулевых строк и
+$0$ означает нулевую подматрицу. Пусть $i_1, \dots ,i_r$ значения столбцов, где находятся ведущие коэффициенты ступенчатого разложения. Тогда если $F$ составлена из столбцов $A$ с номерами $i_1,
+\dots , i_r$, то
+$$
+A = FG
+$$
+-- разложение полного ранга.
+\end{theorem}
+\textbf{Пример 4.}\\
+Найти скелетное разложение.\\
+\[A = \begin{pmatrix}[r]
+2 & -1 & 0 \\         
+-1 & 1 & 1 \\
+0 & 1 & 2 \\
+\end{pmatrix}\]
+Приведем к каноническому виду.\\
+\[\begin{pmatrix}[r]
+2 & -1 & 0 \\         
+-1 & 1 & 1 \\
+0 & 1 & 2 \\
+\end{pmatrix} \approx \begin{pmatrix}[r]
+1 & 0 & 1 \\         
+-1 & 1 & 1\\
+0 & 1 & 2\\
+\end{pmatrix} \approx \begin{pmatrix}
+1 & 0 & 1 \\         
+0 & 1 & 2 \\
+0 & 1 & 2 \\
+\end{pmatrix} \approx \begin{pmatrix}
+1 & 0 & 1 \\         
+0 & 1 & 2 \\
+0 & 0 & 0 \\
+\end{pmatrix}\]\\
+$rkA=2$\\
+Надо найти такие $B$ и $C$, что $A_{3 \times 3}=B_{3 \times 2}C_{2 \times 3}$.
+\[B = \begin{pmatrix}[r]
+2 & -1 \\         
+-1 & 1 \\
+0 & 1 \\
+\end{pmatrix}, ~ C = \begin{pmatrix}
+1 & 0 & 1 \\         
+0 & 1 & 2 \\
+\end{pmatrix}\]
+Здесь $B$ --- столбцы исходной матрицы, $C$ --- канонический вид.\\ \\
+\[B^* = \begin{pmatrix}[r]
+2 & -1 & 0 \\         
+-1 & 1 & 1 \\
+\end{pmatrix}, B^*B = \begin{pmatrix}[r]
+2 & -1 & 0 \\         
+-1 & 1 & 1 \\
+\end{pmatrix} \cdot \begin{pmatrix}[r]
+2 & -1 \\         
+-1 & 1 \\
+0 & 1 \\
+\end{pmatrix} = \begin{pmatrix}[r]
+5 & -3 \\         
+-3 & 3 \\
+\end{pmatrix}\]\\
+\[(BB^*)^{-1} = \frac{1}{6} \cdot \begin{pmatrix}
+3 & 3 \\         
+3 & 5 \\
+\end{pmatrix}^T = \frac{1}{6} \cdot \begin{pmatrix}
+3 & 3 \\         
+3 & 5 \\
+\end{pmatrix}\]\\
+\[B^+ = \frac{1}{6} \cdot \begin{pmatrix}
+3 & 3 \\         
+3 & 5 \\
+\end{pmatrix} \cdot \begin{pmatrix}[r]
+2 & -1 & 0 \\         
+-1 & 1 & 1 \\
+\end{pmatrix} = \frac{1}{6} \cdot \begin{pmatrix}
+3 & 0 & 3 \\         
+1 & 2 & 5 \\
+\end{pmatrix}\]\\
+\[C^* = \begin{pmatrix}
+1 & 0 \\         
+0 & 1 \\
+1 & 2 \\
+\end{pmatrix}, CC^* = \begin{pmatrix}
+1 & 0 & 1 \\         
+0 & 1 & 2 \\
+\end{pmatrix} \cdot \begin{pmatrix}
+1 & 0 \\         
+0 & 1 \\
+1 & 2 \\
+\end{pmatrix} = \begin{pmatrix}
+2 & 2 \\         
+2 & 5 \\
+\end{pmatrix}\]\\
+\[(CC^*)^{-1} = \frac{1}{6} \cdot \begin{pmatrix}[r]
+5 & -2 \\         
+-2 & 2 \\
+\end{pmatrix}^T = \frac{1}{6} \cdot \begin{pmatrix}[r]
+5 & -2 \\         
+-2 & 2 \\
+\end{pmatrix}\]\\
+\[C^+ = \begin{pmatrix}
+1 & 0 \\         
+0 & 1 \\
+1 & 2 \\
+\end{pmatrix} \cdot \frac{1}{6} \cdot \begin{pmatrix}[r]
+5 & -2 \\         
+-2 & 2 \\
+\end{pmatrix} = \frac{1}{6} \cdot \begin{pmatrix}[r]
+5 & -2 \\         
+-2 & 2 \\
+1 & 2 \\
+\end{pmatrix}\]\\
+\[A^+ = C^+B^+ = \frac{1}{6} \cdot \begin{pmatrix}[r]
+5 & -2 \\         
+-2 & 2 \\
+1 & 2 \\
+\end{pmatrix} \cdot \frac{1}{6} \cdot \begin{pmatrix}
+3 & 0 & 3 \\         
+1 & 2 & 5 \\
+\end{pmatrix} = \frac{1}{36} \cdot \begin{pmatrix}[r]
+13 & -4 & 5 \\         
+-4 & 4 & 4 \\
+5 & 4 & 13 \\
+\end{pmatrix}\]
+\subsection{Домашнее задание 1}\begin{enumerate}
+    \item Вычислите \[\begin{pmatrix} 1&0\end{pmatrix}^+\]
+    \item Вычислите \[\begin{pmatrix} ~0~\\~1~\\~2~\\~3~\end{pmatrix}^+\]
+    \item Вычислите \[\begin{pmatrix} 3&2&1&0 \end{pmatrix}^+\]
+    \item Вычислите \[\begin{pmatrix}[r] 1&0~\\-1 & 0~\\-1 & 0~\\ 2&1~\end{pmatrix}^+\]
+    \item Вычислите  \[\begin{pmatrix}[r] 1&2&3\\0 & -1 & -2\end{pmatrix}^+\]
+    \item Пусть $A $ --- матрица размера $m\times n$
+    с рангом $r$ и пусть
+    $$
+    K = \left[ \begin{array}{c} G \\ \hline  0\end{array} \right]
+    $$
+    имеет канонический вид,
+    где $G$ верхняя $r\times n$ подматрица без нулевых строк и
+    $0$ означает нулевую подматрицу. Пусть $i_1, \dots ,i_r$ значения столбцов, где находятся ведущие коэффициенты ступенчатого разложения, и пусть $F$ подматрица $A$ получена из столбцов $i_1,
+    \dots , i_r$.  Докажите, что
+    $$
+    A = FG
+    $$
+    и что это разложение полного ранга (скелетное разложение) $A$.
+    \item Найти разложение полного ранга (скелетное разложение)
+    \[\begin{pmatrix}[r] ~1&1&1~\\~2 & 2 & 2~\\~3 & 3 & 3~\\ ~1&2&3~\end{pmatrix}\]
+    \item Вычислите  \[\begin{pmatrix}[r] ~1&0&0~\\~1 & 1 & 1~\\~0 & 1 & 1~\end{pmatrix}^+\]
+    \item Пусть $E_{ij}$ матрица размера $n\times n$, такая что ее элементы в $i$-ой строке и $j$-ом столбце единицы, а все остальные элементы нули. Найти разложение полного ранга и псевдообратную матрицу.
+    \item Докажите:\begin{enumerate}
+        \item $Im(AA^+) = Im(AA^*) = Im A$;
+        \item $Ker (AA^+) = Ker (AA^*) = Ker A^*$;
+        \item $Im A^+ = Im A^*$;
+    \end{enumerate}
+\end{enumerate}

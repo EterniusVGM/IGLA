@@ -1,0 +1,365 @@
+\newpage
+\section{Лекция 11}
+\subsection{Решение систем линейных уравнений}
+Пусть дана система уравнений:\begin{center}
+    $
+    \left\{
+    \begin{array}{lcl}
+    x+0.99y=1.01 \\
+    x+1.01y=0.99 \\
+    \end{array}
+    \right.
+    $
+\end{center}
+Надо найти приблизительное решение. Все коэффициенты известны с точностью до 1\%.
+Либо $x+y=1$ --- бесконечное множество решений, либо 
+$
+\left\{
+\begin{array}{lcl}
+x+y=1.01 \\
+x+y=0.99 \\
+\end{array}
+\right.
+$
+--- нет решений.\\
+$$A\bar x=\bar b$$
+Если считать, что коэффициенты точно известны, то можно найти решение.
+\[\begin{pmatrix}[r]
+1 & 0.99 \\
+1 & 1.01 \\
+\end{pmatrix} \begin{pmatrix}[r]
+x \\
+y \\
+\end{pmatrix} = \begin{pmatrix}[r]
+1.01 \\
+0.99 \\
+\end{pmatrix}\]
+\[\bar x= A^{-1} \bar b = \cfrac{1}{0.02} \begin{pmatrix}[r]
+1.01 & -0.99 \\
+-1 & 1 \\
+\end{pmatrix} \begin{pmatrix}[r]
+1.01 \\
+0.99 \\
+\end{pmatrix} = \begin{pmatrix}[r]
+2 \\
+-1 \\
+\end{pmatrix}\]
+При малом изменении коэффициентов (даже на 1\%) решение может испортиться.\\ \\
+$
+\left\{
+\begin{array}{lcl}
+x+y=2 \\
+x+2y=3 \\
+\end{array}
+\right.
+$
+--- устойчивая система.\\ \\
+Коэффициенты известны с точностью до 1\%.\\
+\[\begin{pmatrix}[r]
+x \\
+y \\
+\end{pmatrix} = \begin{pmatrix}[r]
+1 \\
+1 \\
+\end{pmatrix} \pm 2\% \]
+Даже если $b$ известен точно, при изменении матрицы все может измениться. Есть два типа ошибок --- неточная матрица и неточная правая часть.\\
+
+    \textbf{Общая постановка задачи.} 
+    
+    Найти $\bar x$, удовлетворяющий системе $A\bar x=\bar b$.\\
+    Пусть $\hat A \hat x=\hat b$ --- решение приближенной системы ($\hat A, \hat x, \hat b$ считаем известны).\\
+    Обозначим: $$\Delta A =\hat A-A$$
+    $$\Delta x = \hat x-x$$
+    $$\Delta b=\hat b -b$$
+    Мы хотим оценить $\Delta x$, причем $\Delta b$ считаем "малыми".\\
+    Так как $A$ и $b$ неизвестны, считаем $x \approx \hat x$.\\
+    Абсолютная погрешность: $|\Delta x|$\\
+    Относительная погрешность: $\cfrac{|\Delta x|}{|x|}$, где $|\cdot|$ --- неоторая векторная норма.\\
+    Оценивая $|b|_1 (|b|_{\infty})$ можем оценить $|\Delta x|_1 (|\Delta x|_{\infty})$.\\
+
+
+\textbf{Упрощенный вариант $\hat A=A$}\\
+Дано:\begin{center}
+    $
+    \left\{
+    \begin{array}{lcl}
+    Ax=b \\
+    A(x+\Delta x)=b+\Delta b \\
+    \end{array}
+    \right.
+    $ 
+    $\Leftrightarrow$
+    $
+    \left\{
+    \begin{array}{lcl}
+    Ax=b & (*) \\
+    A\Delta x=\Delta b & (**)\\
+    \end{array}
+    \right.
+    $
+    $\Leftrightarrow$
+    $
+    \left\{
+    \begin{array}{lcl}
+    x=A^{-1}b & $(v)$ \\
+    \Delta x=A^{-1} \Delta b & $(vv)$\\
+    \end{array}
+    \right.
+    $
+\end{center}
+Считаем, что $|x|\approx |\hat x|,~ |b|\approx |\hat b|$.\\
+Из (*) получим $$|b|\leqslant ||A||~|x| \Leftrightarrow |x| \geqslant \cfrac{|b|}{||A||}~~(1),$$а из (**) $$|\Delta b|\leqslant ||A||~|\Delta x|~~(2)$$
+Из (v) получим $$|x|\leqslant ||A^{-1}||~|b|~~(3),$$ а из (vv) $$|\Delta x|\leqslant ||A^{-1}||~|\Delta b|~~(4)$$
+Тогда относительная погрешность: $$\delta x=\cfrac{|\Delta x|}{|x|}\overset{(1), (4)}{\leqslant} \cfrac{||A^{-1}||~|\Delta b|}{|b|/||A||} = ||A||~||A^{-1}||\cfrac{|\Delta b|}{|b|}$$
+$$\delta x \overset{(2), (3)}{\geqslant} \cfrac{|\Delta b|/||A||}{||A^{-1}||~|b|}=\cfrac{1}{||A||~||A^{-1}||}~\cfrac{|\Delta b|}{|b|}$$
+\begin{definition}
+    $||A||~||A^{-1}|| = cond(A) = \chi (A) $ --- \textbf{число обусловленности}.
+\end{definition}
+Например, для евклидовой нормы $$\chi_2(A)=||A||_2~||A^{-1}||_2$$
+В итоге, получим: $$\cfrac{1}{\chi(A)}\delta b \leqslant \delta x\leqslant \chi(A) \delta b,~~\delta b=\cfrac{|\Delta b|}{|b|}$$
+А для общей задачи, если $(A+\Delta A) \hat x =b+\Delta b,~ \Delta x=\hat x-x$ ($\Delta b, \Delta A, \Delta x$ --- малые), то
+$$\cfrac{1}{\chi(A)}(\delta b+\delta A) \leqslant \delta x \leqslant \chi(A)(\delta b+\delta A),~~\delta A=\cfrac{||\Delta A||}{||A||}$$
+\textbf{Пример 1.}\\
+\[A=\begin{pmatrix}[r]
+1 & 0.99 \\
+1 & 1.01 \\
+\end{pmatrix},~ \bar b=\begin{pmatrix}[r]
+1.01 \\
+0.99 \\
+\end{pmatrix}\]
+Пусть у нас норма $|\cdot|_1$, тогда число обусловленности 
+\[\chi_1(A)=||A||_1||A^{-1}||_1=\begin{Vmatrix}[r]
+1 & 0.99 \\
+1 & 1.01 \\
+\end{Vmatrix}_1 \cdot 50 \cdot \begin{Vmatrix}[r]
+1.01 & -0.99 \\
+-1 & 1 \\
+\end{Vmatrix}_1 = 2\cdot 50 \cdot 2.01 = 201\]
+$$\delta x \leqslant 201 \delta b$$
+Чтобы было $\delta x <1\%$ надо $\delta b<\cfrac{1}{201}\cdot 1\%$.\\
+\\
+\textbf{Пример 2.}\\
+\[A=\begin{pmatrix}[r]
+1 & 1 \\
+1 & 2 \\
+\end{pmatrix},~ \bar b=\begin{pmatrix}[r]
+2 \\
+3 \\
+\end{pmatrix}, ~\bar x=\begin{pmatrix}[r]
+1 \\
+1 \\
+\end{pmatrix}\]
+У $b$ ошибка в 1\%. На сколько изменится $x$ при изменении $b$?\\ \\
+Найдем число обусловленности.
+\[\chi_{\infty}(A) = \begin{Vmatrix}[r]
+1 & 1 \\
+1 & 2 \\
+\end{Vmatrix}_{\infty} \begin{Vmatrix}[r]
+2 & -1 \\
+-1 & 1 \\
+\end{Vmatrix}_{\infty} = 3\cdot 3 = 9\]
+$\delta x < 1\%$, если $\delta b < 0.1 \%$.
+\begin{lemma}[Свойства числа обусловленности]
+    \ 
+\begin{enumerate}
+    \item $\chi(A) \geqslant 1$ 
+    \item $\chi(AB)\leqslant \chi(A) \chi(B)$
+    \item $\chi(A^{-1})=\chi(A)$
+    \item Для евклидовой нормы $||\cdot||_2$: если $\sigma_1\geqslant \cdots \geqslant \sigma_n$ --- сингулярные собственные значения, что $$\sigma_1=\sqrt{\lambda_{max}(A^*A)},$$
+    $$\sigma_n=\sqrt{\lambda_{min}(A^*A)},$$
+    тогда $\chi_2(A)=||A||_2||A^{-1}||_2=\sigma_1(A)\sigma_1(A^{-1})=\cfrac{\sigma_1}{\sigma_n}$\\
+    Например, если $A=A^*$ --- самосопряженная матрица, то $$\chi_2(A)= \bigg | \cfrac{ \lambda_{max}(A)}{ \lambda_{min}(A)} \bigg |$$
+    \item Для любой матричной нормы $||\cdot||$, согласованной с некоторой векторной нормой $|\cdot|$ $$\chi(A)\geqslant \bigg | \cfrac{ \lambda_{max}(A)}{ \lambda_{min}(A)} \bigg |$$
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+    \ 
+    \begin{enumerate}
+        \item Неравенство выполнено, так как для любой нормы $||A^{-1}||\geqslant \cfrac{1}{||A||}$. Кроме того, существует такая матрица $A$, что $\chi(A)=1$ только, если $||E||=1$ --- норма сохраняет единицу, так как иначе $\chi(A)=||A||~||A^{-1}||\geqslant ||AA^{-1}||=||E||$
+        \item $\chi(A) \chi(B)=||A||~||A^{-1}||~||B||~||B^{-1}|| \geqslant ||AB||~||B^{-1}A^{-1}||=||AB||~||(AB)^{-1}||=\chi(AB)$
+        \item Очевидно.
+        \item Проверка по определению.
+        \item $||A||\geqslant \rho(A)=|\lambda_{max}(A)|$\\
+        $||A^{-1}||\geqslant \rho(A^{-1})=\bigg | \cfrac{1}{\lambda_{min}(A)} \bigg | \Rightarrow \chi(A)=||A||~||A^{-1}||\geqslant \cfrac{|\lambda_{max}(A)|}{|\lambda_{min}(A)|}$\\
+        Так как $\lambda$ --- собственное значение $A$, то $\cfrac{1}{\lambda}$ --- собстенное значение $A^{-1}.$
+    \end{enumerate}
+\end{proof}
+\textbf{Пример 3.}\\
+\[\begin{pmatrix}[r]
+0.97 & 1.98 \\
+0.99 & 3.02 \\
+\end{pmatrix} \begin{pmatrix}[r]
+x_1 \\
+x_2 \\
+\end{pmatrix} = \begin{pmatrix}[r]
+3.01 \\
+3.97 \\
+\end{pmatrix}\]
+Решить приближенно и оценить погрешность решения.\\
+\[\hat A=\begin{pmatrix}[r]
+1 & 2 \\
+1 & 3 \\
+\end{pmatrix},~\hat b= \begin{pmatrix}[r]
+3 \\
+4 \\
+\end{pmatrix} \Rightarrow \hat x = \begin{pmatrix}[r]
+1 \\
+1 \\
+\end{pmatrix}\]
+Относительно какой нормы ошибка меньше? ($|\cdot|_1, |\cdot|_{\infty}, |\cdot|_2$)\\
+\[\chi(A)\approx \chi(\hat A)\approx ||\hat A||~||\hat A^{-1}||=\begin{Vmatrix}[r]
+1 & 2 \\
+1 & 3 \\
+\end{Vmatrix} \begin{pmatrix}[r]
+3 & -2 \\
+1 & 1 \\
+\end{pmatrix}\]
+\begin{center}
+    $\chi_{\infty}(A)=max\{3, 4\}\cdot max\{5, 2\}=20$\\
+    $\chi_1(A)=max\{2, 5\}\cdot max\{4, 3\}=20$\\
+    $\chi_2(A)=\sqrt{\cfrac{\lambda_{max}(A^*A)}{\lambda_{min}(A^*A)}}$
+\end{center}
+\[A^*A=\begin{pmatrix}[r]
+1 & 1 \\
+2 & 3 \\
+\end{pmatrix} \begin{pmatrix}[r]
+1 & 2 \\
+1 & 3 \\
+\end{pmatrix} = \begin{pmatrix}[r]
+2 & 5 \\
+5 & 13 \\
+\end{pmatrix}\]
+Собственные значения $A^*A$: $\lambda_{max}=14.93,~ \lambda_{min}=0.069$, тогда $\chi_2(A)=\sqrt{\cfrac{14.93}{0.069}}\approx 15$
+\[\Delta b=\hat b-b =\begin{pmatrix}[r]
+-0.01 \\
+0.03 \\
+\end{pmatrix}\]
+\begin{center}
+    $\delta_1 b=\cfrac{|\Delta b|_1}{|b|_1}\approx \cfrac{|\Delta b|_1}{|\hat b|_1}=\cfrac{0.01+0.03}{3+4}=0.0057$\\
+    $\delta_2 b=\cfrac{\sqrt{0.01^2+0.03^2}}{\sqrt{3^2+4^2}}=0.0063$\\
+    $\delta_{\infty}b=\cfrac{0.03}{4}=0.0075$\\
+    $\delta_1 A=\cfrac{||\Delta A||_1}{||A||_1}=\cfrac{0.04}{5}=0.008$\\
+    $\delta_{\infty} A =\cfrac{||\Delta A||_{\infty}}{||A||_{\infty}}=\cfrac{0.05}{4}=0.0125$
+\end{center}
+Собственные значения для $\Delta A^* \Delta A$: $\lambda_{min}=0.000487,~ \lambda_{max}=0.00131, \chi_2(\Delta A)=\\=\sqrt{\cfrac{0.00131}{0.000487}}=1.64$, тогда
+\begin{center}
+    $\delta_2 A =\cfrac{||\Delta A||_2}{||A||_2}=\cfrac{\sigma_1(\Delta A)}{\sigma_1(A)}=\cfrac{\sqrt{0.00131}}{\sqrt{14.93}}=0.009$\\
+    $\delta_1 x\leqslant \chi_1(A)(\delta_1 b+\delta_1 A) =20\cdot (0.0057+0.008)=0.27$\\
+    $\delta_2 x\leqslant \chi_2(A)(\delta_2 b+\delta_2 A) =15\cdot (0.0063+0.009)=0.23$\\
+    $\delta_{\infty} x\leqslant \chi_{\infty}(A)(\delta_{\infty} b+\delta_{\infty} A) =20\cdot (0.0075+0.0125)=0.4$
+\end{center}
+Норма $|\cdot|_2$ дала наименьшее значение ошибки 0.23, а $|\cdot|_{\infty}$ --- наибольшее 0.4.
+\subsection{Ошибка для обратной матрицы}
+$A=\hat A+\varepsilon$, если знаем $\hat A^{-1}$. Ошибка приближения $A^{-1}\approx \hat A^{-1}$?\\
+$$\chi(A)\approx \chi(\hat A)$$
+Надо оценить
+$$\delta A^{-1}=\cfrac{||(\hat A+\varepsilon)^{-1}-A^{-1}||}{||A^{-1}||}=\cfrac{||-\hat A^{-1}(E-\hat A(\hat A+\varepsilon)^{-1})||}{||A^{-1}||}=\cfrac{||-\hat A^{-1}(E-(E-\hat A^{-1}\varepsilon)^{-1})||}{||A^{-1}||}\approx$$ $$\approx \cfrac{||\hat A^{-1}(E-(E+\hat A^{-1}\varepsilon)^{-1})||}{||\hat A^{-1}||}\leqslant \cfrac{||\hat A^{-1}||}{||\hat A^{-1}||}~||E-(E+\hat A^{-1}\varepsilon)^{-1}||$$
+$$E-(E-\hat A^{-1} \varepsilon)^{-1}=E-(E-Y)^{-1}=E-(E+Y+Y^2+Y^3+\cdots)=-(Y+Y^2+\cdots)$$
+$$||\sum\limits_{t=1}^{\infty}(\hat A^{-1}\varepsilon)^t||\leqslant\sum\limits_{t=1}^{\infty}||\hat A^{-1}||^t||\varepsilon||^t=\cfrac{||\hat A^{-1}||~||\varepsilon||}{1-||\hat A^{-1}||~||\varepsilon||}\approx||\hat A^{-1}||~||\varepsilon||=\cfrac{\chi(\hat A)}{||\hat A||}||\varepsilon||=\chi(\hat A)\cfrac{||\varepsilon||}{||\hat A||}$$
+Более точно $$\delta A^{-1}\leqslant \cfrac{\chi(\hat A)\delta \varepsilon}{1-\chi(\hat A)\delta \varepsilon},~~\delta \varepsilon=\cfrac{||\varepsilon||}{||\hat A||}$$
+\textbf{Пример 4.}\\
+\[A=\begin{pmatrix}[r]
+2 & 0 & 0 \\
+0 & 1 & 1 \\
+0 & 0 & 1 \\
+\end{pmatrix}\]
+Найти $f(A)=A^{100},~ sin\bigg(\cfrac{\pi}{2}~A\bigg)$.\\
+Минимальный многочлен для матрицы $\varphi(\lambda)=(\lambda-1)^2(\lambda-2)$. Тогда для любой функции $f(\lambda)$, определенной на спектре матрицы $A$ спектральное разложение будет иметь вид $$f(A)=f(1)z_{11}+f'(1)z_{12}+f(2)z_{21}$$
+\begin{center}
+    $f_1=\lambda^2-2\lambda+1$\\
+    $f_1(A)=f_1(2)z_{21}$\\
+    $A^2-2A+E=(2^2-2\cdot 2+1)z_{21}$
+\end{center}
+Получим, что \[z_{21}\begin{pmatrix}[r]
+1 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+\end{pmatrix}\]
+\begin{center}
+    $f_2=\lambda-2$\\
+    $A-2E=(-1)z_{11}+1\cdot z_{12}$\\
+    $f_3=1$\\
+    $E=1\cdot z_{21}+1\cdot z_{11}$
+\end{center}
+Получим, что \[z_{11}\begin{pmatrix}[r]
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix}\]
+\[z_{12}\begin{pmatrix}[r]
+2 & 0 & 0 \\
+0 & 1 & 1 \\
+0 & 0 & 1 \\
+\end{pmatrix} - \begin{pmatrix}[r]
+2 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 2 \\
+\end{pmatrix} + \begin{pmatrix}[r]
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix} = \begin{pmatrix}[r]
+0 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+\end{pmatrix}\]
+Для $A^{100}$: $f(1)=1^{100},~f'(1)=100\cdot 1^{99},~f(2)=2^{100}$\\
+Получим
+\[A_{100}=1^{100}\begin{pmatrix}[r]
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix} + 100\cdot 1^{99}\begin{pmatrix}[r]
+0 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+\end{pmatrix} + 2^{100}\begin{pmatrix}[r]
+1 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+\end{pmatrix} = \begin{pmatrix}[r]
+2^{100} & 0 & 0 \\
+0 & 1 & 100 \\
+0 & 0 & 1 \\
+\end{pmatrix}\]
+Аналогично получим
+\[sin\bigg(\cfrac{\pi}{2}~A\bigg)=\begin{pmatrix}[r]
+sin~\pi & 0 & 0 \\
+0 & sin~\cfrac{\pi}{2} & \cfrac{\pi}{2}~cos~\cfrac{\pi}{2} \\
+0 & 0 & sin~\cfrac{\pi}{2} \\
+\end{pmatrix} = \begin{pmatrix}[r]
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix}\]
+\subsection{Домашнее задание  11}\begin{enumerate}
+    \item Доказать утверждение из лекции. Если $(A+\Delta A)\hat x=b+\Delta b,~\Delta x=\hat x-x$, то 
+    $$\cfrac{1}{\chi(A)}(\delta b+\delta A) \leqslant \delta x \leqslant \chi(A)(\delta b+ \delta A),$$ где $\delta A=\cfrac{||\Delta A||}{||A||}$ для малых $\Delta b, \Delta A, \Delta x$.
+    \item Вычислить $ln A$, где 
+    \[A = \begin{pmatrix}[r]
+    0 & 1 & 0\\
+    -4 & 4 & 0\\
+    -2 & 1 & 2\\
+    \end{pmatrix}\]
+    \item Дана система уравнений\\ \\
+    $
+    \left\{
+    \begin{array}{lcl}
+    x_1+x_2=3\\
+    x_1-x_2=4\\
+    \end{array}
+    \right.
+    $
+    \\ \\
+    Элементы главной диагонали могут меняться на $\varepsilon_1$, а элементы правой части на $\varepsilon_2$. Оценить возможное изменение решения для нормы $||A||=max\sqrt{\lambda^*\lambda}$.
+    \item Решить пример Крылова.($\sqrt{7}$ берется с разной точностью).\\ \\
+    $
+    \left\{
+    \begin{array}{lcl}
+    x_1+2x_2=3\\
+    \sqrt{7}x_1+2\sqrt{7}x_2=3\sqrt{7}\\
+    \end{array}
+    \right.
+    $
+    \\ 
+\end{enumerate}

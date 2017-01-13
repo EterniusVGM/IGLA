@@ -1,0 +1,220 @@
+\newpage
+\section{Лекция 12}
+\subsection{Итеративные методы решения систем алгебраических уравнений}
+Дана система уравнений $$A\bar x=\bar B~~(1)$$
+Перепишем ее в виде $$\bar x+(A-E)\bar x=\bar B$$
+или $$\bar x=P\bar x+\bar b$$
+Тут $P=E-A,~\bar b=\bar B$.\\
+Для $c\neq 0:~cA\bar x=c\bar B \Rightarrow \bar x=(E-cA)+c\bar B$, где $P=E-cA,~\bar b=c\bar B$.\\
+Если $C$ --- матрица, тогда $P=E-CA,~\bar b=C\bar B$.\\ \\
+\textbf{Метод итераций.}\\
+Пусть $\bar x^0$ --- любой вектор (начальное приближение к $\bar x$), тогда итеративная формула для вычисления $\bar x^1, \cdots, \bar x^k$ имеет вид
+$$x^{k+1}=Px^k+\bar b$$ 
+Если последовательность векторов $lim\{\bar x^i\}=\bar x^{\infty}$ сходится, то $$x^{\infty}=Px^{\infty}+\bar b,~x=x^{\infty},$$
+где $x=x^{\infty}$ --- решение системы.\\
+\\
+\begin{theorem}
+    Описанный метод простых итераций сходится, то есть существует $\bar x^{\infty}=\underset{i\to \infty}{lim}\{\bar x^i\}$, которое будет решением системы при любом значении $x^0$ тогда и только тогда, когда спектральный радиус $\rho(P)<1$.
+\end{theorem}
+\begin{proof}
+    Пусть спектральный радиус $\rho(P)<1$, тогда существуют согласованные матричные $||\cdot||$ и векторные $|\cdot|$ нормы, что $||P||<1$.\\
+Предположим, что решение системы существует. Если $\bar x$ --- решение системы, то \begin{center}
+    $x^{k+1}-x=(Px^k+\bar b)-(Px+\bar b)=P(x^k-x)$\\
+    $|x^{k+1}-x|\leqslant||P||~|x^k-x|~~(2)$
+\end{center}
+Значит $|x^{k+1}-x|\leqslant \cdots \leqslant ||P||^{k+1}|x^0-x| \to 0$. То есть, если решение $\bar x$ существует, то $\overset{lim}{i\to \infty}x^i=x$ --- решение системы.\\
+Если же решения нет $|\lambda_1|=\rho(P)\geqslant 1$, то существует $\bar v\neq 0:~Pv=\lambda_1 v$ --- собственный вектор, и для $x^0=v+\bar x$ получим
+$$x^{k+1}-x=P(x^k-x)=\cdots=P^{k+1}(x^0-x)=P^{k+1}v=\lambda^{k+1}v \nrightarrow 0$$
+\end{proof}
+Если $||P||<N$, то $|x^k-x|\leqslant N^k|x^0-x|$.\\
+Число верных значащих цифр $-c\cdot log_{10}|x^k-x|=\xi(x^k)$, где $c$ зависит от нормы.\\ \\
+\begin{proposal}
+    $$-const\cdot log_{10}(\rho(P))\leqslant \xi(x^{k+1})-\xi(x^k)$$
+Для нормы $|\cdot|_{\infty}$ $const=1$.
+\end{proposal}
+\begin{proof}
+    \ 
+\begin{center}
+    $\rho(P) \approx ||P|| \geqslant \cfrac{|x^{k+1}-x}{x^k-x}$\\
+    $log_{10}(\rho(P))\geqslant log_{10}|x^{k+1}-x|-log_{10}|x^k-x|$\\
+    $-log_{10}(\rho(P))\leqslant\cfrac{1}{c}(\xi(x^{k+1}-\xi(x^k))$
+\end{center}
+\end{proof}
+Надо, чтобы спектральный радиус был маленький.
+\begin{statement}
+    \ 
+\begin{center}
+    $|x-x^k|\leqslant \cfrac{|x^{k+1}-x^k|}{1-||P||}$, если $||P||<1$
+\end{center}
+\end{statement}
+\begin{proof}
+    $$|x^{k+p}-x^k|\leqslant|x^{k+p}-x^{k+p-1}|+\cdots+|x^{k+1}-x^k|\overset{(2)}{\leqslant}(||P||^p+\cdots+||P||+1)|x^{k+1}-x^k|\leqslant\cfrac{|x^{k+1}-x^k}{1-||P||}$$
+$$|x-x^k|=|x^{\infty}-x^k|=\underset{p\to \infty}{lim}|x^{k+p}-x^k|\leqslant\cfrac{|x^{k+1}-x^k|}{1-||P||}$$
+\end{proof}
+\begin{consequence}
+    \ 
+\begin{center}
+    $|x-x^k|\leqslant \cfrac{||P||^k}{1-||P||}|x^1-x^0|$
+\end{center}
+\end{consequence}
+\begin{consequence}
+    \ 
+\begin{center}
+    Если $\bar x^0=\bar b$, то $|x-x^k|\leqslant \cfrac{||P||^{k+1}}{1-||P||}|\bar b|$
+\end{center}
+\end{consequence}
+\begin{proof}
+    $x^1=Px^0+b$. Если $x^0=b$, то $x^1=Pb+b$.\\
+$$|x^1-x^0|=|Pb|\leqslant||P||~|b|$$
+\end{proof}
+\textbf{Пример 1.}\\
+Методом итераций решить систему.\\ \\
+$
+\left\{
+\begin{array}{lcl}
+20x_1+3x_2+x_3=68\\
+2x_1+20x_2+3x_3=41\\
+3x_1+x_2+10x_3=60\\
+\end{array}
+\right.
+$
+\\
+\\
+Тогда матрица $C$ будет иметь вид
+\[C=\begin{pmatrix}
+~\cfrac{1}{20}~ & 0 & 0\\
+0 & ~\cfrac{1}{20}~ & 0\\
+0 & 0 & ~\cfrac{1}{20}~\\
+\end{pmatrix}\]
+$$CAx=CB,~x=Px+b=(E-CA)x+CB$$
+То есть,  
+\[P=E-CA=\begin{pmatrix}
+0 & -0.15 & -0.05\\
+-0.1 & 0 & -0.15\\
+-0.3 & -0.1 & 0\\
+\end{pmatrix}\]
+\[b=CB=\begin{pmatrix}
+3.4\\
+2.05\\
+6\\
+\end{pmatrix}\]
+\[x=\begin{pmatrix}
+x_1\\
+x_2\\
+x_3\\
+\end{pmatrix} = \begin{pmatrix}
+0 & -0.15 & -0.05\\
+-0.1 & 0 & -0.15\\
+-0.3 & -0.1 & 0\\
+\end{pmatrix}x + \begin{pmatrix}
+3.4\\
+2.05\\
+6\\
+\end{pmatrix}\]
+Посчитаем норму матрицы: $||P||_c=0.9<1,~||P||_1=0.4<1$. Так как ее значения меньше 1, значит процесс итераций будет сходящимся.\\
+Возьмем в качестве первого приближения 
+\[x^0=\begin{pmatrix}
+3.4\\
+2.05\\
+6\\
+\end{pmatrix}\]
+Подставим это значение в $x^1=Px^0+b$, получим 
+\[x^1 \approx \begin{pmatrix}
+3\\
+1\\
+5\\
+\end{pmatrix}\]
+Теперь вместо $x^0$ подставляем $x^1$ и получаем $x^2$, и так далее, пока значение $x$ не будет больше изменяться.
+\subsection{Метод Зейделя}
+Этот метод является модификацией метода итераций. 
+$$x=Px+b$$
+Представим матрицу $P$ в виде суммы верхней и нижней треугольных матриц.
+\[P=P_1+P_2= \begin{pmatrix}
+0 & \cdots & 0\\
+* & \ddots & \vdots\\
+* & * & 0\\
+\end{pmatrix} + \begin{pmatrix}
+p_{11} & * & *\\
+\vdots & \ddots & *\\
+0 & \cdots & p_{nn}\\
+\end{pmatrix}\]
+Тогда итеративная формула вычисления будет иметь вид
+$$x^{k+1}=P_1x^{k+1}+P_2x^k+b$$
+\textbf{Пример 2.}\\
+Сделаем пример 1 с помощью метода Зейделя. В нем мы вычислили
+\[P=E-CA=\begin{pmatrix}
+0 & -0.15 & -0.05\\
+-0.1 & 0 & -0.15\\
+-0.3 & -0.1 & 0\\
+\end{pmatrix}\]
+Представим ее в виде суммы верхней и нижней треугольных матриц.
+\[P=P_1+P_2=\begin{pmatrix}
+0 & 0 & 0\\
+-0.1 & 0 & 0\\
+-0.3 & -0.1 & 0\\
+\end{pmatrix} + \begin{pmatrix}
+0 & -0.15 & -0.05\\
+0 & 0 & -0.15\\
+0 & 0 & 0\\
+\end{pmatrix}\]
+Тут также за нулевое приближение возьмем
+\[x^0=\begin{pmatrix}
+3.4\\
+2.05\\
+6\\
+\end{pmatrix}\]
+$$x_1'=0\cdot x_1'-(0.15\cdot 2.05+0.05\cdot 6)+3.4=2.7925$$
+$$x_2'=-0.1x_1'-0.15\cdot 6+2.05=0.87075$$
+$$x_3'=-0.3x_1'-0.1x_2'-0+6=5.075175$$
+\textbf{Приведение к виду, удобному для итераций.}\\
+$$Ax=b$$
+$$\tau Ax=\tau b$$
+$$x=(E-\tau A)x+\tau b$$
+Надо найти такое оптимальное $\tau$, что $\underset{\tau}{min}\underset{\lambda \in [\lambda_{min},\lambda_{max}]}{max}|1-\tau \lambda|$.
+\begin{statement}
+    Если все собственные числа матрицы $\lambda_i>0$, то оптимальное значение $\tau=\cfrac{2}{\lambda_{min}+\lambda_{max}}$.
+\end{statement}
+\noindent\textbf{Пример 3.}\\
+Привести к виду, удобному для итераций.\\
+$
+\left\{
+\begin{array}{lcl}
+2x_1+2x_2-2x_3=6\\
+2x_1+5x_2-4x_3=1\\
+-2x_1-4x_2+5x_3=1\\
+\end{array}
+\right.
+$
+\\ \\
+Собстевнные значения матрицы $\lambda_1=\lambda_2=1,~\lambda_3=10$. Так как все они положительные, получим: 
+$$\tau=\cfrac{2}{10+1}=\cfrac{2}{11}$$
+\[E-\tau A=\begin{pmatrix}
+1-2\tau & -2\tau & 2\tau \\
+-2\tau & 1-5\tau & 4\tau \\
+2\tau & 4\tau & 1-5\tau \\
+\end{pmatrix}\]
+Тогда $max\{|1-2\tau|,~|1-3\tau|,~|1+\tau|\}$.
+\subsection{Домашнее задание 12}\begin{enumerate}
+    \item Доказать утверждение из лекции. Если все собственные числа матрицы $\lambda_i>0$, то оптимальное значение $\tau=\cfrac{2}{\lambda_{min}+\lambda_{max}}$.
+    \item Привести к виду, удобному для итераций.
+    \begin{enumerate}
+        \item $
+        \left\{
+        \begin{array}{lcl}
+        x_1+3x_2+x_3=8\\
+        2x_1+2x_2+x_3=9\\
+        3x_1+x_2+2x_3=13\\
+        \end{array}
+        \right.
+        $
+        \item $
+        \left\{
+        \begin{array}{lcl}
+        2x_1-4x_2+5x_3=3\\
+        3x_1-3x_2-5x_3=-5\\
+        4x_1+5x_2+2x_3=11\\
+        \end{array}
+        \right.
+        $
+    \end{enumerate}
+\end{enumerate}
